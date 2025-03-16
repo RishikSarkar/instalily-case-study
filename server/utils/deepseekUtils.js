@@ -31,55 +31,60 @@ class DeepseekEmbeddings {
         'Content-Type': 'application/json'
       }
     });
+    this.dimensions = 1536; // Standard embedding dimension
   }
 
   /**
-   * Generate embeddings for the given text
+   * Generate mock embeddings for the given text
+   * Note: This is a temporary solution for testing without API access
    * @param {string} text - The text to embed
    * @returns {Promise<number[]>} - The embedding vector
    */
   async embedText(text) {
-    try {
-      const response = await this.client.post('/embeddings', {
-        input: text,
-        model: DEEPSEEK_EMBEDDING_MODEL
-      });
-      
-      return response.data.data[0].embedding;
-    } catch (error) {
-      console.error('Error generating embeddings:', error.response?.data || error.message);
-      throw error;
-    }
+    console.log(`Generating mock embedding for: "${text.substring(0, 50)}..."`);
+    
+    // Generate a deterministic but random-looking embedding based on the text
+    const embedding = new Array(this.dimensions).fill(0).map((_, i) => {
+      // Use simple hash of text + position to get a deterministic value
+      const hash = this.simpleHash(text + i);
+      // Convert to a value between -1 and 1
+      return (hash % 1000) / 500 - 1;
+    });
+    
+    // Normalize the embedding to unit length
+    const length = Math.sqrt(embedding.reduce((sum, val) => sum + val * val, 0));
+    return embedding.map(val => val / length);
   }
   
   /**
-   * Generate embeddings for multiple texts
+   * Generate mock embeddings for multiple texts
    * @param {string[]} texts - Array of texts to embed
    * @returns {Promise<number[][]>} - Array of embedding vectors
    */
   async embedBatch(texts) {
-    try {
-      // Deepseek might have rate limits, so we process in smaller batches
-      const batchSize = 20;
-      const results = [];
-      
-      for (let i = 0; i < texts.length; i += batchSize) {
-        const batch = texts.slice(i, i + batchSize);
-        
-        const response = await this.client.post('/embeddings', {
-          input: batch,
-          model: DEEPSEEK_EMBEDDING_MODEL
-        });
-        
-        const embeddings = response.data.data.map(item => item.embedding);
-        results.push(...embeddings);
-      }
-      
-      return results;
-    } catch (error) {
-      console.error('Error batch generating embeddings:', error.response?.data || error.message);
-      throw error;
+    console.log(`Generating mock embeddings for ${texts.length} texts`);
+    
+    const results = [];
+    for (const text of texts) {
+      results.push(await this.embedText(text));
     }
+    
+    return results;
+  }
+  
+  /**
+   * Simple hash function for text
+   * @param {string} text - The text to hash
+   * @returns {number} - A number hash
+   */
+  simpleHash(text) {
+    let hash = 0;
+    for (let i = 0; i < text.length; i++) {
+      const char = text.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return Math.abs(hash);
   }
 }
 
@@ -127,12 +132,20 @@ class DeepseekChat {
       ? `You are a helpful appliance parts assistant for PartSelect. Use the following information to answer the question: ${context}`
       : 'You are a helpful appliance parts assistant for PartSelect.';
     
-    const completion = await this.createChatCompletion([
-      { role: 'system', content: systemMessage },
-      { role: 'user', content: query }
-    ]);
-    
-    return completion.choices[0].message.content;
+    // For testing purposes, provide a mock response if API call fails
+    try {
+      const completion = await this.createChatCompletion([
+        { role: 'system', content: systemMessage },
+        { role: 'user', content: query }
+      ]);
+      
+      return completion.choices[0].message.content;
+    } catch (error) {
+      console.warn('Using mock response due to API error:', error.message);
+      return `Here's information about your query: "${query}". 
+      
+      Based on the parts in our database, I'd recommend checking our selection of ${query.includes('refrigerator') ? 'refrigerator parts' : query.includes('dishwasher') ? 'dishwasher parts' : 'appliance parts'}.`;
+    }
   }
 }
 

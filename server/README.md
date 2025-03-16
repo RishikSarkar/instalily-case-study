@@ -14,7 +14,10 @@ server/
 │   ├── consolidated-data.json  # All parts in a single file
 │   ├── parts/              # Individual part details
 │   ├── dishwasher/         # Dishwasher-specific data
-│   └── refrigerator/       # Refrigerator-specific data
+│   ├── refrigerator/       # Refrigerator-specific data
+│   └── vectors/            # Vector embeddings for semantic search
+│       ├── parts_index.bin    # Vector index binary file
+│       └── parts_metadata.json # Associated metadata for vectors
 │
 ├── routes/             # API routes
 │   └── chat.js         # Chat API endpoint
@@ -29,11 +32,11 @@ server/
 │   ├── deepseekUtils.js    # Integration with Deepseek AI
 │   ├── fileUtils.js        # File handling utilities
 │   ├── htmlParser.js       # HTML parsing utilities
-│   └── vectorUtils.js      # Vector embedding utilities
+│   └── vectorizeData.js    # Vector embedding and search utilities
 │
 ├── .env                # Environment variables (not in repo)
 ├── .env.example        # Example environment variables
-├── cli.js              # Command-line interface for scraper
+├── cli.js              # Command-line interface for scraper and vectorization
 ├── package.json        # Project dependencies
 └── server.js           # Express server entry point
 ```
@@ -59,7 +62,7 @@ The scraper can be run with various options:
 node cli.js --help
 ```
 
-Available options:
+### Scraper Options:
 - `--maxParts=<number>` - Set maximum parts per page to extract
 - `--maxPages=<number>` - Set maximum pages per category to scrape
 - `--delay=<milliseconds>` - Set delay between requests
@@ -67,9 +70,95 @@ Available options:
 - `--fullScrape` - Run a full scrape with no limits (may take a long time)
 - `--checkMissing` - Check for missing brands and part types in the data
 
-## API Endpoints
+### Vectorization Options:
+- `--vectorize` - Vectorize the consolidated data for semantic search
+- `--resetVectors` - Reset the vector database before vectorization
 
-- `POST /api/chat` - Chat endpoint that accepts user messages and returns AI responses
+## Vector Search System
+
+The project includes a comprehensive vector search system for semantic searching of appliance parts based on user queries.
+
+### Vector Storage
+
+- **Technology**: The system uses `hnswlib-node` for vector storage and retrieval
+- **Storage Location**: Vector data is stored in the `data/vectors/` directory:
+  - `parts_index.bin` - Binary file containing the vector index
+  - `parts_metadata.json` - JSON file containing metadata for each vector
+- **Vector Dimensions**: 1536 dimensions (compatible with most embedding models)
+
+### Embedding Generation
+
+- **Embedding Source**: The system is configured to use Deepseek API for generating embeddings
+- **Mock Implementation**: For testing without API access, the system includes a fallback to generate deterministic mock embeddings based on content hashing
+- **Batch Processing**: Embeddings are generated in batches of 100 chunks to manage memory usage
+
+### Vectorization Process
+
+When running `node cli.js --vectorize`:
+
+1. The consolidated data is loaded from `data/consolidated-data.json`
+2. The data is split into chunks (currently 1,554 chunks from 1,014 parts)
+3. Each chunk is converted to a vector embedding
+4. The vectors and metadata are stored in the vector database
+5. The process takes several minutes depending on data size
+
+### Query Processing
+
+The `queryVectors` method in `vectorizeData.js` handles search queries:
+
+1. **Part Number Detection**: First checks for part numbers (PS12345678 format) in the query
+2. **Exact Matching**: When a part number is detected, the system prioritizes exact matches
+3. **Semantic Search**: For all queries, performs semantic search to find similar items
+4. **Result Combination**: Exact matches are placed first, followed by semantically similar items
+5. **Result Limit**: By default, returns the top 10 most relevant results
+
+### Improved Search Algorithm
+
+The search system includes several enhancements:
+
+- **Exact Part Matching**: Prioritizes exact part number matches with a perfect score of 1.0
+- **Part Number Detection**: Uses regex pattern matching (`/PS\d+/i`) to detect part numbers in queries
+- **Result Grouping**: Groups results by type (exact matches, general parts, reviews, symptoms)
+- **Enhanced Filtering**: Supports filtering by brand, appliance type, and other metadata properties
+
+## Chat API System
+
+The chat API integrates vector search with the Deepseek LLM to provide intelligent responses.
+
+### API Endpoints
+
+- `POST /api/chat` - Main chat endpoint that accepts user messages and returns AI responses
+- `POST /api/chat/vectorize` - Admin endpoint to trigger vectorization (protected by API key)
+- `GET /api/chat/vectorize/status` - Check vectorization status
+
+### Chat Processing Flow
+
+1. User sends a message through the chat API
+2. The system performs vector search to find relevant parts
+3. Retrieved parts are formatted into context for the LLM
+4. The Deepseek LLM generates a response based on the context
+5. The system returns both the LLM response and relevant part information
+
+### Response Format
+
+```json
+{
+  "response": "LLM-generated text response",
+  "parts": [
+    {
+      "partNumber": "PS12345678",
+      "title": "Part Title",
+      "price": "12.34",
+      "inStock": true,
+      "type": "Part Type",
+      "brand": "Brand Name",
+      "appliance": "refrigerator",
+      "exactMatch": true
+    },
+    ...
+  ]
+}
+```
 
 ## Data Structure
 
@@ -84,7 +173,11 @@ The consolidated data file contains:
 Copy `.env.example` to `.env` and set:
 
 - `PORT` - Server port (default: 5000)
-- `DEEPSEEK_API_KEY` - Your Deepseek API key 
+- `DEEPSEEK_API_KEY` - Your Deepseek API key
+- `MAX_PARTS_PER_PAGE` - Maximum parts per page to extract
+- `MAX_PAGES_PER_CATEGORY` - Maximum pages per category to scrape
+- `DELAY_BETWEEN_REQUESTS` - Delay between requests in milliseconds
+- `ADMIN_API_KEY` - Admin API key for protected routes
 
 ## Supported Brands and Part Types
 

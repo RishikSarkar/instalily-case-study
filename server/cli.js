@@ -98,7 +98,7 @@ async function run() {
       
       if (options.resetVectors) {
         console.log('Resetting vector database before vectorization...');
-        await vectorDB.resetCollection();
+        await vectorDB.resetVectors();
       }
       
       await vectorDB.vectorizeAllData();
