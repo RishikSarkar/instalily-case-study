@@ -1,0 +1,269 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "LG Dryer Lint Filter",
+      "partSelectNumber": "PS3531962ADQ56656401",
+      "manufacturerPartNumber": "ADQ56656401",
+      "price": "54.23",
+      "description": "The Dryer's Lint Filter is used to collect lint during the dryer cycle as it passes through the dryer vent, in order to prevent damage to the machine. This manufacturer-approved part comes in gray, measures around 12 inches wide by 11 inches high, and is easy to install. It slides into the lint filter slot in your dryer. If there is visible damage to the screen then it's time to replace the part. We recommend that you thoroughly clean the lint filter before every load, but even with good maintenance, this hard-working part is often damaged or worn over time. If your dryer isn't drying quickly, the filter may be responsible. The manufacturer has made an authorized substitution to the lint filter. Special details: When replacing lint screen ADQ56656401 you may need to also replace lint screen housing MCK49049101 and lint screen guide MEA49050001 to prevent items from catching on the lint screen, depending on your model.",
+      "symptoms": [
+        "Door won’t close",
+        "Marks left on clothes"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3531962-LG-ADQ56656401-Dryer-Lint-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Washing Machine Drain Pump",
+      "partSelectNumber": "PS35793184681EA2001T",
+      "manufacturerPartNumber": "4681EA2001T",
+      "price": "60.33",
+      "description": "The drain pump and motor assembly may also be known as the washer drain pump and is a part for your washer. The drain pump helps expel water from the washing machine. The drain pump is activated after the spin cycle speed is maintained for a specific period of time. To make this installation you will need a Phillips screwdriver, a small flat-blade screwdriver, a pair of needle-nose pliers, and a pair of slip-joint pliers. Note that the pump casing is not included. This medium-difficulty repair may vary, but can generally be started by disconnecting power, then removing the top of the washer by taking out the four back screws and two small brackets. Then, remove the front panel by taking out the two screws and eight tabs that should be taken from the top. Moving down the front of the washer, remove the door, latch, tub gasket, and drain cover. Disconnect the drain hoses and clip from under the drain assembly, and install new assembly from there. Reassemble parts in direct reverse order -- taking photos during disassembly and keeping parts clearly organized can help here. Despite the number of steps, you will only need a standard Phillips screwdriver to complete this repair.",
+      "symptoms": [
+        "Draining Issues",
+        "Engine runs but does not pump water",
+        "Leaking"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3579318-LG-4681EA2001T-Washing-Machine-Drain-Pump.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Dryer Lint Filter Assembly",
+      "partSelectNumber": "PS35275755231EL1001C",
+      "manufacturerPartNumber": "5231EL1001C",
+      "price": "35.48",
+      "description": "The lint filter sits in your dryer, and collects loose lint when the machine is operating. Sometimes the lint filter will become clogged or damaged, and in this case, you will need to replace your current lint filter with this part. The frame of this line filter is made of white plastic, and the filter is sold individually. To replace the filter, simply remove the old, damaged filter, and replace it with the new one.",
+      "symptoms": [
+        "Door won’t close"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3527575-LG-5231EL1001C-Dryer-Lint-Filter-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "LG 4 PACK ROLLER ASSEMBLY",
+      "partSelectNumber": "PS172698664581EL2002L",
+      "manufacturerPartNumber": "4581EL2002L",
+      "price": "135.77",
+      "description": "This part is sold individually. The drum support roller is found in your dryer. It is used to hold the drum in place in the cabinet while letting the drum rotate on the support rollers. It is recommended that you replace both rollers at once. You may notice that this part needs to be replaced if you are experiencing a squeaking noise, which could be due to the bearing going bad. The bearing could be severely damaged if you hear a very loud thumping noise, much like you would when you are drying a pair of shoes.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS17269866-LG-4581EL2002L-4-PACK-ROLLER-ASSEMBLY.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Door Basket",
+      "partSelectNumber": "PS7786020AAP73631502",
+      "manufacturerPartNumber": "AAP73631502",
+      "price": "36.89",
+      "description": "This door bin is for refrigerators. This part attaches to the inside of the refrigerator door and typically holds jars and bottles.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS7786020-LG-AAP73631502-Door-Basket.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Dryer Lint Filter",
+      "partSelectNumber": "PS35275785231EL1003B",
+      "manufacturerPartNumber": "5231EL1003B",
+      "price": "49.96",
+      "description": "The lint filter in your dryer is used to collect lint as it passes through the dryer vent. If you notice that your dryer is not providing enough heat, or if it takes too long to dry, you may need to replace the lint filter. You should also replace the lint filter if you notice it is damaged during regular maintenance. Many of our customers have rated this repair as easy. To complete the repair, simply remove the old lint filter and replace it with the new one. You may want to use a flat head screwdriver to remove any residual lint before you install the new filter.",
+      "symptoms": [
+        "Marks left on clothes"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3527578-LG-5231EL1003B-Dryer-Lint-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "LG HOLDER",
+      "partSelectNumber": "PS12081829MEG64438801",
+      "manufacturerPartNumber": "MEG64438801",
+      "price": "8.79",
+      "description": "This holder, also known as a mounting bracket, is responsible for securing the dish rack in place inside your dishwasher during cleaning. It is a genuine OEM replacement part sourced directly from LG to ensure a perfect fit for your dishwasher. It is gray in color and measures 1 inch by 1 inch. If the holder is lost or broken, your dish racks may become dislodged or unstable and cause damage inside the dishwasher. Each holder is sold individually.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12081829-LG-MEG64438801-HOLDER.htm?SourceCode=18"
+    },
+    {
+      "title": "LG FILTER,GREASE",
+      "partSelectNumber": "PS127136515230W1A012E",
+      "manufacturerPartNumber": "5230W1A012E",
+      "price": "12.24",
+      "description": "This is a single grease filter manufactured for a microwave. The microwave grease filter filters the exhaust air and traps any grease flowing out of the appliance. It is important to keep the filter clean and intact by cleaning it regularly and replacing it when needed. A clogged air filter can cause your appliance to run inefficiently and possibly alter the taste and smell of your food. This filter is approximately 7.5 inches wide and 5 inches deep. This part is sold separately. No tools are required for this repair, the filter simply slides in and out using the easy-pull tab on the filter.",
+      "symptoms": [
+        "Exhaust fan not working"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12713651-LG-5230W1A012E-FILTER-GREASE.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Lint Screen Housing",
+      "partSelectNumber": "PS3534930MCK49049101",
+      "manufacturerPartNumber": "MCK49049101",
+      "price": "34.89",
+      "description": "This is an authentic dryer lint filter cover sourced directly from the manufacturer. It protects the more delicate lint filter in your dryer, so that it doesn’t get damaged and lint can’t mix in with your clothes. This product is gray in color and is made of plastic. It is sold individually. The manufacture has modified the part and suggests replacing the filter guide also. Please see your specific model information to locate the filter guide.",
+      "symptoms": [
+        "Door won’t close",
+        "Marks left on clothes"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3534930-LG-MCK49049101-Lint-Screen-Housing.htm?SourceCode=18"
+    },
+    {
+      "title": "LG Magnetic Door Plunger",
+      "partSelectNumber": "PS3618292AGM73610701",
+      "manufacturerPartNumber": "AGM73610701",
+      "price": "24.21",
+      "description": "This magnetic door plunger, also known as the magnet holder, is built for your washer. When you order this part, you will receive the plastic housing and a spring that goes with it. The magnetic door plunger attaches to the inner door panel of the washer. It holds the door open when the washer is not running, and allows the door and tub seal to dry. This prevents mold and mildew from building up. Occasionally, the plastic tabs on the housing can break, and when this happens the part will need to be replaced. You may also notice that your washer lid or door will not close; this can also be a sign of a damaged magnetic door plunger.",
+      "symptoms": [
+        "Leaking",
+        "Lid or door won’t close",
+        "Locking Issues"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3618292-LG-AGM73610701-Magnetic-Door-Plunger.htm?SourceCode=18"
+    }
+  ]
+}

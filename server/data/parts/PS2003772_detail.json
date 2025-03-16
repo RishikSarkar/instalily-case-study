@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Thermistor",
+  "partUrl": "https://www.partselect.com/PS2003772-Whirlpool-12002355-Thermistor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$45.45",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS2003772",
+  "manufacturerPartNumber": "12002355",
+  "description": "Refrigerator Thermistor ★★★★★ ★★★★★ 4 Reviews PartSelect Number PS2003772 Manufacturer Part Number 12002355 This long harness thermistor kit is what helps monitor and regulate the temperature inside your refrigerator. It can be located in either the freezer compartment near the evaporator coils or in the fresh food compartment near the airflow channels, depending on the model. If you notice issues like excessive icing in the freezer, inadequate cooling in the refrigerator, temperature fluctuations, or error messages on the display panel, it indicates a potential problem with the thermistor. Since your fridge will not be able to maintain the desired temperature, this results in food spoilage, inefficient cooling, and potential damage to the cooling components. To replace the thermistor, disconnect it from the connector plug or wiring harness and remove any mounting brackets or clips using a screwdriver if necessary. Remember to consult your user manual to determine the required number of thermistors, as they are sold individually as OEM replacement parts.",
+  "rating": 5,
+  "reviewCount": 4,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Freezer section too warm",
+    "Freezer too cold"
+  ],
+  "installationInstructions": {
+    "author": "Gordon from Ben Wheeler, TX",
+    "title": "Freezer cold, refrigerator warm",
+    "content": "Overload relay accessible from back, by compressor unit. Very easy to change out. Diagram from your site placed defrost thermostat in same area.It wasn't. Found another diagram, showed it in refrigerator light area, took that apart, not there. Yet another diagram showed it in the duct work area at back of refrigerator cabinet. Not there.    Finally removed back of freezer compartment, found thermistor and thermostat with the fins. Clipped wires, wired in parts, quick fix. Longest amount of time was spent finding the old parts to replace them. Actual replacement took less than 15 minutes. Refrigerator holding at 35 degrees set on 2 now, better than ever. Total cost, less than $120, doing iy ourselves....priceless."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS2003772-Whirlpool-12002355-Thermistor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS2003772-Whirlpool-12002355-Thermistor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

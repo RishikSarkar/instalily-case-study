@@ -1,0 +1,27 @@
+{
+  "title": "Dishwasher SENSOR",
+  "partUrl": "https://www.partselect.com/PS8727345-Bosch-00611323-SENSOR.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$46.40",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS8727345",
+  "manufacturerPartNumber": "00611323",
+  "description": "Dishwasher SENSOR PartSelect Number PS8727345 Manufacturer Part Number 00611323",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [
+    "Not cleaning dishes properly",
+    "Not draining"
+  ],
+  "installationInstructions": {
+    "author": "Daniel from AUBURN, IN",
+    "title": "dishwasher not draining, dishes dirty",
+    "content": "replacing the sensor was simple, just unplug and turn it out, but didn't solve the problem, it's a float sensor that doesn't show up on the tech sheet in the dishwasher or anywhere in troubleshooting on the internet I could find."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS8727345-Bosch-00611323-SENSOR.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS8727345-Bosch-00611323-SENSOR.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

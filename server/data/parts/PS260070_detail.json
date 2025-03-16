@@ -1,0 +1,26 @@
+{
+  "title": "Dishwasher Timer",
+  "partUrl": "https://www.partselect.com/PS260070-GE-WD21X10013-Timer.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$154.76",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS260070",
+  "manufacturerPartNumber": "WD21X10013",
+  "description": "Dishwasher Timer PartSelect Number PS260070 Manufacturer Part Number WD21X10013",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Lance from Seattle, WA",
+    "title": "Dishwasher timer not working.",
+    "content": "Our older dishwasher would get hung up and not proceed to its next wash cycle. I removed the power to the unit took it apart to inspect. I figured it was somthing to do with the timer. I unhooked the power connection to the motor for the timer. I then plugged the unit back in and checked voltage to the timer motor. I had power at the connection. I then plugged the connection back into the timer motor. The timer motor still did not function. I went online looking for parts and found this site www.partselect.com. All the parts needed to make repairs were listed and good pictures showing the parts I needed. The part was recived a couple days later. I installed the new timer plugged the unit it and it works great now. I even purched a couple other parts to make the unit good as new."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS260070-GE-WD21X10013-Timer.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS260070-GE-WD21X10013-Timer.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

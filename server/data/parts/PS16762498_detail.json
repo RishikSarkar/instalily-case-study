@@ -1,0 +1,26 @@
+{
+  "title": "Dishwasher CONFIGURED UI BOARD",
+  "partUrl": "https://www.partselect.com/PS16762498-GE-WD21X31899-CONFIGURED-UI-BOARD.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$101.77",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS16762498",
+  "manufacturerPartNumber": "WD21X31899",
+  "description": "Dishwasher CONFIGURED UI BOARD ★★★★★ ★★★★★ 5 Reviews PartSelect Number PS16762498 Manufacturer Part Number WD21X31899",
+  "rating": 4.8,
+  "reviewCount": 5,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Jeff from Downingtown, PA",
+    "title": "Doesn't complete dry cycle, no clean light, random noises as if door was closing",
+    "content": "Removed toe kick.  Removed door counter weights and placed door on soft surface.  Removed two bolts(I was able to leave hinges in place) slid door panel down and off.  Removed plastic snap fit cover and 4 bolts from UI board.  Two of the stand-offs where broken, glued them back into place.  Ensured jumpers were set to my model, snapped cover back in place and remounted door.  The dishwasher now runs through the cycle and clean light but did not dry.  That turned out to be a bad flood switch."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16762498-GE-WD21X31899-CONFIGURED-UI-BOARD.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16762498-GE-WD21X31899-CONFIGURED-UI-BOARD.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

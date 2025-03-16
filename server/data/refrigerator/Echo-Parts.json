@@ -1,0 +1,250 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Echo Primer",
+      "partSelectNumber": "PS11826485P005003120",
+      "manufacturerPartNumber": "P005003120",
+      "price": "6.59",
+      "description": "This Primer Bulb is a clear, plastic, individually sold part with an Outer Diameter of 0.720 inches (18.30 mm) and a Height of 0.674 inches (17.12 mm). With Flange: 0.842\" (21.40 mm). This part is rated as Easy to install by customers, and attaches to the primer pump assembly. If the part shows signs of breakage, such as cracks appearing due to the bulb drying out, or fatigue, then it must be replaced. Refer to your owners manual/model number to ensure you are choosing the correct part.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11826485-Echo-P005003120-Primer.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Fuel Filter",
+      "partSelectNumber": "PS11826311A369000480",
+      "manufacturerPartNumber": "A369000480",
+      "price": "5.36",
+      "description": "This OEM Fuel Filter is a silver and white, steel/felt, part measuring about 1.25 inches in length and 3/4 inch wide. It can be installed with pliers and is rated as Easy to install by customers. This part attaches inside the fuel tank to clean the fuel of debris, and should be replaced during regular maintenance, check your manual for recommended replacement time. If the filter is leaking or it has a blockage preventing fuel flow, then it should be replaced. If the engine sounds like it is not getting enough fuel, then remove the filter and check it for blockage.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11826311-Echo-A369000480-Fuel-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Fuel Line Grommet",
+      "partSelectNumber": "PS885997813211546730",
+      "manufacturerPartNumber": "13211546730",
+      "price": "4.99",
+      "description": "This fuel line grommet is compatible with several types of outdoor power equipment. The fuel line grommet creates a seal where the fuel line enters and exits the fuel tank. It is made of black rubber and this version has 3 holes. If your fuel tank or fuel lines are leaking fuel, or your current fuel grommet is worn out, you should consider replacing it. This item is sold individually.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8859978-Echo-13211546730-Fuel-Line-Grommet.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Primer Pump",
+      "partSelectNumber": "PS885816712318140630",
+      "manufacturerPartNumber": "12318140630",
+      "price": "4.98",
+      "description": "The Primer Pump, aka the Pump Bulb, is a clear, individually sold, plastic part, sourced from the original equipment manufacturer. It has an Outer Diameter of 0.616 Inches, 15.66mm and is 0.558 Inches and 14.19mm in height. This part is used to pump fuel from the tank to the carburator and is rated Easy to install. This part installs onto the primer assembly. If the part dries out or starts leaking that means it is broken (likely due to fatigue or general wear) and must be replaced. Check the model number to ensure you are choosing the right part.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8858167-Echo-12318140630-Primer-Pump.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Spark Plug Bpm-8Y",
+      "partSelectNumber": "PS926350615901019830",
+      "manufacturerPartNumber": "15901019830",
+      "price": "3.99",
+      "description": "This Spark Plug Bpm-8y is a silver and white OEM part. Made of steel and ceramic it is individually sold, and is an electrical part. It is installed with a spark plug socket and is rated as Easy to install. It is attached inside of the cylinder head, and is used to ignite the air fuel mixture inside the combustion chamber. You can clean the spark plug with a fine sandpaper of 180 or more, then spray it with carburator cleaner and wipe dry. However, even after regular maintenance, spark plugs need to be changed as part of good engine fine-tuning. Regap to manufacturer specifications. Refer to your owners manual or model number to ensure you are choosing the correct product. Note: If your engine has more than one cylinder and sounds like it has a miss, you can remove each spark plug wire one at a time to find the miss. If the engine drops in rpm when you remove the wire, then that cylinder is fine, if it does not drop then you have found your miss!",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9263506-Echo-15901019830-Spark-Plug-Bpm-8Y.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Air Filter",
+      "partSelectNumber": "PS9195232A226001410",
+      "manufacturerPartNumber": "A226001410",
+      "price": "7.09",
+      "description": "This part is the replacement air filter for your small engine, used for outdoor power equipment. It has a black plastic rim that is approximately 2.5 inches by 2.5 inches. The air filter in your small engine prevents dirt and debris from entering the cylinder, where it can cause more serious damage. If your air filter is clogged, it can decrease your engine performance, and it will need to be cleaned or replaced. If the filter is damaged, it will need to be replaced as well. This is an OEM part sourced directly from the manufacturer, and is it sold individually.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9195232-Echo-A226001410-Air-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Stud-Guide Bar",
+      "partSelectNumber": "PS10053555V225000031",
+      "manufacturerPartNumber": "V225000031",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10053555-Echo-V225000031-Stud-Guide-Bar.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Filter, Fuel",
+      "partSelectNumber": "PS11826309A369000460",
+      "manufacturerPartNumber": "A369000460",
+      "price": "8.60",
+      "description": "The Fuel Filter is a white and silver, individually sold, steel part. It reuires pliers to install and its installation is rated as Easy. The part attaches inside of the fuel tank and is used to clean the fuel of debris. It should be changed regularly. Check your owners manual for the recommended replacement schedule for your engine. If the fuel is leaking or their is a blockage, you will know the part is broken and will likely need to be replaced. To check for small leaks, feel around for dampness and the smell of fuel.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11826309-Echo-A369000460-Filter-Fuel.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Fuel Tank Vent",
+      "partSelectNumber": "PS9183121A356000031",
+      "manufacturerPartNumber": "A356000031",
+      "price": "7.63",
+      "description": "This a a genuine OEM replacement check valve for your small engine. It is also known as a fuel tank vent. You may need to replace this part if you are noticing debris or dirty oil in the reservoir. Make sure the engine is cool before you begin this repair, and remove the wire and boot from the spark plug to prevent the engine from starting up.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9183121-Echo-A356000031-Fuel-Tank-Vent.htm?SourceCode=18"
+    },
+    {
+      "title": "Echo Fuel Return Tube 3x6x90mm",
+      "partSelectNumber": "PS886203613201056330",
+      "manufacturerPartNumber": "13201056330",
+      "price": "5.19",
+      "description": "The fuel return tube or fuel return line, as it is also known, delivers fuel back to the tank from the primer bulb. This is a genuine OEM part from the manufacturer, and it is yellow in color and sold individually. Its overall dimensions are 3x6x90mm. Over time, or due to over-tightening, cracks may appear in your fuel return tube, causing fuel to leak. You will know it is time to replace this part if you notice these symptoms. This is an easy repair, according to our customers, and does not require any special tools. The new part will simply attach to the primer bulb and fuel tank.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8862036-Echo-13201056330-Fuel-Return-Tube-3x6x90mm.htm?SourceCode=18"
+    }
+  ]
+}

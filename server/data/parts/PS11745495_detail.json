@@ -1,0 +1,28 @@
+{
+  "title": "Dishwasher Door Handle",
+  "partUrl": "https://www.partselect.com/PS11745495-Whirlpool-WP8269117-Door-Handle.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$72.89",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11745495",
+  "manufacturerPartNumber": "WP8269117",
+  "description": "Dishwasher Door Handle ★★★★★ ★★★★★ 25 Reviews PartSelect Number PS11745495 Manufacturer Part Number WP8269117 NOTE: This part is no longer available in white or biscuit. HANDLE only.",
+  "rating": 4.68,
+  "reviewCount": 25,
+  "symptoms": [
+    "Door latch failure",
+    "Door won’t close",
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Thomas from Austin, TX",
+    "title": "Broken handle on dishwasher",
+    "content": "Ordered new part(s), parts arrived in a few days, removed the 6 screws holding the control panel cover onto the dishwasher door (requires a torx driver), removed control panel cover (carefully, so as not to break any wires on the wiring harness from the door to the computer board), unscrewed/removed door switch, popped off the the two plastic brackets holding the door handle assembly (door handle, latch bracket, door latch actuator, spring) to the front door, removed the broken handle, installed the new handle, reversed steps, done.  Works like a champ.  The one thing I did do at the same time is notice that there's only one return spring for the door handle (even though both the handle and latch bracket have hooks for springs on both sides.  I suspect this is what caused the door handle to break in the first place (the spring causes uneven tension on the handle, which over time caused the arms on the handle to catch and break).  So I also ordered a second spring, and when I attached the new door handle to the latch bracket assembly I also installed return springs on both sides.  With even tension, the handle doesn't tend to twist when it raises and lowers the latch, so hopefully won't break again.  Just a thought while you have the unit off the dishwasher."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11745495-Whirlpool-WP8269117-Door-Handle.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11745495-Whirlpool-WP8269117-Door-Handle.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

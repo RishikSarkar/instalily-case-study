@@ -1,0 +1,27 @@
+{
+  "title": "Dishwasher SWITCH, FLOOD",
+  "partUrl": "https://www.partselect.com/PS12068856-GE-WD21X23498-SWITCH-FLOOD.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$8.06",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS12068856",
+  "manufacturerPartNumber": "WD21X23498",
+  "description": "Dishwasher SWITCH, FLOOD ★★★★★ ★★★★★ 1 Review PartSelect Number PS12068856 Manufacturer Part Number WD21X23498",
+  "rating": 5,
+  "reviewCount": 1,
+  "symptoms": [
+    "Not drying dishes properly",
+    "Will not fill with water"
+  ],
+  "installationInstructions": {
+    "author": "Mike from Bruceville, TX",
+    "title": "Dishwasher was not heating up when running and the heated dry was not working either",
+    "content": "The dishwasher was not heating anymore. I suspected it was the float/flood switch, so I got that ordered. I went ahead and ordered the element also and I'm glad I did! Even though the element was good, when I tested it I loosened the nut holding the element in. When I retightened it there was NO WAY for me to get it watertight again and it kept dripping out the bottom. Mine was made in 2019, and the gaskets on the element that came with it were a terrible design - the metal flange on the element was about as big as the hole in the middle of the gasket so water just leaked between the gasket \"donut\" hole and the element with no way to seal.  The element I bought for this repair just in case had a totally redesigned gasket that sealed right up and didn't have the same design issue.  So beware, if you are fiddling with the element in your process, be sure the gasket will reseal - or just have an extra new element in case it is the old (bad) design.The flood switch was easy to find (with dishwasher on its back) in a white housing under the black circular sump.Getting the actual switch out of that housing took some doing. I ended up using 4 small kebab sticks - toothpicks might work better- all 4 tabs have to be pulled out at the same time. So I ended up changing out both the element (which was good but started leaking) and the float switch. IMPORTANT!!! Before you put the dishwasher back in, you probably need to reset the thermal cutoff (TCO) on the back of the dishwasher.  Follow the wire up from the element and it is the first thing it goes to. There should be a small (3mm) black button that has popped out. Press that back in.  With your repair (float switch or element) it should start heating again - at least mine did."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS12068856-GE-WD21X23498-SWITCH-FLOOD.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS12068856-GE-WD21X23498-SWITCH-FLOOD.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

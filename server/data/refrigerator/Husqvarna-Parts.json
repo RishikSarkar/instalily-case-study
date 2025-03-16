@@ -1,0 +1,254 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Husqvarna Engine Fuel Filter",
+      "partSelectNumber": "PS9285148530095646",
+      "manufacturerPartNumber": "530095646",
+      "price": "4.99",
+      "description": "This fuel filter is for lawn and garden equipment engines. Fuel filter cleans the fuel before it reaches the carburetor. Work in a well-ventilated area when installing this part. Drain the fuel tank and disconnect the spark plug wire before beginning the repair.",
+      "symptoms": [
+        "Engine stops after a few seconds or minutes",
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9285148-Husqvarna-530095646-Engine-Fuel-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Fuel Line",
+      "partSelectNumber": "PS9472280530069247",
+      "manufacturerPartNumber": "530069247",
+      "price": "6.62",
+      "description": "This is the replacement fuel line 25 Inch for several OPE products that use small engines. The fuel line carries fuel from the tank to the carburetor. Over time, the fuel line can become badly clogged, and it can become brittle as well. When the fuel line is badly clogged or cracked, fuel can leak out and it can make it difficult to start or run the engine. To replace the fuel line, carefully disconnect the old line from the carburetor and from the fuel grommet, then replace it with the new line. This fuel line is 25 inches in length and is made of clear plastic. The fuel line is sold individually and is an OEM part sourced directly from the manufacturer.",
+      "symptoms": [
+        "Engine stops after a few seconds or minutes",
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9472280-Poulan-530069247-Fuel-Line.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Mulching Plug",
+      "partSelectNumber": "PS16374898586922701",
+      "manufacturerPartNumber": "586922701",
+      "price": "17.09",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16374898-Husqvarna-586922701-Mulching-Plug.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Bearing",
+      "partSelectNumber": "PS9006914532009040",
+      "manufacturerPartNumber": "532009040",
+      "price": "6.21",
+      "description": "The OEM bearing, also known as the flange bearing, is silver, made of metal, and sold individually. It is used on riding mowers to secure the wheel in place and allow it to rotate freely on the shaft. Over time, the part may become worn and damaged, which you will notice if you experience a squealing or grinding sound from the wheel in question, or you notice the wheel is sloppy on the shaft. You will need a hammer and punch to complete this repair, which most of our customers rated as easy. Make sure you tap the new bearing into place evenly inside the tire rim.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9006914-Husqvarna-532009040-Bearing.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Bag Frame",
+      "partSelectNumber": "PS16374900586929102",
+      "manufacturerPartNumber": "586929102",
+      "price": "17.95",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16374900-Husqvarna-586929102-Bag-Frame.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Clevis Pin",
+      "partSelectNumber": "PS9009427532132673",
+      "manufacturerPartNumber": "532132673",
+      "price": "3.99",
+      "description": "This clevis pin is an OEM replacement part that is compatible with various makes and models of tiller and is sold as an individual part. The purpose of this pin is to snap or break under a certain amount of pressure if your tiller is jammed, to protect the more valuable components of your tiller. Measuring at approximately 2-inches long and made of high-quality metal, replacing this pin should only require pliers to swap out the old pin for the new.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9009427-Husqvarna-532132673-Clevis-Pin.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Tank Purge Line",
+      "partSelectNumber": "PS9472264530069216",
+      "manufacturerPartNumber": "530069216",
+      "price": "6.21",
+      "description": "This part is the replacement tank/purge line for your outdoor power equipment. It is made of clear plastic and is sold individually. The tank/purge line returns excess fuel from the carburetor to the fuel tank after the primer bulb has been pushed. If the line is cracked or damaged, it can affect engine performance and will need to be replaced. This is an OEM part sourced directly from the manufacturer.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9472264-Poulan-530069216-Tank-Purge-Line.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Ring Klip Number T5304-75",
+      "partSelectNumber": "PS9143890812000029",
+      "manufacturerPartNumber": "812000029",
+      "price": "3.99",
+      "description": "The Ring Klip Number T5304-75, also known simply as a ring clip, is an OEM part designed to secure your mower wheel to its axle. This part is black, made of metal, and around an inch in length. It is sold individually and may become damaged over time due to wear and fatigue.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9143890-Husqvarna-812000029-Ring-Klip-Number-T5304-75.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Cap Axle Black 1 50 x 1 00",
+      "partSelectNumber": "PS9007667532104757",
+      "manufacturerPartNumber": "532104757",
+      "price": "3.99",
+      "description": "This genuine black cap axle, also sometimes known as the dust cap, is around 2 inches in diamater and sold individually. Comprised of plastic, it is designed to keep debris out of the hub and axle of your lawn mower or garden tractor. Over time, your dust cap may become damaged or lost due to wear and tear. If this happens, dirt and debris can freely enter the axle and hub, causing damage. This is an easy repair to make and does not require any tools. Just look for the cap axle on the rim of the wheel to make your repair.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9007667-Husqvarna-532104757-Cap-Axle-Black-1-50-x-1-00.htm?SourceCode=18"
+    },
+    {
+      "title": "Husqvarna Grassbag Frame",
+      "partSelectNumber": "PS11824788585054702",
+      "manufacturerPartNumber": "585054702",
+      "price": "21.00",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11824788-Husqvarna-585054702-Grassbag-Frame.htm?SourceCode=18"
+    }
+  ]
+}

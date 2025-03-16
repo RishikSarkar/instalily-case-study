@@ -11,6 +11,7 @@
   font-size: 16px;
   margin-top: 60px; 
   margin-bottom: 70px; 
+  background-color: #faf9f8;
 }
 
 .user-message-container,
@@ -45,21 +46,29 @@
 .user-message {
   align-self: flex-end;
   font-size: 13px;
-  background-color: #1b3875;
-  color: #ffffff;
+  background-color: #f3c04c;
+  color: #121212 !important;
   border-top-right-radius: 0;
   text-align: left;
 }
 
+.user-message * {
+  color: #121212;
+}
+
 .assistant-message {
   align-self: flex-start;
-  background-color: #f6f6f6;
+  background-color: #337778;
   border-top-left-radius: 0;
-  color: #000000;
+  color: white !important;
   padding: 14px;
   font-size: 13px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.assistant-message * {
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -104,7 +113,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #121212;
+  background-color: #337778;
   color: white;
   cursor: pointer;
   font-size: 13px;

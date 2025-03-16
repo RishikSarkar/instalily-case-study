@@ -1,0 +1,23 @@
+{
+  "title": "Refrigerator Transformer",
+  "partUrl": "https://www.partselect.com/PS11738264-Whirlpool-WP11001154-Transformer.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$45.16",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11738264",
+  "manufacturerPartNumber": "WP11001154",
+  "description": "Refrigerator Transformer PartSelect Number PS11738264 Manufacturer Part Number WP11001154 The transformer is for a personal beverage vending machine.",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [],
+  "installationInstructions": {
+    "author": "William from Valley City, OH",
+    "title": "No Status Lights on Control Board. No 12vdc coming from Transformer.",
+    "content": "1. Unplug power.2. Removed the screws holding on the access panel on rear of machine.3. Remove 4 screws holding plastic cover from motherboard enclosure.4. Replace the transformer and connect wires as they were on the old transformer.6. Replace the cover with the 4 screws.7. Replace the access cover."
+  },
+  "readMoreLinks": {
+    "instructions": "https://www.partselect.com/PS11738264-Whirlpool-WP11001154-Transformer.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

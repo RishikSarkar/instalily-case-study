@@ -1,0 +1,26 @@
+{
+  "title": "Dishwasher CONFIGURED UI BOARD",
+  "partUrl": "https://www.partselect.com/PS16762507-GE-WD21X31909-CONFIGURED-UI-BOARD.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$85.16",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS16762507",
+  "manufacturerPartNumber": "WD21X31909",
+  "description": "Dishwasher CONFIGURED UI BOARD PartSelect Number PS16762507 Manufacturer Part Number WD21X31909",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "John from DANBURY, CT",
+    "title": "UI Control panel would not light up and not work at all. Unplugging D/W failed to correct.",
+    "content": "Unplug the dishwasher. Remove toe kick with 1/4 socket. Unplug, by pinching, door harness connector (White terminal connector) from PC board at bottom of dishwasher. Remove the door door using the Allen wrench, place it the hole on side of door hinge where pulley attaches. Unhook the pulley attachment at the door by using a vise grip to pull the plastic up and out. Don't break the plastic! Do the same for the other side.  Remove Allen wrench. Pull door in and up at the same time. Take off 2 screws at bottom of door using 1/4 or 5/16 socket. Remove the vent cover (cap) using  2 flat head screwdrivers to loosen. Unscrew by hand. Slide toward the bottom, the inner door panel off from the outer door panel. You will see the door wire harness and some styrofoam insulation. Stand with outer door facing away from you. Remove UI by holding door handle, pressing it and pull the control head, up and away from you. It should come off from the top off the outer door panel. The UI will need to be removed from this housing. Unplug the UI harness connector. Remove 7 screw with a Phillips screwdriver or 1/4 socket. There are 2 clear plastic clips that need to be pressed in to release UI from the housing. Be careful, those clips are easy to snap. Place and snap new UI into the housing.  Replace 7 screws. Reattach the connector pug to the new UI board. My personality was factory set. So, no jumper  pins on my board. Snap the UI housing back onto the top of your door. Delicately, remove the styrofoam and unsnap the old harness to the soap and drying dispenser. Remove the rest of the old harness. Install the new door harness and use the plastic plugs on the harness to secure to the door. Install the styrofoam insulation.  Attach the inner door panel to the outer door panel by sliding inner pan up toward the top. Replace the 2 screws at the bottom of the door. Attach vent cap by hand screwing it on. Position door at the dishwasher. Use Allen wrench or helper to hold at correct angle. Use a vise grip to grab the plastic pulley to attach it to the door hinge. Do the same on the other side. Plug in the harness connector to the PC board. Plug in the dishwasher and the UI should light up!  Run a load and make sure no leaks are seen around the door. Replace toe kick."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16762507-GE-WD21X31909-CONFIGURED-UI-BOARD.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16762507-GE-WD21X31909-CONFIGURED-UI-BOARD.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

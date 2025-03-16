@@ -1,0 +1,282 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Jenn-Air Rack Track Stop",
+      "partSelectNumber": "PS11746591WP8565925",
+      "manufacturerPartNumber": "WP8565925",
+      "price": "7.70",
+      "description": "The rack track stop on your dishwasher is designed to stop the dish rack at the appropriate place when opening and closing the rack. If your dishwasher is not cleaning your dishes properly, the rack stop may need to be replaced. The replacement part may differ slightly from the broken part, depending on the model. However, the different styles are interchangeable. This product is sold individually and comes in both a white and grey plastic version. Many of our customers found this repair to be very easy and takes less than 30 minutes to complete. Simply snap the old part out and snap the new part into place. You will not require any tools to complete the job. This is an authentic part approved by the manufacturer.",
+      "symptoms": [
+        "Door latch failure",
+        "Door won’t close",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11746591-Whirlpool-WP8565925-Rack-Track-Stop.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Lower Dishrack Wheel",
+      "partSelectNumber": "PS3406971W10195416",
+      "manufacturerPartNumber": "W10195416",
+      "price": "26.89",
+      "description": "This OEM gray Dishwasher Lower Dishrack Wheel Assembly is a plastic kit that allows the rack to slide in and out of the dishwasher easily. If it breaks or becomes damaged. sliding will feel difficult. This can happen due to normal wear and tear, and the part should be replaced if this occurs. Check your model number and user manual to make sure this part is correct. It attaches directly to the dishrack. To repair, open the dishwasher door and pull out the lower dishrack. Next, push the tab from both sides and it should pop out. To install the new wheel assembly, place it on the rack and make sure the caps overlap the wire from the inside before you clip it in place by pushing the wheel. It measures roughly 3x6 inches.",
+      "symptoms": [
+        "Door latch failure",
+        "Door won’t close",
+        "Leaking"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3406971-Whirlpool-W10195416-Lower-Dishrack-Wheel.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Multi Rib Belt - 92-1/4\"",
+      "partSelectNumber": "PS346995341241",
+      "manufacturerPartNumber": "341241",
+      "price": "12.89",
+      "description": "This dryer drum belt (Whirlpool Dryer Belt, Drive Belt) has four ridges, three grooves and is 1/4\" wide, and 92 1/4 inches in length. It comes in black and is made of rubber. The belt transfers the rotation of the motor to turn the drum. The belt attaches to the drum, idler pulley, and motor pulley.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Heat stays on after drum has stopped",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS346995-Whirlpool-341241-Multi-Rib-Belt-92-1-4-quot.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Refrigerator Ice and Water Filter",
+      "partSelectNumber": "PS11701542EDR1RXD1",
+      "manufacturerPartNumber": "EDR1RXD1",
+      "price": "62.38",
+      "description": "The EDR1RXD1 water filter provides clean, fresh-tasting water by reducing contaminants such as lead, chlorine, and particulates. Designed for easy installation, this filter ensures your refrigerator water and ice are safe and refreshing with every use",
+      "symptoms": [
+        "Ice maker dispenses too little ice",
+        "Ice maker not making ice",
+        "Ice maker won’t dispense ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11701542-Whirlpool-EDR1RXD1-Refrigerator-Ice-and-Water-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Drum Support Roller Kit",
+      "partSelectNumber": "PS157007012001541",
+      "manufacturerPartNumber": "12001541",
+      "price": "13.49",
+      "description": "The drum support roller (Dryer Drum Support Roller, Drum Roller and Washer Assembly) holds the drum in the proper position while it spins on the support wheels. This part rotates on the roller shaft which is attached to the rear bulkhead. This part should be replaced whenever it does not rotate easily on the roller shaft. If you’re noticing a thump, scrape, or squeal while your drum is spinning, it may be your drum support rollers. Take a look at your existing drum rollers; if one or both of them are worn or broken, you’ll need to replace them. The drum support roller is subject to constant wearing when your dryer is in use, which causes them to break down over time. This part features 1 roller and 2 small washers, and measures approximately 3 inches in diameter. It is constructed with a combination of plastic, metal and rubber. This model comes in black/beige.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Marks left on clothes",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS1570070-Whirlpool-12001541-Drum-Support-Roller-Kit.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Lower Dishrack Wheel Assembly",
+      "partSelectNumber": "PS11750057WPW10195417",
+      "manufacturerPartNumber": "WPW10195417",
+      "price": "33.89",
+      "description": "This gray plastic lower dishrack roller is a part for your dishwasher. It attaches to the bottom of the lower dishrack, allowing it to move in and out smoothly. If the lower dishrack stops moving in and out easily or preventing you from being able to shut the dishwasher door, inspect the dishrack roller for damage. The assembly includes 2 rollers and the bracket that attaches to the dishrack (parts are not sold separately). This assembly is sold individually, so you will need 4 assemblies to replace them all in your appliance. For this easy repair, start by removing the lower dishrack from the appliance and set it on the counter. Use a screwdriver to pry off the old roller assembly from the lower tabs. Align the new part on the dishrack by snapping it in place.",
+      "symptoms": [
+        "Door latch failure",
+        "Door won’t close",
+        "Not cleaning dishes properly"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11750057-Whirlpool-WPW10195417-Lower-Dishrack-Wheel-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Dishwasher Upper Rack Adjuster",
+      "partSelectNumber": "PS11756150WPW10546503",
+      "manufacturerPartNumber": "WPW10546503",
+      "price": "24.89",
+      "description": "This OEM Dishwasher Upper Rack Adjuster is a grayish-black, plastic part which will require a screwdriver to install. It fits onto the dishwasher rack and connects it to the track allowing it to slide in and out. If broken then the rack will no longer slide properly, and the part must be replaced. The installation has been rated as \"easy\" by customers. Before beginning any repair, you should unplug the dishwasher and wear gloves to protect your hands. Check your model number and user manual to see if this part is right for you! Your dishwasher should have a left and right upper rack adjuster, and both are the same part. These parts are sold individually, so if you are looking to replace both, you will need to order two parts.",
+      "symptoms": [
+        "Door latch failure",
+        "Door won’t close",
+        "Leaking"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11756150-Whirlpool-WPW10546503-Dishwasher-Upper-Rack-Adjuster.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Light Bulb - 40W",
+      "partSelectNumber": "PS23760348206232A",
+      "manufacturerPartNumber": "8206232A",
+      "price": "8.87",
+      "description": "This 40w light bulb is a replacement bulb constructed of glass and metal. It is an easy-to-install electrical part which produces 40w of light. If the bulb won't light up then it may be broken and should be replaced. The bulb attaches directly to an appropriate light socket and has a small screw-in base. To access the exterior light bulb, you will need to remove the panel on the bottom of the microwave using a Phillips screwdriver. If your exterior light bulb has not been changed before, it is probably held in place with some silicone. You will need to cut away this silicone to remove the old bulb. If you cannot access the silicone with a utility knife, it can be removed using dental floss. Once the silicone is removed, simply unscrew the old bulb, and replace it with the new one. Be sure to disconnect the power to the microwave before you begin this repair. This light bulb measures about 1 1/8 inches. We do not recommend using a higher-wattage bulb for this appliance, and can only recommend this specific bulb. If fixing the bulb does not solve your microwave light issue, it's possibly a problem with the socket, which means the socket and/or board will need to be replaced. This can be a more dangerous repair, so consult your user manual or a technician before attempting.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS2376034-Whirlpool-8206232A-Light-Bulb-40W.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Refrigerator Water Filter",
+      "partSelectNumber": "PS11722130EDR4RXD1",
+      "manufacturerPartNumber": "EDR4RXD1",
+      "price": "62.38",
+      "description": "This water filter (Whirlpool EveryDrop Refrigerator Water Filter, Single Turn Filter) purifies water going to the water dispenser and sometimes the icemaker as well. This part should be replaced if it is causing reduced water flow or just replaced periodically per the owner manual. Replacing this water filter may fix a noisy or leaking fridge, a fridge that is not dispensing water (or reduced flow rate), and an ice maker that is not making ice at all, or not making enough ice. This filter is white, sold individually and measures 8 inches by 3 inches in diameter. This water filter has been updated by the manufacturer. It may appear different but will still function the same. It is sold individually.",
+      "symptoms": [
+        "Fridge too cold",
+        "Ice maker dispenses too little ice",
+        "Ice maker not making ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11722130-Whirlpool-EDR4RXD1-Refrigerator-Water-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Jenn-Air Bake Element",
+      "partSelectNumber": "PS11703285W10779716",
+      "manufacturerPartNumber": "W10779716",
+      "price": "48.37",
+      "description": "This is a heating element compatible with various makes of ranges and ovens and is sold as an individual part. Measuring 20.5-inches wide and 20.25-inches (with terminals) long, this heating element is a genuine OEM part. If your range is not heating during the bake setting, not heating evenly, or if the element is burnt out or damaged, the element will need to be replaced. This repair is simple and only requires that you disconnect your oven from the wall outlet and use an appropriate screwdriver to disassemble and replace the element with the additional support brackets to secure it.",
+      "symptoms": [
+        "Element will not heat",
+        "Little to no heat when baking",
+        "Oven is too hot"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11703285-Whirlpool-W10779716-Bake-Element.htm?SourceCode=18"
+    }
+  ]
+}

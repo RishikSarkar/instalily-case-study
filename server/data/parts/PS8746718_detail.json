@@ -1,0 +1,27 @@
+{
+  "title": "Refrigerator Damper Control Assembly",
+  "partUrl": "https://www.partselect.com/PS8746718-Frigidaire-242303001-Damper-Control-Assembly.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$166.50",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS8746718",
+  "manufacturerPartNumber": "242303001",
+  "description": "Refrigerator Damper Control Assembly ★★★★★ ★★★★★ 12 Reviews PartSelect Number PS8746718 Manufacturer Part Number 242303001 This authentic OEM damper control assembly is designed to be compatible with refrigerators. The assembly regulates the airflow between the freezer and refrigerator compartments. When the refrigerator needs to cool down, the damper receives signals from the thermostat or control board to open and allows more cold air from the freezer to enter the refrigerator compartment. When the desired temperature is reached, the damper closes to restrict airflow. If the damper assembly is faulty or damaged, your fridge will be unable to maintain the desired temperature levels. It may be either too warm leading to food spoilage or too cold leading to frost buildup.",
+  "rating": 4.67,
+  "reviewCount": 12,
+  "symptoms": [
+    "Fridge too cold",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "Lyman from LEXINGTON, KY",
+    "title": "Fridge side warm.",
+    "content": "Removed the nut screws holding on the controls on the fridge side. Swapped out the old damper control for the new. Just need to be sure to get the new assembly in the same way the old one came out -- including placement of the freezer sensor control (separate part from the assembly). Replaced the control unit and damper worked and now my fridge is the right temperature! One other item -- when diagnosing the problem with a warm fridge, most newer fridges have a self testing method via the digital temperature controls. Find your Service Data Sheet for instructions. This would have saved me time from using my multimeter testing various components."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS8746718-Frigidaire-242303001-Damper-Control-Assembly.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS8746718-Frigidaire-242303001-Damper-Control-Assembly.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

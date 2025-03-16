@@ -1,0 +1,28 @@
+{
+  "title": "Crosley Dishwasher Latch",
+  "partUrl": "https://www.partselect.com/PS16218716-Frigidaire-5304525218-Latch.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$36.20",
+  "originalPrice": "$45.25",
+  "inStock": true,
+  "partSelectNumber": "PS16218716",
+  "manufacturerPartNumber": "5304525218",
+  "description": "Crosley Dishwasher Latch ★★★★★ ★★★★★ 17 Reviews PartSelect Number PS16218716 Manufacturer Part Number 5304525218 This door latch with the switches is a simple on/off mechanism that prohibits the dishwasher from operating when the door is open.",
+  "rating": 4.76,
+  "reviewCount": 17,
+  "symptoms": [
+    "Door latch failure",
+    "Door won’t close",
+    "Leaking"
+  ],
+  "installationInstructions": {
+    "author": "Rick from Ozark, MO",
+    "title": "Appliance read out \"err\", would not go on",
+    "content": "It would sometimes work, which led me to believe it was a switch. Looked on line and found the mail switch to go on was in the latch. I took it apart, 6 screws, wiggled the switch and it went on. So I found the door switch to be bad. It was very simple to change the switch."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16218716-Frigidaire-5304525218-Latch.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16218716-Frigidaire-5304525218-Latch.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Caloric Refrigerator Defrost Timer",
+  "partUrl": "https://www.partselect.com/PS11723171-Whirlpool-W10822278-Defrost-Timer.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$35.85",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11723171",
+  "manufacturerPartNumber": "W10822278",
+  "description": "Caloric Refrigerator Defrost Timer ★★★★★ ★★★★★ 36 Reviews PartSelect Number PS11723171 Manufacturer Part Number W10822278 The Defrost Timer (Defrost control) acts like a clock by switching on the defrost heater circuit after a predetermined amount of compressor run time. This allows the defrost circuit to clear the evaporator of ice or frost to maintain proper airflow. If this part is not working, it can lead to temperature increases in your refrigerator. If the compressor circuit fails, no cooling will take place; if the defrost circuit isn't activated, ice will quickly build up on the evaporator coils and reduce airflow and efficiency. If the timer doesn't advance or if the contacts have no continuity, the timer will need to be replaced. This part is located inside of the control housing on most models, and is approximately 3 inches long and 2.5 inches wide. This part is constructed of plastic and metal, and comes in white. It features 1 defrost timer, along with all necessary mounting hardware and installation instructions",
+  "rating": 4.22,
+  "reviewCount": 36,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Freezer section too warm",
+    "Freezer too cold"
+  ],
+  "installationInstructions": {
+    "author": "Lawrence from Grahamsville, NY",
+    "title": "The frost free feature of the freezer was freezing over with ice and cooling coils were being insulated with thickening frost which caused the cooling air to rise in temperature from -5 degrees to 20 degrees.",
+    "content": "I troubleshot the problem by reading the electrical schematic and concluding the heating elements (defrost cables) were either defective or  the bi-metal temp sensor was open. When closed the temp sensor completes the circuit for the current to flow through the heaters to defrost the cooling coils every 8 hours and then when the bimetal opens at 55 degrees the circuit is open and the coils are cooled because the refridgeration motor is in run mode. A timer between the motor and heater elements also was defective. The timer controls the cooling period and the defrost period. I ohmed out each part according to the spec sheet of normal resistance of parts and thus the bimetal and timer were defective. I gather a surge of some duration and amplitude affected these parts because a storm 24 hours prior to refridgerator  problem had passsed through  the area and the AC electrical power had oscillated  several times during that event. I used hand tools to do the repair. If you are not mechanically inclined a step by step proceedure would be moot. It is a matter of disassembly and assembly  paying close attention to fragile parts."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11723171-Whirlpool-W10822278-Defrost-Timer.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11723171-Whirlpool-W10822278-Defrost-Timer.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

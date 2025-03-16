@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Cold Control Thermostat",
+  "partUrl": "https://www.partselect.com/PS8769007-Frigidaire-241537103-Cold-Control-Thermostat.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$42.32",
+  "originalPrice": "$104.94",
+  "inStock": true,
+  "partSelectNumber": "PS8769007",
+  "manufacturerPartNumber": "241537103",
+  "description": "Refrigerator Cold Control Thermostat ★★★★★ ★★★★★ 7 Reviews PartSelect Number PS8769007 Manufacturer Part Number 241537103 This cold control thermostat cycles on and off regularly to keep your refrigerator cold.",
+  "rating": 4.86,
+  "reviewCount": 7,
+  "symptoms": [
+    "Freezer section too warm",
+    "Fridge and Freezer are too warm",
+    "Fridge runs too long"
+  ],
+  "installationInstructions": {
+    "author": "Bruce from Alton, IL",
+    "title": "Refrigerator would not run but interior light was on.",
+    "content": "I unplugged the refrigerator, then opened the door and removed four screws holding the plastic electrical panel to the interior top of the main refrigerator compartment and noticed the cold control was corroded badly, apparently from moisture in the panel.  I ordered a new one from partselect.com.  When it arrived the next day, I then pulled off the control knob, unclipped the cold control, unplugged the three wires to the control, then removed the styrofoam insulation blocks holding the thermocouple wire and then removed the thermocouple wire to complete the removal.  I then reversed the process to install the new thermostat and control.  That is repositioned the thermocouple wire, put the insulation blocks back to hold the wire, then replugged the three electrical wires, clipped the control back and pushed the control knob back on and finally screwed the panel back to the top of the main compartment and plugged the refrigerator electrical cord back in to provide current to the refrigerator.  It immediately started up and ran fine.  Total time - about 8 minutes."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS8769007-Frigidaire-241537103-Cold-Control-Thermostat.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS8769007-Frigidaire-241537103-Cold-Control-Thermostat.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

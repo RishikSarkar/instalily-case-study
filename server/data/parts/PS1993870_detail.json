@@ -1,0 +1,28 @@
+{
+  "title": "RCA Refrigerator Ice Maker",
+  "partUrl": "https://www.partselect.com/PS1993870-GE-WR30X10093-Ice-Maker.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$191.89",
+  "originalPrice": "$239.86",
+  "inStock": true,
+  "partSelectNumber": "PS1993870",
+  "manufacturerPartNumber": "WR30X10093",
+  "description": "RCA Refrigerator Ice Maker ★★★★★ ★★★★★ 78 Reviews PartSelect Number PS1993870 Manufacturer Part Number WR30X10093 This 10 by 5 inch ice maker (Electromechanical Icemaker Kit, Ice Maker Assembly) produces ice. This particular model will produce seven crescent shaped cubes every cycle. It is constructed of plastic and metal, and comes in black/white. This kit includes a set of installation instructions, a 4-pin round plug-in connector, 6 post plug-in connectors, tube and fill cup. The ideal temperature of a freezer is zero degrees Fahrenheit. If the temperature in your freezer is at an appropriate level yet ice is still not being made, it could be an issue with the water inlet valve or your ice maker assembly. If you determine it is the ice maker, this is the replacement you need. The ice maker can break from normal wear and accidental damage. Ice makers will need to be replaced every 3-10 years depending on the frequency of usage and water quality. This model is mounted on the freezer wall.",
+  "rating": 4.65,
+  "reviewCount": 78,
+  "symptoms": [
+    "Ice maker dispenses too little ice",
+    "Ice maker dispenses too much ice",
+    "Ice maker not making ice"
+  ],
+  "installationInstructions": {
+    "author": "Michael from Bradenton, FL",
+    "title": "ice maker not working properly and door seal  worn",
+    "content": "Two screws held the icemaker on.  You do not even have to take them all the way out to remove the IM.  Replacement of the water valve was just as easy except they (parts manufacturer) updated the flange nut with a compression fitting and it took me a minute looking at it before I realize what was going on.  The door seal could not be easier, no tools just a few minutes of time"
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS1993870-GE-WR30X10093-Ice-Maker.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS1993870-GE-WR30X10093-Ice-Maker.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

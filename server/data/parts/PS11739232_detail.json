@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Thermostat Assembly",
+  "partUrl": "https://www.partselect.com/PS11739232-Whirlpool-WP2198202-Thermostat-Assembly.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$85.01",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11739232",
+  "manufacturerPartNumber": "WP2198202",
+  "description": "Refrigerator Thermostat Assembly ★★★★★ ★★★★★ 53 Reviews PartSelect Number PS11739232 Manufacturer Part Number WP2198202 This thermostat assembly is used in refrigerator units and freezers as a sensor. The thermostat senses the temperature increase in the evaporator during the cycle of defrosting and turns off when ice is melted. If you have any of the following symptoms, replacing your thermostat could solve the problem: fridge does not start, is too warm, too cold, runs too long, or will not start. The tools needed for this repair project is a putty knife, Phillips and flat blade screw driver, 1/4 inch nut driver, and needle nose pliers. Remember to unplug refrigerator from power source as a safety precaution. Refer to the manual provided by the manufacturer for further installation instructions.",
+  "rating": 4.68,
+  "reviewCount": 53,
+  "symptoms": [
+    "Freezer section too warm",
+    "Freezer too cold",
+    "Fridge and Freezer are too warm"
+  ],
+  "installationInstructions": {
+    "author": "Steve earney from Brooks, GA",
+    "title": "inconsistent compressor and condensor fan operation",
+    "content": "Compressor start relay would cycle several times before compressor would come on.  Replaced start relay and defrost timer assy.  Operated more consistently however not completely reliable. Ice would begin to melt.  Noticed that if you would cycle the temperature control the compressor would start again and operate for several hours then not cycle again.  Jumpered temp control and operation was continuous and reliable.  Replaced cold control thermostat.  Operation now normal.  Suspect high resistance in switch caused start relay and timer contacts to arc.  Small amount of carbon noticed under temp control..."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11739232-Whirlpool-WP2198202-Thermostat-Assembly.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11739232-Whirlpool-WP2198202-Thermostat-Assembly.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

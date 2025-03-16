@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Run Capacitor",
+  "partUrl": "https://www.partselect.com/PS2333670-Frigidaire-5304464438-Run-Capacitor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$53.48",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS2333670",
+  "manufacturerPartNumber": "5304464438",
+  "description": "Refrigerator Run Capacitor ★★★★★ ★★★★★ 9 Reviews PartSelect Number PS2333670 Manufacturer Part Number 5304464438 The run capacitor helps the compressor kick on and off while maintaining a constant temperature in your fridge and freezer. You may need to replace your run capacitor if your refrigerator or freezer section will not start, if they are too warm, or if your refrigerator has become too noisy. Replacing the run capacitor is a relatively easy project. For this repair you will only need a 1/4 inch nut driver and needle nose pliers. Remember to disconnect the power and water supply line to the unit before you begin this repair. For full step by step instructions, simply click on the video below.",
+  "rating": 4.56,
+  "reviewCount": 9,
+  "symptoms": [
+    "Clicking sound",
+    "Doesn’t stop running",
+    "Freezer section too warm"
+  ],
+  "installationInstructions": {
+    "author": "Jim Meeks from Wimberly, TX",
+    "title": "The controller (current relay) burned up",
+    "content": "1. Unhooked a retaining wire that secures the controller to the compressor terminal box. 2. removed destroyed part. 3.  Got the model and serial numbers and got online. 4. Ordered part 5. Waited a couple of weeks to get part 6. Found that the manufacturer had daisy chained a bunch of components together with some funny deep socket plugs that by themselves are not routinely found so rather than buy a laundry list of unnecessary parts to get the aforementioned plus and make my customer wait a couple of more weeks I chose to connect the wires to a couple of high temperature female stainless steel quick connectors and feed the wires directly into the controller.  Fortunately the controller had the polarity marked on the housing. (L for Line was the hot lead and C was for common the neutral lead)  Failure to follow proper polarity will damage the part and could kill the compressors's start wimding."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS2333670-Frigidaire-5304464438-Run-Capacitor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS2333670-Frigidaire-5304464438-Run-Capacitor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Temperature Sensor",
+  "partUrl": "https://www.partselect.com/PS11753994-Whirlpool-WPW10383615-Refrigerator-Temperature-Sensor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$40.52",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11753994",
+  "manufacturerPartNumber": "WPW10383615",
+  "description": "Refrigerator Temperature Sensor ★★★★★ ★★★★★ 4 Reviews PartSelect Number PS11753994 Manufacturer Part Number WPW10383615 This temperature sensor is for refrigerators. The temperature sensor senses the temperature inside the refrigerator and sends information to the electronic control. Unplug the refrigerator and safely store any food that could deteriorate while the power is off before installing this part. Wear work gloves to protect your hands. The thermistor itself, part WPW10383615, should test at these Ohms depending on temperature. It's recommended to test at room temperature and again in a glass of ice water to make sure it's sensing temperatures properly. So it should read around 3000 - 5000 Ohms at room temperature 7000 - 10000 Ohms at 0°C and 20000 Ohms at -15°C.",
+  "rating": 4.25,
+  "reviewCount": 4,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Fridge too warm",
+    "Frost buildup"
+  ],
+  "installationInstructions": {
+    "author": "Nancy from JAMESTOWN, NY",
+    "title": "The freezer wasn't defrosting.",
+    "content": "took the old thermistor out and put the new one in."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11753994-Whirlpool-WPW10383615-Refrigerator-Temperature-Sensor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11753994-Whirlpool-WPW10383615-Refrigerator-Temperature-Sensor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

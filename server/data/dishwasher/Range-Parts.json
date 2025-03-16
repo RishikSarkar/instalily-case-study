@@ -1,0 +1,267 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Range Oven Bake Element",
+      "partSelectNumber": "PS438018316075103",
+      "manufacturerPartNumber": "316075103",
+      "price": "25.89",
+      "description": "The Oven Bake Element is a black, metal part which supplies heat to the oven. This element is 19-1/2\" wide x 18-1/2\" long and has 3-1/2\" inserts. It is rated as \"Easy\" to install by users, and attaches to the bottom of the oven. If you notice visible damage, or that your oven is not receiving heat properly then it may be a problem with this part. Check your model number and user manual to see if this is the right part for you. It is important for you to disconnect your appliance from the power source before performing this repair. After disconnecting your appliance, remove the two screws/nuts connecting the old element, pull it out, and discard if faulty. Simply connect the new element prongs where the old element fit, and screw it back in. You may need a flashlight when making this repair.",
+      "symptoms": [
+        "Element will not heat",
+        "Little to no heat when baking",
+        "Little to no heat when broiling"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS438018-Frigidaire-316075103-Oven-Bake-Element.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Bake Element",
+      "partSelectNumber": "PS11703285W10779716",
+      "manufacturerPartNumber": "W10779716",
+      "price": "48.37",
+      "description": "This is a heating element compatible with various makes of ranges and ovens and is sold as an individual part. Measuring 20.5-inches wide and 20.25-inches (with terminals) long, this heating element is a genuine OEM part. If your range is not heating during the bake setting, not heating evenly, or if the element is burnt out or damaged, the element will need to be replaced. This repair is simple and only requires that you disconnect your oven from the wall outlet and use an appropriate screwdriver to disassemble and replace the element with the additional support brackets to secure it.",
+      "symptoms": [
+        "Element will not heat",
+        "Little to no heat when baking",
+        "Oven is too hot"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11703285-Whirlpool-W10779716-Bake-Element.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Drip Bowl - 8\"",
+      "partSelectNumber": "PS437595316048413",
+      "manufacturerPartNumber": "316048413",
+      "price": "11.89",
+      "description": "This chrome drip bowl is designed for use with electric cooktops and ranges. This drip bowl is sold individually. At the widest point this part has a diameter of approximately 10 inches. It sits beneath the surface burner element. It catches any drips or spills coming from the cookware on your burner. Because the cooktop is a high-traffic area of the kitchen, these bowls often get damaged, or get so dirty they can no longer be adequately cleaned. When replacing this part you need to remove the burner element. While you have it out we recommend inspecting the terminals and the element for any corrosion, arcing, or discoloration. Any of those things could be a sign of a bigger problem, and it indicates that the element and terminal block should be replaced.",
+      "symptoms": [
+        "Element will not heat"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS437595-Frigidaire-316048413-Drip-Bowl-8-quot.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Chrome Drip Bowl - 6\"",
+      "partSelectNumber": "PS437596316048414",
+      "manufacturerPartNumber": "316048414",
+      "price": "7.45",
+      "description": "The drip bowl catches grease and spills that come from cooking on your stove top. They are located under the heating elements. Drip bowls are often neglected and can become rusted and cracked. If your drip bowl is damaged, it could allow grease, food, or other spills to drip inside your range. This could become a fire hazard. This 6 inch chrome drip bowl fits most electric ranges. Before you replace your damaged drip bowl, make sure the element is turned off and cool to the touch. To replace the drip bowl, remove the element, replace the current drip bowl, and reattach the element. This part is sold individually.",
+      "symptoms": [
+        "Element will not heat"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS437596-Frigidaire-316048414-Chrome-Drip-Bowl-6-quot.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Chrome Drip Bowl - 8 inch",
+      "partSelectNumber": "PS11750107WPW10196405",
+      "manufacturerPartNumber": "WPW10196405",
+      "price": "7.66",
+      "description": "This manufacturer-certified drip bowl is also known as a drip pan, and it is designed for use with cooktops and ranges. It sits below 8-inch burner elements and catches drips and spills from the cookware on the burner. The diameter of the drip bowl is approximately 10 inches. This replacement might appear slightly different, but it will fit your appliance. You will need no tools to complete this repair. Simply remove the burner element, remove the old bowl, line up the hole on the new bowl with the terminal block and drop it into place. Make sure the bowl is flat before reinstalling the element. While you have the element out you should inspect the terminals for corrosion, damage, or discolouration. If you notice any of those things you should also replace the element and terminal block. You will need to replace your drip bowl if it is lost, damaged, or can no longer be cleaned. This replacement part is sold individually. To extend the life of your new drip bowl we recommend you clean it regularly with soap and water. We recommend only using the recommended drip bowl for your appliance; generic versions will not fit properly which could affect the performance of your elements and cause long-term damage.",
+      "symptoms": [
+        "Element will not heat"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11750107-Whirlpool-WPW10196405-Chrome-Drip-Bowl-8-inch.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Surface Element Control Switch",
+      "partSelectNumber": "PS11729102WB24X25013",
+      "manufacturerPartNumber": "WB24X25013",
+      "price": "37.42",
+      "description": "The control switch turns the surface element on and off and controls how much heat the element produces.",
+      "symptoms": [
+        "Element will not heat",
+        "Oven is too hot"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11729102-GE-WB24X25013-Range-Surface-Element-Control-Switch.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Drip Bowl - 6 Inch",
+      "partSelectNumber": "PS11750108WPW10196406",
+      "manufacturerPartNumber": "WPW10196406",
+      "price": "6.95",
+      "description": "This drip bowl is used for electric cooktops and ranges, it is designed to sit under a 6-inch surface burner. It catches the drips and spills coming from the cookware on the surface burner. This drip bowl is chrome, and it has a diameter of 8 inches. You need to remove the burner element to replace this part. Line the hole up with the element terminal blocks, and ensure the new bowl is flush with the surface of the cooktop before replacing the burner element. Drip bowls need to be replaced when they are lost, damaged, or you are no longer able to clean them adequately. This replacement part is sold individually.",
+      "symptoms": [
+        "Element will not heat"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11750108-Whirlpool-WPW10196406-Drip-Bowl-6-Inch.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Drip Bowl - 6 Inch",
+      "partSelectNumber": "PS244394WB31T10010",
+      "manufacturerPartNumber": "WB31T10010",
+      "price": "18.20",
+      "description": "This drip bowl, also known as the drip pan or burner bowl, is 6 inches in internal diameter to match the burner, but actually measures closer to 8 inches in total diameter to its outer edges. This authentic manufacturer-approved part is used to catch spills from cooking on the top burner. If your bowls are getting stained, dirty, or rusted, this replacement can solve it. First, remove the element from the stove top, and pull out the old drip pan. Insert the new bowl and make sure it is aligned to where the element is plugged in. Lastly, you can put the element back in. For safety precautions, make sure to unplug the range from the power source and wait until the surface is cool before replacing this part. This part is sold individually, if you are replacing more than one drip bowl on your stove at once, you will need to account for this. To replace, simply pull the old surface elements and burner bowls off, give everything a thorough clean, and install the new parts with no tools necessary.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS244394-GE-WB31T10010-Drip-Bowl-6-Inch.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Drip Bowl - 8 Inch",
+      "partSelectNumber": "PS244395WB31T10011",
+      "manufacturerPartNumber": "WB31T10011",
+      "price": "18.63",
+      "description": "This Drip Bowl, also known as a burner bowl or drip pan, is made to fit an element 8 inches in diameter and comes in chrome. The actual total diameter of this drip bowl is closer to 10 inches, but don't worry, it will fit your 8-inch burner. This bowl is used to catch drippings and food that falls when cooking on the oven element. The drip bowl might burn, become rusty, and wear down over time, and will need to be replaced. Replacing the drip pan is very easy. The elements on the oven must be removed to access the pan underneath. When replacing the bowl, make sure to line up the hole with the terminal block where the element plugs into, and always remove power to your appliance and ensure it is completely cool before commencing your repair. These drip bowls are sold individually, not as a set for your appliance, so you will need to purchase each separately if upgrading all the drip bowls for your range.",
+      "symptoms": [
+        "Element will not heat"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS244395-GE-WB31T10011-Drip-Bowl-8-Inch.htm?SourceCode=18"
+    },
+    {
+      "title": "Range Light Bulb - 40W",
+      "partSelectNumber": "PS8847348009",
+      "manufacturerPartNumber": "8009",
+      "price": "11.72",
+      "description": "This an authentic OEM 40-Watt replacement light bulb, used in a number of household appliances. It is specially designed to withstand extreme temperatures, which is why these replacement bulbs are most often used to light the inside of refrigerators and ranges. It features a standard socket base, which means you simply unscrew the burnt-out bulb and screw in the replacement. Depending on the appliance you may require a screwdriver or nut driver to access the light bulb. We recommend you wear work gloves while handling this replacement part. It is constructed of glass and metal and is sold individually. Depending on the appliance and location of the bulb within it, you may want to consider disconnecting power and using a flashlight for easier access to unscrewing and re-screwing in your bulb during this repair.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS884734-Whirlpool-8009-Light-Bulb-40W.htm?SourceCode=18"
+    }
+  ]
+}

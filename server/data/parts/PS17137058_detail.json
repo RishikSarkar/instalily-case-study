@@ -1,0 +1,26 @@
+{
+  "title": "General Electric Dishwasher Configured User Interface Control Board",
+  "partUrl": "https://www.partselect.com/PS17137058-GE-WD21X31902C-Configured-User-Interface-Control-Board.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$161.55",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS17137058",
+  "manufacturerPartNumber": "WD21X31902C",
+  "description": "General Electric Dishwasher Configured User Interface Control Board ★★★★★ ★★★★★ 19 Reviews PartSelect Number PS17137058 Manufacturer Part Number WD21X31902C This is the user interface control board for various dishwashers. The user interface panel is what you directly interact with on your dishwasher to start and stop it and select the specific cycle you want. If your user interface panel is not responding and you have tested your dishwasher to ensure no other part could be at fault, it will need to be replaced immediately for it to regain function. Replacing this panel will requires some disassembly of your dishwasher, and will require tools like a screwdriver, wrench, and a pair of pliers. This OEM user interface panel measures approximately 14-inches wide and is sold individually.",
+  "rating": 4.84,
+  "reviewCount": 19,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Brian from MANSFIELD, MA",
+    "title": "Dishwasher was randomly beeping when not in use. Then eventually the display wouldn’t light up.",
+    "content": "I first tested for 120volts to my dishwasher to verify it was getting power from my electrical panel. Then tested pins 2 and 5 on the control board to make sure there was 14 volts going to the user interface harness. After I verified that I knew it was the user interface that was bad. I watched a video I found on YouTube and followed it. This repair was fairly easy while watching the video and making sure that you use the correct pin out that comes in the box for your model. I’m not an appliance repair person and it took me about an hour start to finish. I’m going to attach the video I https://youtu.be/TI8cUjy5YOEhttps://www.youtube.com/watch?v=GN5t4VFgLCY"
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS17137058-GE-WD21X31902C-Configured-User-Interface-Control-Board.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS17137058-GE-WD21X31902C-Configured-User-Interface-Control-Board.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

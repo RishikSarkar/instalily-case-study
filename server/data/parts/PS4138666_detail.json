@@ -1,0 +1,27 @@
+{
+  "title": "Samsung Refrigerator Temperature Sensor",
+  "partUrl": "https://www.partselect.com/PS4138666-Samsung-DA32-10104N-Temperature-Sensor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$34.57",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS4138666",
+  "manufacturerPartNumber": "DA32-10104N",
+  "description": "Samsung Refrigerator Temperature Sensor ★★★★★ ★★★★★ 1 Review PartSelect Number PS4138666 Manufacturer Part Number DA32-10104N This a genuine OEM temperature sensor, designed for use with refrigerators, and is an individual part. This temperature sensor is responsible for detecting and adjusting the temperature in your refrigerator. If your refrigerator is having issues with being either too cold, or too warm, it is likely that this sensor needs to be replaced. To replace it, ensure that your refrigerator is turned off before you locate it with your user manual and replace it.",
+  "rating": 5,
+  "reviewCount": 1,
+  "symptoms": [
+    "Fridge too cold",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "Richard from GULFPORT, MS",
+    "title": "Evaporator frozen (refrigrator section) and allowing top section to lose cooling",
+    "content": "This is the Samsung French door refrigerator style that so many people have complained about freezing up and not cooling the top section. I first changed out the defrost thermostat and this did not correct the problem. I done a quick resistance check on the temp sensor that's mounted on the evaporator itself. The resistance would change when holding an ice cube on the sensor so I just assumed it was ok. PLEASE TAKE NOTE: When performing a resistance check on this sensor, make sure your readings match the Samsung temp/resistance chart in their literature. My sensor was way off calibration and was causing the freeze up. Its working as designed now and DW is happy again. Learn from my mistake."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS4138666-Samsung-DA32-10104N-Temperature-Sensor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS4138666-Samsung-DA32-10104N-Temperature-Sensor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

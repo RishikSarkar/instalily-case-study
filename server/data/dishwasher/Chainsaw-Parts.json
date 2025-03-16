@@ -1,0 +1,252 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Chainsaw Washer",
+      "partSelectNumber": "PS1250551890618229",
+      "manufacturerPartNumber": "90618229",
+      "price": "3.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12505518-DeWALT-90618229-Washer.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Drive Sprocket",
+      "partSelectNumber": "PS1250551790618228",
+      "manufacturerPartNumber": "90618228",
+      "price": "6.97",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12505517-DeWALT-90618228-Drive-Sprocket.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Pole Piece Sa",
+      "partSelectNumber": "PS16688554N611762",
+      "manufacturerPartNumber": "N611762",
+      "price": "35.66",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16688554-DeWALT-N611762-Pole-Piece-Sa.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Brush & Spring (Pair)",
+      "partSelectNumber": "PS102599572610009829",
+      "manufacturerPartNumber": "2610009829",
+      "price": "6.29",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10259957-Dremel-2610009829-Brush-Spring-Pair.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw CHAIN COVER",
+      "partSelectNumber": "PS1250996290609778",
+      "manufacturerPartNumber": "90609778",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12509962-DeWALT-90609778-CHAIN-COVER.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Shaft Lock Assembly",
+      "partSelectNumber": "PS102599582610009839",
+      "manufacturerPartNumber": "2610009839",
+      "price": "3.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10259958-Dremel-2610009839-Shaft-Lock-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Engine Fuel Filter",
+      "partSelectNumber": "PS9285148530095646",
+      "manufacturerPartNumber": "530095646",
+      "price": "4.99",
+      "description": "This fuel filter is for lawn and garden equipment engines. Fuel filter cleans the fuel before it reaches the carburetor. Work in a well-ventilated area when installing this part. Drain the fuel tank and disconnect the spark plug wire before beginning the repair.",
+      "symptoms": [
+        "Engine stops after a few seconds or minutes",
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9285148-Husqvarna-530095646-Engine-Fuel-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Carbon Brush Set",
+      "partSelectNumber": "PS170169592610053746",
+      "manufacturerPartNumber": "2610053746",
+      "price": "6.29",
+      "description": "Carbon Brush Set",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS17016959-Dremel-2610053746-Carbon-Brush-Set.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Fuel Line",
+      "partSelectNumber": "PS9472280530069247",
+      "manufacturerPartNumber": "530069247",
+      "price": "6.62",
+      "description": "This is the replacement fuel line 25 Inch for several OPE products that use small engines. The fuel line carries fuel from the tank to the carburetor. Over time, the fuel line can become badly clogged, and it can become brittle as well. When the fuel line is badly clogged or cracked, fuel can leak out and it can make it difficult to start or run the engine. To replace the fuel line, carefully disconnect the old line from the carburetor and from the fuel grommet, then replace it with the new line. This fuel line is 25 inches in length and is made of clear plastic. The fuel line is sold individually and is an OEM part sourced directly from the manufacturer.",
+      "symptoms": [
+        "Engine stops after a few seconds or minutes",
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9472280-Poulan-530069247-Fuel-Line.htm?SourceCode=18"
+    },
+    {
+      "title": "Chainsaw Rubber Gear Cap",
+      "partSelectNumber": "PS11868360562408002",
+      "manufacturerPartNumber": "562408002",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11868360-Ridgid-562408002-Rubber-Gear-Cap.htm?SourceCode=18"
+    }
+  ]
+}

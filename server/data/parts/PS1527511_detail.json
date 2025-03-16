@@ -1,0 +1,26 @@
+{
+  "title": "Refrigerator Temperature Sensor",
+  "partUrl": "https://www.partselect.com/PS1527511-Frigidaire-297110400-Temperature-Sensor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$65.37",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS1527511",
+  "manufacturerPartNumber": "297110400",
+  "description": "Refrigerator Temperature Sensor PartSelect Number PS1527511 Manufacturer Part Number 297110400 Also known as a thermistor.",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [
+    "Fridge too cold",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "",
+    "title": "",
+    "content": ""
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS1527511-Frigidaire-297110400-Temperature-Sensor.htm?SourceCode=18#Troubleshooting"
+  },
+  "context": "refrigerator"
+}

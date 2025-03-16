@@ -1,0 +1,248 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Troy-Bilt Fuel Tank Assembly W/Fuel Lines Incl. 29",
+      "partSelectNumber": "PS11812933753-06797",
+      "manufacturerPartNumber": "753-06797",
+      "price": "22.11",
+      "description": "The fuel tank assembly is responsible for storing and supplying fuel to the engine in lawn and outdoor power equipment. It includes the tank, fuel cap, and fuel lines. The fuel tank assembly will fail if the tank develops cracks or leaks, or if the fuel lines can become clogged. When the fuel tank assembly fails, you will notice fuel leakage, restricted fuel supply, stalling, difficulties starting and overall lower performance. Before beginning any repairs, first drain any remaining fuel from the tank for your safety. Disconnect the fuel lines from the tank and remove the fuel tank from the equipment. Position the new tank on to the mounting holes and secure it in place. Connect the fuel lines to the engine and vent to complete your repair.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11812933-MTD-753-06797-Fuel-Tank-Assembly-W-Fuel-Lines-Incl-29.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Grass Catcher Frame",
+      "partSelectNumber": "PS9988561647-04271-0637",
+      "manufacturerPartNumber": "647-04271-0637",
+      "price": "37.15",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9988561-MTD-647-04271-0637-Grass-Catcher-Frame.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Fuel Tank Assembly",
+      "partSelectNumber": "PS10009586753-06183",
+      "manufacturerPartNumber": "753-06183",
+      "price": "13.77",
+      "description": "This fuel tank assembly is supplied by the original manufacturer for use in trimmers. It is responsible for storing and transferring fuel to the engine for combustion. The assembly consists of a plastic tank, a fuel cap, a fuel filter, and the fuel lines which have a diameter of 0.25 inches. If the fuel tank is damaged, or the fuel lines are clogged, the assembly will need to be replaced. A faulty fuel tank assembly will result in fuel leakage, hard starting, rough idling, and poor equipment performance. To begin, drain the fuel from the tank. Disconnect the fuel lines and remove the mounting hardware that secures the assembly to the equipment. Pull off the old assembly and align the new one with the mounting holes. Secure the assembly in place and reconnect the fuel lines. Refill the fuel tank to complete the repair.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10009586-Bolens-753-06183-Fuel-Tank-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Line trimmer cutting head assembly",
+      "partSelectNumber": "PS16583608841-013303S",
+      "manufacturerPartNumber": "841-013303S",
+      "price": "15.69",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16583608-MTD-841-013303S-Line-trimmer-cutting-head-assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Throttle Cable",
+      "partSelectNumber": "PS10009725753-06831",
+      "manufacturerPartNumber": "753-06831",
+      "price": "11.83",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10009725-Bolens-753-06831-Throttle-Cable.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Rear Axle Assembly",
+      "partSelectNumber": "PS10023414911-04144B",
+      "manufacturerPartNumber": "911-04144B",
+      "price": "33.18",
+      "description": "Axle assembly attaches the rear wheels to the mower and allows the wheels to rotate. This part replaces part numbers 911-04144 and 911-04144A. Wear work gloves to protect your hands when installing this part.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10023414-MTD-911-04144B-Rear-Axle-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Chute Assembly",
+      "partSelectNumber": "PS16388457631-04354C",
+      "manufacturerPartNumber": "631-04354C",
+      "price": "43.06",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16388457-Husky-631-04354C-Chute-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Clip-Hold Down (Nylon)",
+      "partSelectNumber": "PS99037661724869099",
+      "manufacturerPartNumber": "1724869099",
+      "price": "11.36",
+      "description": "Hold-down clips, also known as retaining, locking or fastening clips, are designed to secure and fasten specific parts within equipment, and the use depends on the type and model. This hold down clip is used to secure the chute of various models of snowblowers, and is sold as an individual OEM part, without any securing hardware. Made of nylon, this clip secures to the chute with two screws and two washers. If you notice a wobbly or insecure chute resulting in excessive vibrations from the chute, check to make sure the clip is in-place before inspecting it for damage and ordering a replacement. To replace this clip, you will need to gain access to the chute, with either a screwdriver or wrench, and once you can access it, it is as simple as unscrewing the old clip and installing the new clip and rest of the assembly.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9903766-MTD-1724869099-Clip-Hold-Down-Nylon.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Edger Blade",
+      "partSelectNumber": "PS9129938781-0080-0637",
+      "manufacturerPartNumber": "781-0080-0637",
+      "price": "9.16",
+      "description": "This Edger Blade is a black, metal blade which is sold individually and comes certified from the manufacturer. Installation is rated as \"Easy\" and requires a socket set and wrench set. This blade attaches to the drive shaft and is used for edging the grass around driveways and walkways. If this part becomes worn/fatigued/damaged (which may happen after hitting the pavement) you will notice an odd vibration and poor trimming, at which time the part should be replaced.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9129938-MTD-781-0080-0637-Edger-Blade.htm?SourceCode=18"
+    },
+    {
+      "title": "Troy-Bilt Cutting Head Assembly",
+      "partSelectNumber": "PS10009816753-08169",
+      "manufacturerPartNumber": "753-08169",
+      "price": "14.01",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10009816-MTD-753-08169-Cutting-Head-Assembly.htm?SourceCode=18"
+    }
+  ]
+}

@@ -7,7 +7,7 @@ function ChatWindow() {
 
   const defaultMessage = [{
     role: "assistant",
-    content: "Hi, how can I help you today?"
+    content: "Hi there! I'm your PartSelect assistant. I can help you find refrigerator and dishwasher parts, check compatibility, assist with installations, and support your purchase. How can I help you today?"
   }];
 
   const [messages,setMessages] = useState(defaultMessage)
@@ -51,7 +51,7 @@ function ChatWindow() {
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Type a message..."
+              placeholder="Ask about parts, compatibility, or installation..."
               onKeyPress={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
                   handleSend(input);
@@ -60,7 +60,7 @@ function ChatWindow() {
               }}
               rows="3"
             />
-            <button className="send-button" onClick={handleSend}>
+            <button className="send-button" onClick={() => handleSend(input)}>
               Send
             </button>
           </div>

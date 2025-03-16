@@ -1,0 +1,284 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Dryer Thermal Fuse",
+      "partSelectNumber": "PS11741460WP3392519",
+      "manufacturerPartNumber": "WP3392519",
+      "price": "16.89",
+      "description": "The Dryer Thermal Fuse (Thermal Cutoff, Temperature Fuse) is a 2 by ½ inch, white, plastic safety mechanism that stops the flow of electricity to the motor circuit when a dryer overheats. If the fuse is missing or broken, your dryer will not start. A thermal fuse fails when the exhaust temperature exceeds the fuse rating, that is when the temperature rises above the temperature that the fuse is designed to handle. This can occur when a heating element is shorted, a regulating thermostat or thermister fails, or with a partially restricted exhaust vent. The fuse attaches to the blower wheel housing. It must be replaced when there is no longer continuity between the terminals. This is a one-time fuse, meaning it cannot be re-set. The replacement part features two 3/16 inch terminals.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Heat stays on after drum has stopped",
+        "Not Heating"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11741460-Whirlpool-WP3392519-Dryer-Thermal-Fuse.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Multi Rib Belt - 92-1/4\"",
+      "partSelectNumber": "PS346995341241",
+      "manufacturerPartNumber": "341241",
+      "price": "12.89",
+      "description": "This dryer drum belt (Whirlpool Dryer Belt, Drive Belt) has four ridges, three grooves and is 1/4\" wide, and 92 1/4 inches in length. It comes in black and is made of rubber. The belt transfers the rotation of the motor to turn the drum. The belt attaches to the drum, idler pulley, and motor pulley.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Heat stays on after drum has stopped",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS346995-Whirlpool-341241-Multi-Rib-Belt-92-1-4-quot.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Maintenance Kit",
+      "partSelectNumber": "PS3730874392065",
+      "manufacturerPartNumber": "4392065",
+      "price": "29.89",
+      "description": "The drum support roller kit (Dryer Repair Kit) allows the dryer to tumble properly by supporting the drum cylinder. The idler pulley provides the tension required for a multi-ribbed belt. The belt attaches to the drum, idler pulley, and motor pulley. If your dryer is damaged, it may be making loud, squeaking, and/or squealing noises while the drum is turning. This is from normal wear and tear. The drum may eventually stop turning all together. This is a sign the part should be replaced. This is one complete maintenance kit. The kit includes the drum belt, drum support rollers, one idler pulley, four tri-rings, and one clip. The parts are constructed of plastic, metal, and rubber, and come in black/white/silver.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Heat stays on after drum has stopped",
+        "Marks left on clothes"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS373087-Whirlpool-4392065-Maintenance-Kit.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Heating Element - 240V 5400W",
+      "partSelectNumber": "PS334313279838",
+      "manufacturerPartNumber": "279838",
+      "price": "50.92",
+      "description": "The heating element (Flat Can Heating Element 5400W, Heating Element, Whirlpool Dryer Heating Element, Dryer Heating Element) provides heat to the dryer. It is metal and measures 10.5 inches long, 7.5 inches wide, 2 inches deep. The element attaches to the heater housing. This part can break as a result of wear and tear. This can be material fatigue or prolonged high temperature exposure. If broken your clothes may not dry because of a lack of heat. It must be replaced when there is no longer continuity between the terminals. First check the thermal fuse on the blower housing before deciding to replace the heating element.",
+      "symptoms": [
+        "Heat stays on after drum has stopped",
+        "Noisy",
+        "Not Heating"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS334313-Whirlpool-279838-Heating-Element-240V-5400W.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Repair Kit",
+      "partSelectNumber": "PS3730884392067",
+      "manufacturerPartNumber": "4392067",
+      "price": "47.87",
+      "description": "The Whirlpool Dryer Repair Kit is a universal maintenance kit for 27-inch dryers, compatible with various models from Whirlpool, Kenmore, Maytag, and others. It includes a belt, drum rollers, an idler pulley, clips, and a washer to fix common issues like noise and improper drum rotation. Installation requires disassembling the dryer to replace parts using standard tools. Ensure the dryer is unplugged before starting. This durable OEM kit provides reliable repairs for quieter, more efficient operation.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Marks left on clothes",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS373088-Whirlpool-4392067-Dryer-Repair-Kit.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Drive Belt",
+      "partSelectNumber": "PS16542496WE03X29897",
+      "manufacturerPartNumber": "WE03X29897",
+      "price": "36.10",
+      "description": "This Drive Belt is 89.5\" long and comes in black, featuring four ribs on the inside for a better grip. This is a long belt that wraps all the way around the dryer drum, around a tension pulley, and then around the drive motor pulley, allowing all the parts to work together, spinning the drum as the motor rotates. If the drum will not turn when the dryer is turned on the belt is likely broken. It is common for belts to stretch or become brittle over time, which is what leads to the breakage. If broken, it should be replaced; the drum simply cannot spin without this belt. Refer to your model number and user manual to check if this part is right for you. Ensure you use work gloves to protect your hands from sharp internal parts during this repair. Please note: When comparing the length of your old belt to the length of the belt as stated here, remember that a small amount of stretching and contortion may occur with belts over time for a range of different reasons. Unless your belt is drastically different in length, this belt is what you are looking for despite any small inaccuracies. You will need to remove power to your appliance, remove the main panel, and access the motor drive to slip your new belt back into place.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Heat stays on after drum has stopped",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16542496-GE-WE03X29897-Drive-Belt.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Drum Bearing Slide - Green (Sold individually)",
+      "partSelectNumber": "PS6447706WE1M1067",
+      "manufacturerPartNumber": "WE1M1067",
+      "price": "14.40",
+      "description": "This original equipment manufacturer Drum Bearing Slide is a plastic, green, easy-to-install part for your dryer. It replaces the dryer's front drum slide to allow for easier movement. You'll know if this part is an issue if your dryer is unable to tumble properly or is very noisy. Damage can come from regular use. As the slides start to break down it may cause your dryer to make noise or not dry clothes in the usual amount of time. You will need to purchase two for both sides of your dryer. They attach to the outer-most sides of the bearing. The manufacturer recommends replacing both slides at the same time. Take this opportunity to clean out the lint and dust in the dryer, to keep it running smoothly. This is a genuine replacement part that comes directly from the manufacturer. This item is sold individually. The part attaches to the outermost side of the bearing. Although this part is denoted as being \"Green\" in its title, many users and technicians have noted that its true colour is closer to a dark gray or black.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Marks left on clothes",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS6447706-GE-WE1M1067-Drum-Bearing-Slide-Green-Sold-individually.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Drum Bearing Slide - White (Sold individually)",
+      "partSelectNumber": "PS755842WE1M504",
+      "manufacturerPartNumber": "WE1M504",
+      "price": "18.57",
+      "description": "This authentic, white Drum Bearing Slide, also known as the bearing drum slide, glide, or pad, is a plastic, easy-to-install part for your dryer. It replaces the dryer's front drum slide to allow for easier movement. You'll know if this part is an issue if your dryer is unable to tumble properly or is very noisy. Damage can come from regular use. The part attaches to the outermost side of the bearing. Check both slides for signs of wear, because they often wear at the same rate, and should be replaced at the same time; there are 2 of these particular slides per dryer. This part is sold individually, so you'll need to purchase multiple parts if replacing both at the same time.",
+      "symptoms": [
+        "Marks left on clothes",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS755842-GE-WE1M504-Drum-Bearing-Slide-White-Sold-individually.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Drum Support Roller Kit",
+      "partSelectNumber": "PS157007012001541",
+      "manufacturerPartNumber": "12001541",
+      "price": "13.49",
+      "description": "The drum support roller (Dryer Drum Support Roller, Drum Roller and Washer Assembly) holds the drum in the proper position while it spins on the support wheels. This part rotates on the roller shaft which is attached to the rear bulkhead. This part should be replaced whenever it does not rotate easily on the roller shaft. If you’re noticing a thump, scrape, or squeal while your drum is spinning, it may be your drum support rollers. Take a look at your existing drum rollers; if one or both of them are worn or broken, you’ll need to replace them. The drum support roller is subject to constant wearing when your dryer is in use, which causes them to break down over time. This part features 1 roller and 2 small washers, and measures approximately 3 inches in diameter. It is constructed with a combination of plastic, metal and rubber. This model comes in black/beige.",
+      "symptoms": [
+        "Drum Not Spinning",
+        "Marks left on clothes",
+        "Noisy"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS1570070-Whirlpool-12001541-Drum-Support-Roller-Kit.htm?SourceCode=18"
+    },
+    {
+      "title": "Dryer Lint Filter",
+      "partSelectNumber": "PS3531962ADQ56656401",
+      "manufacturerPartNumber": "ADQ56656401",
+      "price": "54.23",
+      "description": "The Dryer's Lint Filter is used to collect lint during the dryer cycle as it passes through the dryer vent, in order to prevent damage to the machine. This manufacturer-approved part comes in gray, measures around 12 inches wide by 11 inches high, and is easy to install. It slides into the lint filter slot in your dryer. If there is visible damage to the screen then it's time to replace the part. We recommend that you thoroughly clean the lint filter before every load, but even with good maintenance, this hard-working part is often damaged or worn over time. If your dryer isn't drying quickly, the filter may be responsible. The manufacturer has made an authorized substitution to the lint filter. Special details: When replacing lint screen ADQ56656401 you may need to also replace lint screen housing MCK49049101 and lint screen guide MEA49050001 to prevent items from catching on the lint screen, depending on your model.",
+      "symptoms": [
+        "Door won’t close",
+        "Marks left on clothes"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS3531962-LG-ADQ56656401-Dryer-Lint-Filter.htm?SourceCode=18"
+    }
+  ]
+}

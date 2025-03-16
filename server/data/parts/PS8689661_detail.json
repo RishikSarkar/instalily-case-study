@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Compressor Start Relay Kit",
+  "partUrl": "https://www.partselect.com/PS8689661-Frigidaire-5304491941-Refrigerator-Compressor-Start-Relay-Kit.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$105.57",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS8689661",
+  "manufacturerPartNumber": "5304491941",
+  "description": "Refrigerator Compressor Start Relay Kit ★★★★★ ★★★★★ 1 Review PartSelect Number PS8689661 Manufacturer Part Number 5304491941 Compressor start relay kit is an original equipment manufacturer (OEM) part that fits some Kenmore, Frigidaire, Electrolux, Crosley, Gibson and White-Westinghouse refrigerators. It also fits some Kenmore, Frigidaire and Gibson upright freezers. Compressor start relay kit includes the compressor start relay, run capacitor, wire harness adapter, 2 wire terminals, 2 wire connectors, 2 pieces of wire connection shrink tubing, the wire retaining clip and kit instructions sheet. Clarification of instructions: Kit 5304491941 now uses a wire harness with white wires; attach the red compressor power wire to the wire harness adapter's white wire that plugs into the start device terminal at the outside edge of the start device. Replaces original refrigerator and freezer compressor start relay part numbers 216649316, 218721119, 241524601, 241524605 and 5304468029. Fits some refrigerators in the following series: Kenmore and Kenmore Elite 253; Frigidaire FRS, FRT, FRX, FSC, GLH, GLR, GS2, NGS, PHS, PLH and PLRS; Electrolux E23; Crosley CRSE; Gibson GRS and GRT; and White-Westinghouse WRS and WRT. Also fits some upright freezers in these series: Kenmore 253; Frigidaire FFU; and Gibson GFU.",
+  "rating": 4,
+  "reviewCount": 1,
+  "symptoms": [
+    "Freezer section too warm",
+    "Fridge and Freezer are too warm",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "MARK from LIBERTY LAKE, WA",
+    "title": "Rear of upper shelf would freeze, while the rest of the freezer was dripping wet",
+    "content": "We opened our freezer last week only to find the bottom 2/3 was barely cold, while only the rear of the upper shelf was cold.  In fact, it was covered in frost, despite being a frost-free model. Our frozen veggies were slushy, not rock hard, and our frozen juices were all liquid.  We defrosted the freezer, plugged it back in, but immediately noticed that we didn't hear the 'whhoooooosh' that you typically hear when you close the freezer door.  After 30 minutes, the rear upper shelf was frosty again, but the rest was still at room temp. We figured the freezer was a goner, so we started looking at new freezers.  I headed online to see if I could fix it, and I eventually found this site.  I had learned online that these symptoms can be caused by either a bad capacitor, or a bad controller (which the capacitor plugs in to).  I guess you can't necessarily tell which of the two parts is defective, so I chose to order/replace both of them.  I ordered the correct parts from partselect.com, and they alerted me that Frigidaire has a new replacement part for the capacitor.  When the parts arrived (quickly, ftw!), I unplugged the freezer and snipped the two wires leading to the controller.  Next I unplugged the controller from the compressor housing.  I spliced the replacement controller's wires into the freezer's wires (using my own wire nuts...as none were included with my order  :(     ).  I snapped the new controller onto the compressor mounting, and then plugged the capacitor in.  I plugged the freezer back in, and it was time for the moment of truth.   The interior light of the freezer came on, and I could hear the compressor 'humming'.   I could hear it humming before the repair, so the big test was to see if it got cold.  I was nervous because the freezer DIDN'T make the 'whoooshing' noise right away, but after just an hour, the 'test' mug of water was already turning into ice.  It was fixed!!!!  If you have these symptoms, you CAN do this!!!  Unplug the freezer.  Cut two wires.  Unplug the controller.  Splice two wires.  Plug in the new controller.  Snap in the new capacitor.  DONE!!!"
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS8689661-Frigidaire-5304491941-Refrigerator-Compressor-Start-Relay-Kit.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS8689661-Frigidaire-5304491941-Refrigerator-Compressor-Start-Relay-Kit.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

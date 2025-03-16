@@ -1,0 +1,27 @@
+{
+  "title": "Refrigerator Evaporator Fan Motor",
+  "partUrl": "https://www.partselect.com/PS12728811-Frigidaire-242077705-Evaporator-Fan-Motor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$109.74",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS12728811",
+  "manufacturerPartNumber": "242077705",
+  "description": "Refrigerator Evaporator Fan Motor ★★★★★ ★★★★★ 9 Reviews PartSelect Number PS12728811 Manufacturer Part Number 242077705 This is a blower motor, also known as evaporator fan motor, for a refrigerator. It features a 3-wire connector. The motor powers the fan to circulate air through the fridge to your fresh food compartment. This allows for efficient cooling.",
+  "rating": 4.11,
+  "reviewCount": 9,
+  "symptoms": [
+    "Fridge too warm",
+    "Noisy"
+  ],
+  "installationInstructions": {
+    "author": "Roger from TRURO, IA",
+    "title": "Refrigerator not cooling, Freezer working fine",
+    "content": "Frig area was at about 50 degrees and would not get cooler.   Freezer was working great.   Empty the freezer and remove the two screws that hold the back panel of the inside of the freezer on.   Pull the panel out and you will see the fan that is mounted to the back of the panel.   If the fan is not running, disconnect it (quick connector) and check to see if there is voltage coming to it from the connector (should be 120VAC between the two wires).  If there is power, and the fan was not working, replace the fan.  Fan just snaps into the holder on the back panel and plugs into the quick connector.  Make sure you clear any ice build-up in the hole between the freezer and the frig that the fans blows through.  Put it back together and verify the fan runs."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS12728811-Frigidaire-242077705-Evaporator-Fan-Motor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS12728811-Frigidaire-242077705-Evaporator-Fan-Motor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

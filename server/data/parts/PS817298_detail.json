@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Run Capacitor",
+  "partUrl": "https://www.partselect.com/PS817298-Frigidaire-218909912-Run-Capacitor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$58.87",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS817298",
+  "manufacturerPartNumber": "218909912",
+  "description": "Refrigerator Run Capacitor ★★★★★ ★★★★★ 3 Reviews PartSelect Number PS817298 Manufacturer Part Number 218909912 This part helps the compressor kick on and off while maintaining a constant temperature to keep things frozen in your freezer.",
+  "rating": 4.33,
+  "reviewCount": 3,
+  "symptoms": [
+    "Freezer section too warm",
+    "Fridge and Freezer are too warm",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "eric from inglewood, TN",
+    "title": "Faulty Controller and Possibly Capacitor",
+    "content": "After building a test box and determining the Controller was bad simply ordered parts and installed.   Installation was a little difficult due to locking spades on electrical connections.   Unplug all power from freezer.  Remove Bail wire from controller capacitor unit and remove from compressor by pulling STRAIGHT from compressor body to avoid bending contacts.   Use a very small instrumentation screwdriver to release locking spade on yellow and white wires. To unlock slide screwdriver in slot along wire entry to controller body while gently pulling on wire.   Note position of wires and replace on new unit in same position/order.  Plug new run capacitor into new controller being careful to orient capacitor to proper position (hole matches guide on controller unit).   Plug newly installed controller and capacitor into condensor and replace bail wire.Make sure timer is not in defrost mode - manually advance timer if necessary to ensure timer is in run mode.  Turn temperature control to coldest setting.  Plug in and hopefully enjoy the humming noise of your newly repaired and operational compressor and freezer."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS817298-Frigidaire-218909912-Run-Capacitor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS817298-Frigidaire-218909912-Run-Capacitor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

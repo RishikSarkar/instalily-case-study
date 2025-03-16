@@ -1,0 +1,28 @@
+{
+  "title": "Dishwasher HEATING ELEMENT",
+  "partUrl": "https://www.partselect.com/PS16729156-GE-WD05X30818-HEATING-ELEMENT.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$48.35",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS16729156",
+  "manufacturerPartNumber": "WD05X30818",
+  "description": "Dishwasher HEATING ELEMENT ★★★★★ ★★★★★ 26 Reviews PartSelect Number PS16729156 Manufacturer Part Number WD05X30818 The element heating assembly is found at the bottom of the dishwasher tub, and helps to warm the water in the wash cycle, and dry the dishes afterward. If the water does not heat up during the wash cycle, or the dishes are not being dried properly, you may need to replace the element heating assembly in your dishwasher. This element heating assembly is horseshoe-shaped and is sold individually. To replace your heating assembly, first make sure it has cooled down, then simply slide the connecting tabs out. Replace with a new heating element and your problem should be solved.",
+  "rating": 4.12,
+  "reviewCount": 26,
+  "symptoms": [
+    "Leaking",
+    "Not cleaning dishes properly",
+    "Not drying dishes properly"
+  ],
+  "installationInstructions": {
+    "author": "David from SHAWNEE, KS",
+    "title": "Diswasher not drying dishes",
+    "content": "Didn't actually do the compete repair but got close.  Pulled out dishwasher, disconnected and checked continuity on the existing heating element (about 16 ohms)  the new element was also about 16 ohms.   This indicates they both were working fine and no need for replacement.  Next step would have been to swap the elements would have been simple.  Tried to replace main board as well, still not the issue so giving up and replacing the dishwasher.   It wasn't the high temp cut off thermostat either incidentally and no error codes in maintenance mode.  Check continuity of your existing element before ordering to save aggravation."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16729156-GE-WD05X30818-HEATING-ELEMENT.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16729156-GE-WD05X30818-HEATING-ELEMENT.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

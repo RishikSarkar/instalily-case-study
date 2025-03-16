@@ -1,0 +1,28 @@
+{
+  "title": "Litton Refrigerator Run Capacitor",
+  "partUrl": "https://www.partselect.com/PS11743364-Whirlpool-WP65889-4-Run-Capacitor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$66.66",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11743364",
+  "manufacturerPartNumber": "WP65889-4",
+  "description": "Litton Refrigerator Run Capacitor ★★★★★ ★★★★★ 5 Reviews PartSelect Number PS11743364 Manufacturer Part Number WP65889-4 This part helps the compressor kick on and off while maintaining a constant temperature to keep things frozen in your freezer. If you are noticing temperature issues with your refrigerator or freezer, the run capacitor may need replacing. This repair is fairly easy to complete, and the only tools you will require are a 1/4 inch nut driver, and a 1/4 inch socket with a small ratchet. The run capacitor is located in the back of the fridge, so you will need to make sure you have room to work on this repair. Make sure to unplug the fridge prior to beginning the repair.",
+  "rating": 3.2,
+  "reviewCount": 5,
+  "symptoms": [
+    "Clicking sound",
+    "Freezer section too warm",
+    "Fridge and Freezer are too warm"
+  ],
+  "installationInstructions": {
+    "author": "Mark from West Chester, PA",
+    "title": "Timer won't advance for auto-sensing cycles. Low Heat.",
+    "content": "First I unplugged the dryer from the wall outlet.  Then, removed the access panel in the lower front (held on by 2 screws near the floor).  Then, I removed the black plastic air duct (held by 3 screws) in front of the blower.  Then, with a Sharpie marker, next to each wire terminal lug, I labeled on the chassis the COLOR of each wire where it plugs on to a terminal lug (for proper wiring re-assembly later).  Then, thru the lower front, I reached into the lower left rear of the dryer to remove the heating element assembly from its metal duct (held by 3 or 4 screws) - it slides down a bit, then it is easily removable.  I layed the element on the floor in front of the dryer - all wiring still intact.   Then, using the NEW HEATING ELEMENT and SENSORS ordered, I assembled them to match the original, re-using screws off of the old unit - and moving the wiring one-by-one from the original to the new assembly.  I then installed the new heating element assembly into the duct at the lower rear of the dryer.  I then replaced the 2 sensors on the front metal panel of blower housing, with new parts from my order, re-using the original wiring and screws.  Then I re-installed the black plastic duct onto the front of the blower.   Then, on the top of the dryer, I dissassembled the control panel from the rear, by removing 5 screws.  I then found the resistor mounted on the back of the timer, and replaced it with the new one.  Since the new resistor did not come with terminal lugs crimped on its wires, I had to cut the terminal lugs off of the original resistor and solder them onto the new resistor.  I then reassembled the control panel.  I then plugged the dryer back into the wall outlet and did a test run with no clothes.  IT WORKED !!  Then I reinstalled the lower front access panel and ran the dryer with wet clothes.  IT WORKED !!"
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11743364-Whirlpool-WP65889-4-Run-Capacitor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11743364-Whirlpool-WP65889-4-Run-Capacitor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

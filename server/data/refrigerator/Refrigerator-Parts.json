@@ -1,0 +1,276 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Refrigerator Door Shelf Bin",
+      "partSelectNumber": "PS12364199242126602",
+      "manufacturerPartNumber": "242126602",
+      "price": "35.15",
+      "description": "This manufacturer-certified Refrigerator Door Shelf Bin, also known as a crisper bin or door shelf bin, is made of clear plastic, and is easy to install. It is used to hold items in the fridge, like jars, cans, and condiments and you'll be able to visually see if the part is broken or cracked. This particular shelf attaches to the fridge door. You can check if this model is right for your appliance by checking your user manual and model number. This part should simply snap into place without the need for any tools as part of the repair. Just carefully line up the slots on the door with the slots on the bin and slide the bin down to completely lock it into place. The part is sold individually, and fits many different types of side-by-side refrigerators.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12364199-Frigidaire-242126602-Refrigerator-Door-Shelf-Bin.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Ice and Water Filter",
+      "partSelectNumber": "PS11701542EDR1RXD1",
+      "manufacturerPartNumber": "EDR1RXD1",
+      "price": "62.38",
+      "description": "The EDR1RXD1 water filter provides clean, fresh-tasting water by reducing contaminants such as lead, chlorine, and particulates. Designed for easy installation, this filter ensures your refrigerator water and ice are safe and refreshing with every use",
+      "symptoms": [
+        "Ice maker dispenses too little ice",
+        "Ice maker not making ice",
+        "Ice maker won’t dispense ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11701542-Whirlpool-EDR1RXD1-Refrigerator-Ice-and-Water-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Door Shelf Bin",
+      "partSelectNumber": "PS11752778WPW10321304",
+      "manufacturerPartNumber": "WPW10321304",
+      "price": "36.18",
+      "description": "This refrigerator door bin is a genuine OEM replacement designed to fit many side-by-side refrigerator models. Compatible with brands like KitchenAid, Maytag, and Amana, it attaches to the interior door, providing storage for jars and bottles. Featuring a clear design with white trim, this bin is both durable and functional. Installation is tool-free—simply align and snap into place. Verify your refrigerator’s model number before ordering to ensure compatibility, as dimensions may vary slightly. Restore your refrigerator's storage capacity and organization with this high-quality replacement door bin.",
+      "symptoms": [
+        "Door won’t open or close",
+        "Ice maker not making ice",
+        "Ice maker won’t dispense ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11752778-Whirlpool-WPW10321304-Refrigerator-Door-Shelf-Bin.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Door Shelf Retainer Bar",
+      "partSelectNumber": "PS734935240534901",
+      "manufacturerPartNumber": "240534901",
+      "price": "37.89",
+      "description": "This door shelf retaining bar, also known as refrigerator door bar retainer or fridge door rack, is a genuine part sourced from the original manufacturer. It is a white This manufacturer-certified Door Shelf Retainer Bar, sometimes otherwise known as the door rack or bar retainer, is a white, plastic part which can be easily installed onto the inside of the refrigerator or freezer door to hold items on the door shelves. It holds items in your fridge and will show physical damage if broken or warped, at which time it should be replaced. Check your user manual and model number to see if this part is right for you. No tools are required for this installation, the part should simply snap into place. This part measures roughly 25 inches wide, 3 inches high, and 5 inches deep. This part is sold individually, and we recommend checking the other door shelf retaining bars on your refrigerator or freezer at the same time as ordering this part to ensure that no others need to be replaced, as they often wear or warp at similar speeds.",
+      "symptoms": [
+        "Door won’t open or close",
+        "Leaking"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS734935-Frigidaire-240534901-Door-Shelf-Retainer-Bar.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Door Shelf Bin - White",
+      "partSelectNumber": "PS11739091WP2187172",
+      "manufacturerPartNumber": "WP2187172",
+      "price": "31.89",
+      "description": "The white refrigerator door bin is an essential component for maximizing the storage capacity of your appliance. Measuring approximately 16.25\" wide, 3.25\" high, and 6.25\" deep, it securely holds jars, bottles, and other items in an accessible location on the refrigerator door. This bin is made from sturdy materials to withstand daily use and is designed to fit seamlessly into compatible refrigerator models. Installation is straightforward—simply follow the instructions provided in your owner’s manual. Confirm compatibility by matching the bin’s dimensions to your appliance before purchasing.",
+      "symptoms": [
+        "Door won’t open or close",
+        "Ice maker not making ice",
+        "Leaking"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11739091-Whirlpool-WP2187172-Refrigerator-Door-Shelf-Bin-White.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Water Filter",
+      "partSelectNumber": "PS11722130EDR4RXD1",
+      "manufacturerPartNumber": "EDR4RXD1",
+      "price": "62.38",
+      "description": "This water filter (Whirlpool EveryDrop Refrigerator Water Filter, Single Turn Filter) purifies water going to the water dispenser and sometimes the icemaker as well. This part should be replaced if it is causing reduced water flow or just replaced periodically per the owner manual. Replacing this water filter may fix a noisy or leaking fridge, a fridge that is not dispensing water (or reduced flow rate), and an ice maker that is not making ice at all, or not making enough ice. This filter is white, sold individually and measures 8 inches by 3 inches in diameter. This water filter has been updated by the manufacturer. It may appear different but will still function the same. It is sold individually.",
+      "symptoms": [
+        "Fridge too cold",
+        "Ice maker dispenses too little ice",
+        "Ice maker not making ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11722130-Whirlpool-EDR4RXD1-Refrigerator-Water-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Crisper Drawer with Humidity Control",
+      "partSelectNumber": "PS11739119WP2188656",
+      "manufacturerPartNumber": "WP2188656",
+      "price": "72.78",
+      "description": "The crisper drawer (Crisper Pan, Refrigerator Crisper Drawer) with humidity control is meant to keep your vegetables and fruit as fresh as possible by allowing you to regulate the humidity levels within the drawer. It attaches on the inside of your refrigerator to the bottom of the crisper shelf. This drawer can break from misuse or accidental damage. It is also subject to material fatigue over time. If broken or damaged, it may be difficult to slide the drawer in and out, and it should be replaced. This plastic drawer measures 14.92 inches long, 7.6 inches high, and 16.5 inches wide and comes in white/clear.",
+      "symptoms": [
+        "Clicking sound",
+        "Door Sweating",
+        "Door won’t open or close"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11739119-Whirlpool-WP2188656-Refrigerator-Crisper-Drawer-with-Humidity-Control.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Water Filter - White",
+      "partSelectNumber": "PS11704498EPTWFU01",
+      "manufacturerPartNumber": "EPTWFU01",
+      "price": "64.97",
+      "description": "This OEM refrigerator filter is for french door and side-by-side door types and is located in the back, top-right of your appliance. By absorbing heavy metals, pharmaceuticals, pesticides, chlorine, and much more, this filter provides delicious and healthy drinking water. This filter measures 2 inches deep, 9 inches high, 2 inches wide, and weighs 0.9 lbs. The installation is quick and easy with a push and twist feature. Don't forget to run water through the dispenser for about three minutes or 1.5 gallons to prepare the filter before use. For best performance replace this filter every six months.",
+      "symptoms": [
+        "Ice maker not making ice"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11704498-Frigidaire-EPTWFU01-Refrigerator-Water-Filter-White.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Water Filter",
+      "partSelectNumber": "PS16217433XWFE",
+      "manufacturerPartNumber": "XWFE",
+      "price": "79.91",
+      "description": "This water filter is found in the rear upper-right corner of the interior of the refrigerator. If your model has a replacement indicator light it will turn red to signal the need for a replacement. If your model does not have an indicator light, the filter cartridge should be replaced every six months or earlier if you notice a decrease in the flow of water from the dispenser. The filter media is carbon black and reduces leads, some pharmaceuticals, and fifty other contaminates. It is 2 inches deep, 6 inches high, 2.25 inches wide and weighs approximately 1 lbs. When it comes time to replace the filter, first discard the old one by turning it to the left to remove. It will release itself when it has been turned far enough. Installation instructions are quick and simple but can vary slightly depending on if it is a bottom-freezer, side-by-side or multi-door bottom-freezer model. Refer to the user instructions for you filter. Do not forget to reset the filter change indicator if applicable. In bottom-freezer and side-by-side models this is done by pressing and holding the RESET WATER FILTER bottom for three seconds. On a multi-door bottom-freezer model, press the button underneath the Confirm Filter Change message while the water is dispensing. On select models this reset is done automatically once a new filter is installed.",
+      "symptoms": [
+        "Not dispensing water"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16217433-GE-XWFE-Refrigerator-Water-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Refrigerator Water Filter",
+      "partSelectNumber": "PS10063209RPWFE",
+      "manufacturerPartNumber": "RPWFE",
+      "price": "92.32",
+      "description": "This NSF-certified water filter helps to improve the taste, quality, and health of your water by removing a number of contaminants including mercury, lead, and trace pharmaceuticals. The filter should be replaced every six month or after 300 gallons of water have been filtered. If you are unsure if your filter is due for replacement, another indicator is if the water flow from the dispenser has slowed down considerably. Replacing this part is a simple task that does not require any tools or shutting off the water or power supply to your fridge. Once the new filter has been installed, be sure to run at least two gallons of water through before consuming.",
+      "symptoms": [
+        "Ice maker not making ice",
+        "Not dispensing water"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10063209-GE-RPWFE-Refrigerator-Water-Filter.htm?SourceCode=18"
+    }
+  ]
+}

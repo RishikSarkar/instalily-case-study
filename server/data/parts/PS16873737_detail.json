@@ -1,0 +1,26 @@
+{
+  "title": "Dishwasher Main Control Board",
+  "partUrl": "https://www.partselect.com/PS16873737-GE-WD21X32165-Main-Control-Board.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$100.00",
+  "originalPrice": "$125.00",
+  "inStock": true,
+  "partSelectNumber": "PS16873737",
+  "manufacturerPartNumber": "WD21X32165",
+  "description": "Dishwasher Main Control Board ★★★★★ ★★★★★ 3 Reviews PartSelect Number PS16873737 Manufacturer Part Number WD21X32165 This main control board is a genuine OEM part that is designed for dishwashers. It is responsible for controlling the operation of the dishwasher. It monitors all the dishwasher cycles including wash, rinse, dry, and sanitization. It receives input from the control panel and sends commands to various components of the dishwasher, such as the motor, pump, heating element, and sensors, to control the different cycles and functions of the appliance. Signs of a faulty control board include an unresponsive control panel, error codes, interrupted wash cycles, or a burning smell, which indicates a short circuit.",
+  "rating": 4.33,
+  "reviewCount": 3,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Glen from WARDEN, WA",
+    "title": "Dishwasher stopped working",
+    "content": "This didn't work out well. At the beginning of September the control panel in the door started to work erratically, the lighted buttons did not light up as expected. I ordered a replacement board and installed it.CONFIGURED UI SERVICE CONTROL Part #: PS16618944This did not help, so I ordered another control board and installed it.CONFIGURED SERVICE MACHINE CONTROL BOARDPart #: PS16226072.This did not help. This control board has a small orange fuse that looks like an old fashioned transistor. it was fine, as was the fuse on the previous control board.There were two things about the Control boards that might help someone figure out what went wrong. When I took out the original control board, there was evidence of component overheating. When I installed the new control board there was a green light that was blinking.I had hoped to complete this repair, but we have been without a dishwasher for over a month, so I bought a new one.(I am a competent Instrumentation and Controls technician)It could be that there is a bigger issue here; a major component failure.If anyone has some suggestions to try, I would like to repair the machine and sell it as a used appliance."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16873737-GE-WD21X32165-Main-Control-Board.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16873737-GE-WD21X32165-Main-Control-Board.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

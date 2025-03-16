@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Run Capacitor - 120V",
+  "partUrl": "https://www.partselect.com/PS3495561-Frigidaire-297286803-Run-Capacitor-120V.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$38.37",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS3495561",
+  "manufacturerPartNumber": "297286803",
+  "description": "Refrigerator Run Capacitor - 120V ★★★★★ ★★★★★ 16 Reviews PartSelect Number PS3495561 Manufacturer Part Number 297286803 This part helps the compressor kick on and off while maintaining a constant temperature to keep things frozen in your freezer. The run capacitor is attached to the compressor. This part is 120 volts and 15 mfd. The run capacitor helps the compressor kick on and off while maintaining a constant temperature to keep things frozen in your freezer. If your refrigerator is too warm, will not start, or your freezer section is too warm, you may need to replace this part. This is a genuine OEM part. Please remember to disconnect power to your refrigerator before starting your repair.",
+  "rating": 4.44,
+  "reviewCount": 16,
+  "symptoms": [
+    "Clicking sound",
+    "Freezer section too warm",
+    "Fridge and Freezer are too warm"
+  ],
+  "installationInstructions": {
+    "author": "James from Navarre, FL",
+    "title": "After getting wiring diagram off internet it was diagnosed as freezer stuck in defrost mode, temp alarm on, but fan running.",
+    "content": "Turned gray knob on defrost timer (located bottom left back of freezer) past defrost position to verify compressor would run...it would not, but fan would run.  Tested run capacitor...found borderline defective (weak, wrong value ohm meter kick). Just to be sure, removed interior shelves and interior rear and gasket to check heater at 20 ohms as OK and removed thermostat and verified contact closure after exposure in another freezer....re-installed, hooked heater back up and re-installed interior rear panel.  Replaced defrost timer by unplugging 4-pin connector, then removed 2 screws that hold it to the bracket.  Installed new one in reverse order.  Then removed wire bail holding run capacitor to compressor plug assembly, removed run capacitor, plugged in new one.  Turned on freezer......now making ice and holding cold temperature and cycling properly between freeze and defrost modes.  Two problems made this repair a bit more difficult.  This is the second time that defrost timer has failed...only got 3 years from last one."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS3495561-Frigidaire-297286803-Run-Capacitor-120V.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS3495561-Frigidaire-297286803-Run-Capacitor-120V.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

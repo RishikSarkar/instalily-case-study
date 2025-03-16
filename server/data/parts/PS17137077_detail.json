@@ -1,0 +1,28 @@
+{
+  "title": "Dishwasher TIMER",
+  "partUrl": "https://www.partselect.com/PS17137077-GE-WD21X33639-TIMER.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$121.98",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS17137077",
+  "manufacturerPartNumber": "WD21X33639",
+  "description": "Dishwasher TIMER ★★★★★ ★★★★★ 1 Review PartSelect Number PS17137077 Manufacturer Part Number WD21X33639 Timer Control",
+  "rating": 5,
+  "reviewCount": 1,
+  "symptoms": [
+    "Not draining",
+    "Will not fill with water",
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "Jay from North Liberty, IA",
+    "title": "Water would not drain.",
+    "content": "The washer ran through a full cycle, but the water didn't drain out. I pulled out the drain vent and checked for foreign objects. Also checked at the drain hose/disposal joint and there was no blockage. After removing the bottom panels I noticed the solenoid was shot. Cylinder was burnt up and stuck solid in the up position. I went online and found that a main cause of this can be from the timer causing the solenoid to over exert and burn out. I decided if I was going to order parts and dig into a repair I should replace both. For the timer it is just a matter of unscrewing the inner door panel and unplugging the old timer. Then inserting new one. Couple of things I ran into were the door is no longer heavy enough to stay down so I grabbed a waffle iron as a weight to hold it down. Also will need to unscrew the set screw on the Door lock latch's bottom side. Pay close attention to how it was together helps. For the solenoid I removed the main screws holding the unit in place as well as the c-clip holding the plastic arm. Undo the spring and plug and the whole unit comes out. Reverse these steps with the new solenoid to install."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS17137077-GE-WD21X33639-TIMER.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS17137077-GE-WD21X33639-TIMER.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

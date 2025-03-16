@@ -1,0 +1,26 @@
+{
+  "title": "Refrigerator SPRING TORSION",
+  "partUrl": "https://www.partselect.com/PS1483166-GE-WR02X12256-SPRING-TORSION.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$9.41",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS1483166",
+  "manufacturerPartNumber": "WR02X12256",
+  "description": "Refrigerator SPRING TORSION PartSelect Number PS1483166 Manufacturer Part Number WR02X12256",
+  "rating": 0,
+  "reviewCount": 0,
+  "symptoms": [
+    "Not dispensing water"
+  ],
+  "installationInstructions": {
+    "author": "David from TOWSON, MD",
+    "title": "Water not turning off; spring broken off of dispenser lever.",
+    "content": "Replacement of Paddle Ice Disp Bk (#70) with Torsion Spring (#74) --- Pry off bezel with putty knife. Remove control panel. Disconnect connectors. Unscrew (4x) plastic Housing. IMPORTANT: Funnel Ice Disp (#69) MUST be removed from Housing Shield Disp (#58) in order to rotate new part #70 to remove/install. May be tricky as stuck together with age and gunk. Note flat on axle of switch arm of #70; must rotate fully to remove/install part. Install new part with spring, and reassemble. NOTE: there are (at least) two types of bezels: one with spring tabs on the sides that must be felt and pushed in to remove without breaking, and another (mine) with rigid tabs on all sides that must be gently pried to pop out."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS1483166-GE-WR02X12256-SPRING-TORSION.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS1483166-GE-WR02X12256-SPRING-TORSION.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Bosch Dishwasher VALVE ACCESS",
+  "partUrl": "https://www.partselect.com/PS16746057-Bosch-10023852-VALVE-ACCESS.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$24.00",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS16746057",
+  "manufacturerPartNumber": "10023852",
+  "description": "Bosch Dishwasher VALVE ACCESS ★★★★★ ★★★★★ 7 Reviews PartSelect Number PS16746057 Manufacturer Part Number 10023852 This water access valve, also known as a water inlet valve, is an authentic OEM replacement part used in dishwashers. The valve controls the flow of water into the dishwasher. It is responsible for allowing water from the household water supply to enter the dishwasher tub during the wash cycle. The valve is controlled by the electronic control board, which signals it to open or close based on the selected cycle and water level requirements. Once the dishwasher is filled to the appropriate level, the water inlet valve closes to prevent any further water from entering the tub. If the valve is faulty, you will likely experience water leakages, difficulties filling dishwasher, and poor cleaning results. This part is commonly associated with the E15 error code on dishwashers.",
+  "rating": 5,
+  "reviewCount": 7,
+  "symptoms": [
+    "Leaking",
+    "Not cleaning dishes properly",
+    "Not draining"
+  ],
+  "installationInstructions": {
+    "author": "Raymond from VIENNA, VA",
+    "title": "E:15 error code with Watertap",
+    "content": "The E:15 error code means water is detected in the pan under the unit.  There are several ways this can happen.In this case, it was caused by a bad inlet valve.  It did not close properly and led to an overflow of water inside that eventually spilled into the pan underneath the unit.I see now why the pump keeps running after this error.  In this case, it would have led to a big flood in the kitchen if it did not.I was actually able to run the unit while broke by manually operating the valve under our sink that provides water to the unit.Be sure to turn off breaker before servicing.  Don't get shocked!Be sure to turn off water before starting!  Or, you'll have a flood.Anyway, I just pulled the unit out (was secured by 2 screws on the sides). I lifted up the insulation material on the left side to get at the valve.  Pushed a little green tab to release the electrical plug.  Then, use pliers to move clamp off the white water hose on the inside.  Then, pull of white hose.  This was hard in my case.  Took a lot of force.  Then, reach behind the unit and use pliers to unscrew water hose.  Now, the whole gray panel there can pop out with some force.  Then, slip the old valve out and slip new one in.  Reconnect hoses and clamp.  Note that I put some caulk on the connector where white hose goes.  Not sure if needed or not.Good luck!"
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16746057-Bosch-10023852-VALVE-ACCESS.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16746057-Bosch-10023852-VALVE-ACCESS.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

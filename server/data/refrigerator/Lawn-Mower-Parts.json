@@ -1,0 +1,246 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Lawn Mower Rear Wheel",
+      "partSelectNumber": "PS1209234242710-VE2-M02ZE",
+      "manufacturerPartNumber": "42710-VE2-M02ZE",
+      "price": "22.61",
+      "description": "It is an authentic part that is supplied by the original equipment manufacturer for use with Honda lawn mowers. This is an identical replacement for a missing or faulty rear wheel that was installed on a new unit, please make sure to refer to the appropriate diagrams of your model for the correct location and application of this component. This high-quality wheel is made of durable plastic and is sold individually, keep in mind the hardware to secure it is sold separately.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12092342-Honda-42710-VE2-M02ZE-Rear-Wheel.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Blade Insulator",
+      "partSelectNumber": "PS9927054241381-01",
+      "manufacturerPartNumber": "241381-01",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9927054-DeWALT-241381-01-Blade-Insulator.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Brush, Shunted",
+      "partSelectNumber": "PS9927365242273-00",
+      "manufacturerPartNumber": "242273-00",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9927365-DeWALT-242273-00-Brush-Shunted.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Mulching Plug",
+      "partSelectNumber": "PS16374898586922701",
+      "manufacturerPartNumber": "586922701",
+      "price": "17.09",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16374898-Husqvarna-586922701-Mulching-Plug.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Bearing",
+      "partSelectNumber": "PS9006914532009040",
+      "manufacturerPartNumber": "532009040",
+      "price": "6.21",
+      "description": "The OEM bearing, also known as the flange bearing, is silver, made of metal, and sold individually. It is used on riding mowers to secure the wheel in place and allow it to rotate freely on the shaft. Over time, the part may become worn and damaged, which you will notice if you experience a squealing or grinding sound from the wheel in question, or you notice the wheel is sloppy on the shaft. You will need a hammer and punch to complete this repair, which most of our customers rated as easy. Make sure you tap the new bearing into place evenly inside the tire rim.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9006914-Husqvarna-532009040-Bearing.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Bag Frame",
+      "partSelectNumber": "PS16374900586929102",
+      "manufacturerPartNumber": "586929102",
+      "price": "17.95",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16374900-Husqvarna-586929102-Bag-Frame.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Fan",
+      "partSelectNumber": "PS9926821241125-00",
+      "manufacturerPartNumber": "241125-00",
+      "price": "21.44",
+      "description": "This is an OEM replacement part for use with lawn mower. The fan is attached to the blade and is used to divert the grass clippings away from the engine compartment. This fan is made of durable plastic. This part is sold separately.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9926821-DeWALT-241125-00-Fan.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Grass Catcher Frame",
+      "partSelectNumber": "PS9988561647-04271-0637",
+      "manufacturerPartNumber": "647-04271-0637",
+      "price": "37.15",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9988561-MTD-647-04271-0637-Grass-Catcher-Frame.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Height Guide Assembly Metric",
+      "partSelectNumber": "PS16666196144-4805",
+      "manufacturerPartNumber": "144-4805",
+      "price": "19.00",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16666196-Toro-144-4805-Height-Guide-Assembly-Metric.htm?SourceCode=18"
+    },
+    {
+      "title": "Lawn Mower Ring Klip Number T5304-75",
+      "partSelectNumber": "PS9143890812000029",
+      "manufacturerPartNumber": "812000029",
+      "price": "3.99",
+      "description": "The Ring Klip Number T5304-75, also known simply as a ring clip, is an OEM part designed to secure your mower wheel to its axle. This part is black, made of metal, and around an inch in length. It is sold individually and may become damaged over time due to wear and fatigue.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9143890-Husqvarna-812000029-Ring-Klip-Number-T5304-75.htm?SourceCode=18"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator DEFROST TIMER",
+  "partUrl": "https://www.partselect.com/PS12585793-Frigidaire-5304518034-DEFROST-TIMER.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$28.03",
+  "originalPrice": "$45.49",
+  "inStock": true,
+  "partSelectNumber": "PS12585793",
+  "manufacturerPartNumber": "5304518034",
+  "description": "Refrigerator DEFROST TIMER ★★★★★ ★★★★★ 14 Reviews PartSelect Number PS12585793 Manufacturer Part Number 5304518034 This is a 120 volt defrost timer manufactured for refrigerators. The defrost timer manages the automatic defrost systemin the unit. It acts like a clock by switching between activating the cooling cycle and the defrost heater to maintain the set thermostat temperature, preventing the unit from being too warm or cold. The defrost timer may need to be replaced if the fridge will not maintain its temperature or has frost buildup. Depending on the model, it could be located on the rear panel or ceiling of the fresh food compartment. Be sure to disconnect power to the refrigerator before replacing this part.",
+  "rating": 4.57,
+  "reviewCount": 14,
+  "symptoms": [
+    "Doesn’t stop running",
+    "Fridge too warm",
+    "Frost buildup"
+  ],
+  "installationInstructions": {
+    "author": "James from Navarre, FL",
+    "title": "After getting wiring diagram off internet it was diagnosed as freezer stuck in defrost mode, temp alarm on, but fan running.",
+    "content": "Turned gray knob on defrost timer (located bottom left back of freezer) past defrost position to verify compressor would run...it would not, but fan would run.  Tested run capacitor...found borderline defective (weak, wrong value ohm meter kick). Just to be sure, removed interior shelves and interior rear and gasket to check heater at 20 ohms as OK and removed thermostat and verified contact closure after exposure in another freezer....re-installed, hooked heater back up and re-installed interior rear panel.  Replaced defrost timer by unplugging 4-pin connector, then removed 2 screws that hold it to the bracket.  Installed new one in reverse order.  Then removed wire bail holding run capacitor to compressor plug assembly, removed run capacitor, plugged in new one.  Turned on freezer......now making ice and holding cold temperature and cycling properly between freeze and defrost modes.  Two problems made this repair a bit more difficult.  This is the second time that defrost timer has failed...only got 3 years from last one."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS12585793-Frigidaire-5304518034-DEFROST-TIMER.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS12585793-Frigidaire-5304518034-DEFROST-TIMER.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

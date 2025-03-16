@@ -1,0 +1,246 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Generator Rubber (Lower)",
+      "partSelectNumber": "PS1189338068325-Z07-003",
+      "manufacturerPartNumber": "68325-Z07-003",
+      "price": "14.72",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11893380-Honda-68325-Z07-003-Rubber-Lower.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Mounting Foot",
+      "partSelectNumber": "PS120926210K6628",
+      "manufacturerPartNumber": "0K6628",
+      "price": "3.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12092621-Generac-0K6628-Mounting-Foot.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator 10-32 X 9/16",
+      "partSelectNumber": "PS1011851306-75-2402",
+      "manufacturerPartNumber": "06-75-2402",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10118513-Milwaukee-06-75-2402-10-32-X-9-16.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Drain Grommet",
+      "partSelectNumber": "PS10116568N103455",
+      "manufacturerPartNumber": "N103455",
+      "price": "14.73",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10116568-Porter-Cable-N103455-Drain-Grommet.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Foot- Rubber 106-W",
+      "partSelectNumber": "PS118709240047774SRV",
+      "manufacturerPartNumber": "0047774SRV",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11870924-Powermate-0047774SRV-Foot-Rubber-106-W.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Oil Filter, 90Mm No Logo",
+      "partSelectNumber": "PS11923318070185ES",
+      "manufacturerPartNumber": "070185ES",
+      "price": "16.85",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11923318-Generac-070185ES-Oil-Filter-90Mm-No-Logo.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Element, Air Cleaner",
+      "partSelectNumber": "PS1188994117211-Z07-000",
+      "manufacturerPartNumber": "17211-Z07-000",
+      "price": "9.24",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11889941-Honda-17211-Z07-000-Element-Air-Cleaner.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Valve, Fuel shutoff 4 Gallon Tank",
+      "partSelectNumber": "PS98744080H3384",
+      "manufacturerPartNumber": "0H3384",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9874408-Generac-0H3384-Valve-Fuel-shutoff-4-Gallon-Tank.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Valve Fuel Shutoff",
+      "partSelectNumber": "PS98748630J0974",
+      "manufacturerPartNumber": "0J0974",
+      "price": "20.80",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9874863-Generac-0J0974-Valve-Fuel-Shutoff.htm?SourceCode=18"
+    },
+    {
+      "title": "Generator Filter (Outer)",
+      "partSelectNumber": "PS1188994817218-Z07-000",
+      "manufacturerPartNumber": "17218-Z07-000",
+      "price": "7.72",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11889948-Honda-17218-Z07-000-Filter-Outer.htm?SourceCode=18"
+    }
+  ]
+}

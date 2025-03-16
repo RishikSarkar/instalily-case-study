@@ -1,0 +1,246 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Murray Bearing",
+      "partSelectNumber": "PS9006914532009040",
+      "manufacturerPartNumber": "532009040",
+      "price": "6.21",
+      "description": "The OEM bearing, also known as the flange bearing, is silver, made of metal, and sold individually. It is used on riding mowers to secure the wheel in place and allow it to rotate freely on the shaft. Over time, the part may become worn and damaged, which you will notice if you experience a squealing or grinding sound from the wheel in question, or you notice the wheel is sloppy on the shaft. You will need a hammer and punch to complete this repair, which most of our customers rated as easy. Make sure you tap the new bearing into place evenly inside the tire rim.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9006914-Husqvarna-532009040-Bearing.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Grass Catcher Frame",
+      "partSelectNumber": "PS9988561647-04271-0637",
+      "manufacturerPartNumber": "647-04271-0637",
+      "price": "37.15",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9988561-MTD-647-04271-0637-Grass-Catcher-Frame.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Ring Klip Number T5304-75",
+      "partSelectNumber": "PS9143890812000029",
+      "manufacturerPartNumber": "812000029",
+      "price": "3.99",
+      "description": "The Ring Klip Number T5304-75, also known simply as a ring clip, is an OEM part designed to secure your mower wheel to its axle. This part is black, made of metal, and around an inch in length. It is sold individually and may become damaged over time due to wear and fatigue.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9143890-Husqvarna-812000029-Ring-Klip-Number-T5304-75.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Cap Axle Black 1 50 x 1 00",
+      "partSelectNumber": "PS9007667532104757",
+      "manufacturerPartNumber": "532104757",
+      "price": "3.99",
+      "description": "This genuine black cap axle, also sometimes known as the dust cap, is around 2 inches in diamater and sold individually. Comprised of plastic, it is designed to keep debris out of the hub and axle of your lawn mower or garden tractor. Over time, your dust cap may become damaged or lost due to wear and tear. If this happens, dirt and debris can freely enter the axle and hub, causing damage. This is an easy repair to make and does not require any tools. Just look for the cap axle on the rim of the wheel to make your repair.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9007667-Husqvarna-532104757-Cap-Axle-Black-1-50-x-1-00.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Washer 25/32 x 1-1/4 x 16 Ga.",
+      "partSelectNumber": "PS9008998532121749",
+      "manufacturerPartNumber": "532121749",
+      "price": "3.99",
+      "description": "This OEM washer, also known as a flat washer, has dimensions of 25/32 x 1-1/4. Silver in color and metal, the washer is sold individually. Although this part can have a range of applications depending on the equipment, its general function is to spread the load under a bolt. Ensure you consult your owners manual or check your model number to confirm this is the washer you need for your equipment. This part will need to be replaced when your existing one is worn or damaged. It is an easy repair according to our customers, and does not require any special tools.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9008998-Husqvarna-532121749-Washer-25-32-x-1-1-4-x-16-Ga.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Clip, Hairpin",
+      "partSelectNumber": "PS9007536532003146",
+      "manufacturerPartNumber": "532003146",
+      "price": "3.99",
+      "description": "This hairpin clip, also known as a cotter pin, is a genuine OEM sourced part used to secure rotating components together in various outdoor power equipment. It is made of steel and is approximately 1.5 inches long. The clip acts as a fastener to prevent the moving parts from loosening and falling off during usage. The clip is vulnerable to corrosion and general wear over time. However, it can also fail prematurely due to overloading and excessive stress. A damaged hairpin clip will result in misalignment of parts, accidental disassembly, increased friction and wear, and potential harm to the user. Remove the faulty pin and align the new one with the insertion points. Ensure that the pin is securely fitted in its appropriate slot and compress the ends to prevent it from dislodging.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9007536-Husqvarna-532003146-Clip-Hairpin.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Lawn Tractor Mandrel Assembly",
+      "partSelectNumber": "PS12087499587819701",
+      "manufacturerPartNumber": "587819701",
+      "price": "48.56",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS12087499-Husqvarna-587819701-Lawn-Tractor-Mandrel-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Blade Mower",
+      "partSelectNumber": "PS9286056532138971",
+      "manufacturerPartNumber": "532138971",
+      "price": "16.18",
+      "description": "This replacement blade is supplied directly from the original equipment manufacturer for use with Craftsman riding lawn mowers and garden tractors. It is secured under the deck to cut the grass, over time the blade may become dull or damaged causing irregular cutting patterns. Inspect your blades periodically and replace them as needed to maintain a clean cut lawn. It is a high-quality component which is made of durable steel and it is sold individually.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9286056-Husqvarna-532138971-Blade-Mower.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Rear Axle Assembly",
+      "partSelectNumber": "PS10023414911-04144B",
+      "manufacturerPartNumber": "911-04144B",
+      "price": "33.18",
+      "description": "Axle assembly attaches the rear wheels to the mower and allows the wheels to rotate. This part replaces part numbers 911-04144 and 911-04144A. Wear work gloves to protect your hands when installing this part.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10023414-MTD-911-04144B-Rear-Axle-Assembly.htm?SourceCode=18"
+    },
+    {
+      "title": "Murray Pin, Shear, 1-3/4",
+      "partSelectNumber": "PS9999468703063",
+      "manufacturerPartNumber": "703063",
+      "price": "4.99",
+      "description": "Shear Pins are designed to break off in order to prevent further damage to your machine. Because they are designed to break, we recommend having a few spares on hand. This part is made of metal, is silver, is not part of a kit or assembly, and is sold individually. A Shear Pin will break when you hit a large chunk or ice or other debris. Once it is broken, it will need to be replaced. You will need pliers to complete this repair. Customers rate this repair as Easy.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9999468-Murray-703063-Pin-Shear-1-3-4.htm?SourceCode=18"
+    }
+  ]
+}

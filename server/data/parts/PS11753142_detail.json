@@ -1,0 +1,27 @@
+{
+  "title": "Dishwasher Spring",
+  "partUrl": "https://www.partselect.com/PS11753142-Whirlpool-WPW10337934-Spring.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$30.95",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11753142",
+  "manufacturerPartNumber": "WPW10337934",
+  "description": "Dishwasher Spring ★★★★★ ★★★★★ 6 Reviews PartSelect Number PS11753142 Manufacturer Part Number WPW10337934 This door spring is a genuine OEM replacement part for your dishwasher. The spring ensures that your dishwasher door does not fall open too quickly. If this occurs, one or both springs should be replaced. This part consists of one spring. To replace the spring, you will need to pull the dishwasher about six inches to a foot out from the cabinet. Replacing the spring has been rated as an easy repair by our customers.",
+  "rating": 4.33,
+  "reviewCount": 6,
+  "symptoms": [
+    "Door latch failure",
+    "Door won’t close"
+  ],
+  "installationInstructions": {
+    "author": "Reid from ALPHARETTA, GA",
+    "title": "Dishes were not drying properly",
+    "content": "Did the repair, but needed one extra step not described in video:I followed the directions on the PartSelect Youtube video - very helpful! I do believe the heating element was the original culprit, as it had a \"burn\" area about the size of a dime that caused it to almost break into two parts. Obviously a point of failure.BUT - after replacement, it still did not solve the problem of the dishes not drying.After much web searching, I tried the diagnostic mode on the dishwasher, and that did a hard reset of the logic board and FIXED the problem.  So in all, it required both a new heating element AND a hard reset via diagnostic mode."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11753142-Whirlpool-WPW10337934-Spring.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11753142-Whirlpool-WPW10337934-Spring.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

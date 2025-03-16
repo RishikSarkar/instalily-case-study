@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Single Water Inlet Valve",
+  "partUrl": "https://www.partselect.com/PS11740365-Whirlpool-WP2315576-Refrigerator-Single-Water-Inlet-Valve.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$71.41",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11740365",
+  "manufacturerPartNumber": "WP2315576",
+  "description": "Refrigerator Single Water Inlet Valve ★★★★★ ★★★★★ 24 Reviews PartSelect Number PS11740365 Manufacturer Part Number WP2315576 The single water inlet valve, also known as a water solenoid valve, is used for refrigerators. This part is a solenoid-operated switch that releases water from the supply line to the water valve and into the icemaker mold when activated. If your icemaker is making small cubes, does not dispense ice or water, or leaks, this replacement could solve the issue. The tools needed for this repair are a 1/4 inch nut driver and a utility knife. Refer to the diagram provided by the manufacturer for further instructions. As a safety precaution, remember to unplug your dryer from the power source.",
+  "rating": 4.58,
+  "reviewCount": 24,
+  "symptoms": [
+    "Ice maker not making ice",
+    "Ice maker won’t dispense ice",
+    "Leaking"
+  ],
+  "installationInstructions": {
+    "author": "Robert from Abingdon, MD",
+    "title": "No water feed to icemaker",
+    "content": "To troubleshoot - Check water supply to valve. It f that's good - remove back plate, remove water valve reconnect inlet line, disconnect electrical connector, place valve over a pan with outlet fitting disconnected, temporarily connect 110 VAC with clipleads to water valve solenoid. No water flow means valve is not opening.  To install new valve, connect outlet line, and wiring connector, then insert in cabinet and install 2 screws, reinstall back plate, connect water inlet line."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11740365-Whirlpool-WP2315576-Refrigerator-Single-Water-Inlet-Valve.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11740365-Whirlpool-WP2315576-Refrigerator-Single-Water-Inlet-Valve.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

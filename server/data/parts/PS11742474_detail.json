@@ -1,0 +1,28 @@
+{
+  "title": "Caloric Refrigerator Bimetal Defrost Thermostat",
+  "partUrl": "https://www.partselect.com/PS11742474-Whirlpool-WP4387503-Bimetal-Defrost-Thermostat.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$42.45",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS11742474",
+  "manufacturerPartNumber": "WP4387503",
+  "description": "Caloric Refrigerator Bimetal Defrost Thermostat ★★★★★ ★★★★★ 15 Reviews PartSelect Number PS11742474 Manufacturer Part Number WP4387503 This is a bimetal defrost thermostat for your refrigerator. It stops the fridge from overheating during the defrost cycle by protecting the evaporator. This clip-on thermostat will sense the temperature increase in the evaporator during the defrost process, and will cycle the defrost heater off after the ice or frost is melted. The most common reasons for needing to replace this part are if your unit is leaking, has inconsistent temperatures (too hot or too cold), you are seeing buildup of ice, or your appliance is running too long.",
+  "rating": 4.73,
+  "reviewCount": 15,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Freezer section too warm",
+    "Freezer too cold"
+  ],
+  "installationInstructions": {
+    "author": "Lawrence from Grahamsville, NY",
+    "title": "The frost free feature of the freezer was freezing over with ice and cooling coils were being insulated with thickening frost which caused the cooling air to rise in temperature from -5 degrees to 20 degrees.",
+    "content": "I troubleshot the problem by reading the electrical schematic and concluding the heating elements (defrost cables) were either defective or  the bi-metal temp sensor was open. When closed the temp sensor completes the circuit for the current to flow through the heaters to defrost the cooling coils every 8 hours and then when the bimetal opens at 55 degrees the circuit is open and the coils are cooled because the refridgeration motor is in run mode. A timer between the motor and heater elements also was defective. The timer controls the cooling period and the defrost period. I ohmed out each part according to the spec sheet of normal resistance of parts and thus the bimetal and timer were defective. I gather a surge of some duration and amplitude affected these parts because a storm 24 hours prior to refridgerator  problem had passsed through  the area and the AC electrical power had oscillated  several times during that event. I used hand tools to do the repair. If you are not mechanically inclined a step by step proceedure would be moot. It is a matter of disassembly and assembly  paying close attention to fragile parts."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11742474-Whirlpool-WP4387503-Bimetal-Defrost-Thermostat.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11742474-Whirlpool-WP4387503-Bimetal-Defrost-Thermostat.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

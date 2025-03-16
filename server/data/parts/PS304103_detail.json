@@ -1,0 +1,28 @@
+{
+  "title": "Hotpoint Refrigerator Temperature Sensor",
+  "partUrl": "https://www.partselect.com/PS304103-GE-WR55X10025-Temperature-Sensor.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$22.80",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS304103",
+  "manufacturerPartNumber": "WR55X10025",
+  "description": "Hotpoint Refrigerator Temperature Sensor ★★★★★ ★★★★★ 66 Reviews PartSelect Number PS304103 Manufacturer Part Number WR55X10025 This sensor (Temperature Sensor, Thermistor, Refrigerator Temperature Sensor) sends the temperature reading of the compartment to the control board. If you notice your refrigerator is too warm, too cold, or not defrosting properly, then there may be a problem with your sensor. The temperature sensor can break from material fatigue or through normal use, and should be replaced. It is attached to the evaporator and control housing in your appliance. It measures approximately 1.25 inches long with 18 inch wire leads, and is constructed out of plastic. This part comes in white, beige. It includes the sensor, with wire leads.",
+  "rating": 4.58,
+  "reviewCount": 66,
+  "symptoms": [
+    "Doesn’t stop running",
+    "Freezer not defrosting",
+    "Freezer section too warm"
+  ],
+  "installationInstructions": {
+    "author": "Gerald from San Clemente, CA",
+    "title": "Fridge too warm, evaporator icing up",
+    "content": "After replacing the defrost heater, main board and thermistor I still had the same problem.  Called a repair guy and he (with the help of GE on the phone) diagnosed that the temperature sensor was bad.  So I ordered from partselect and installed it and it fixed the problem.  Been good for a couple months (knocking on wood).  To install I had to cut the 2 wires to the old sensor, crimp the 2 new wires on and snap the new sensor to the clip on the evaporator.  Very easy.  Make sure you seal the ends of the wire crimps so moisture doesn't get in and corrode the connection."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS304103-GE-WR55X10025-Temperature-Sensor.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS304103-GE-WR55X10025-Temperature-Sensor.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Defrost Heater",
+  "partUrl": "https://www.partselect.com/PS2581596-Frigidaire-242044113-Defrost-Heater.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$81.86",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS2581596",
+  "manufacturerPartNumber": "242044113",
+  "description": "Refrigerator Defrost Heater ★★★★★ ★★★★★ 2 Reviews PartSelect Number PS2581596 Manufacturer Part Number 242044113",
+  "rating": 5,
+  "reviewCount": 2,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Freezer section too warm",
+    "Fridge too warm"
+  ],
+  "installationInstructions": {
+    "author": "Robert from North Chesterfield, VA",
+    "title": "Refrigerator would not go into Defrost",
+    "content": "When I first noticed that my refrigerator coil was iced up, I read a little bit about the defrost cycle of a refrigerator. I decided to try replacing the least expensive parts first. First I tried the defrost themostat, it was a very easy repair. My coil still froze up after a couple of days. Then I learned how to force my fridge into a defrost mode (on a frigidaire you just click the light button in the fridge 5 times in under 6 seconds). Then I noticed that the defrost heater was not heating up...this repair was more difficult. You have to first remove the two shelves, bin, and tracks. Then you remove the back panel...4 screws. Then you have to take out a couple of screws and drill out one rivet on the drain pan and pull the drain pan out so you can get the defrost heater which snakes up through the coil from the bottom of the coil. Be careful, as the drain pan and coil fins are very sharp, I sliced a couple fingers messing around with these parts. The defrost heater itself is relatively easy to put in once the coil is in the right position (there are videos on youtube on how to do this). After I put in the new heating element, and buttoned everything back up, I was excited to check my work...I forced the fridge into defrost by clicking the light switch 5 times, and the heater still didn't come on! It dawned on me that this problem started about 5 days after a major power outage (hurricane Irene)...When the power came on, it must have surged, and zapped the defrost control board...Long story short, I replaced the control board (about $75.00 from partselect.com) and my problem is fixed...at least I have a 100% brand new defrost system now...Of course it won't be too long until my wife wants another fridge to match her Stainless Steel applicances...oh well, this one will do fine in the garage."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS2581596-Frigidaire-242044113-Defrost-Heater.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS2581596-Frigidaire-242044113-Defrost-Heater.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

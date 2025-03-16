@@ -1,0 +1,250 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Tiller Clevis Pin",
+      "partSelectNumber": "PS9009427532132673",
+      "manufacturerPartNumber": "532132673",
+      "price": "3.99",
+      "description": "This clevis pin is an OEM replacement part that is compatible with various makes and models of tiller and is sold as an individual part. The purpose of this pin is to snap or break under a certain amount of pressure if your tiller is jammed, to protect the more valuable components of your tiller. Measuring at approximately 2-inches long and made of high-quality metal, replacing this pin should only require pliers to swap out the old pin for the new.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9009427-Husqvarna-532132673-Clevis-Pin.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Fuel Tank Assembly W/Fuel Lines Incl. 29",
+      "partSelectNumber": "PS11812933753-06797",
+      "manufacturerPartNumber": "753-06797",
+      "price": "22.11",
+      "description": "The fuel tank assembly is responsible for storing and supplying fuel to the engine in lawn and outdoor power equipment. It includes the tank, fuel cap, and fuel lines. The fuel tank assembly will fail if the tank develops cracks or leaks, or if the fuel lines can become clogged. When the fuel tank assembly fails, you will notice fuel leakage, restricted fuel supply, stalling, difficulties starting and overall lower performance. Before beginning any repairs, first drain any remaining fuel from the tank for your safety. Disconnect the fuel lines from the tank and remove the fuel tank from the equipment. Position the new tank on to the mounting holes and secure it in place. Connect the fuel lines to the engine and vent to complete your repair.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11812933-MTD-753-06797-Fuel-Tank-Assembly-W-Fuel-Lines-Incl-29.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Cable Forward Extension Control (1440mm)",
+      "partSelectNumber": "PS16723234A203120",
+      "manufacturerPartNumber": "A203120",
+      "price": "42.92",
+      "description": "",
+      "symptoms": [
+        "Drive system does not work"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16723234-Powermate-A203120-Cable-Forward-Extension-Control-1440mm.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Extension Control Cable Reverse (1430mm)",
+      "partSelectNumber": "PS16723235A203121",
+      "manufacturerPartNumber": "A203121",
+      "price": "40.96",
+      "description": "",
+      "symptoms": [
+        "Drive system does not work"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS16723235-Powermate-A203121-Extension-Control-Cable-Reverse-1430mm.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Clip, Hairpin",
+      "partSelectNumber": "PS9007536532003146",
+      "manufacturerPartNumber": "532003146",
+      "price": "3.99",
+      "description": "This hairpin clip, also known as a cotter pin, is a genuine OEM sourced part used to secure rotating components together in various outdoor power equipment. It is made of steel and is approximately 1.5 inches long. The clip acts as a fastener to prevent the moving parts from loosening and falling off during usage. The clip is vulnerable to corrosion and general wear over time. However, it can also fail prematurely due to overloading and excessive stress. A damaged hairpin clip will result in misalignment of parts, accidental disassembly, increased friction and wear, and potential harm to the user. Remove the faulty pin and align the new one with the insertion points. Ensure that the pin is securely fitted in its appropriate slot and compress the ends to prevent it from dislodging.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9007536-Husqvarna-532003146-Clip-Hairpin.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Throttle Cable",
+      "partSelectNumber": "PS10009725753-06831",
+      "manufacturerPartNumber": "753-06831",
+      "price": "11.83",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10009725-Bolens-753-06831-Throttle-Cable.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Cbl/Cltch T",
+      "partSelectNumber": "PS11971272583731701",
+      "manufacturerPartNumber": "583731701",
+      "price": "18.86",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11971272-Craftsman-583731701-Cbl-Cltch-T.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Air Filter",
+      "partSelectNumber": "PS9117898753-05996",
+      "manufacturerPartNumber": "753-05996",
+      "price": "3.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9117898-MTD-753-05996-Air-Filter.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Wheel, 13 Inch, Right",
+      "partSelectNumber": "PS10041115A200809",
+      "manufacturerPartNumber": "A200809",
+      "price": "143.84",
+      "description": "This is a genuine OEM supplied replacement wheel that is specially manufactured for use on Powermate and Southland rear tine tillers. It is the right wheel that keeps the unit mobile for easy transportation. This high-quality wheel is sold individually, it consists of a metal rim and a durable rubber tire. Please note the left wheel and the hardware to secure these parts are all sold separately.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS10041115-Southland-A200809-Wheel-13-Inch-Right.htm?SourceCode=18"
+    },
+    {
+      "title": "Tiller Cable Barrel Holder",
+      "partSelectNumber": "PS9167431946-0605",
+      "manufacturerPartNumber": "946-0605",
+      "price": "4.54",
+      "description": "This cable barrel holder is a genuine OEM part that is designed for use with tillers and snow throwers. Sold as an individual part, this holder measures approximately 1-inch in length and is used to secure the clutch control handle and cable together. This holder is made of durable plastic and can replace the old holder by simply removing it, inserting the cable into the new holder, and tightening it until it is locked in place.?",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9167431-MTD-946-0605-Cable-Barrel-Holder.htm?SourceCode=18"
+    }
+  ]
+}

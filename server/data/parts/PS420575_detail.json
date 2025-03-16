@@ -1,0 +1,27 @@
+{
+  "title": "Dishwasher High Limit Thermostat",
+  "partUrl": "https://www.partselect.com/PS420575-Frigidaire-154290204-High-Limit-Thermostat.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$51.03",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS420575",
+  "manufacturerPartNumber": "154290204",
+  "description": "Dishwasher High Limit Thermostat ★★★★★ ★★★★★ 2 Reviews PartSelect Number PS420575 Manufacturer Part Number 154290204 This resettable hi-limit thermostat acts as a safety mechanism that keeps the dishwasher from overheating. This part will cut out if the internal temperature reaches 200 degrees Fahrenheit. It will reset when the temperature drops to 100 degrees Fahrenheit - the differential of 100 degrees.",
+  "rating": 2.5,
+  "reviewCount": 2,
+  "symptoms": [
+    "Not cleaning dishes properly",
+    "Not drying dishes properly"
+  ],
+  "installationInstructions": {
+    "author": "Ewout from Bozeman, MT",
+    "title": "Water in dishwasher did not heat up. Dishes came out dirty and greasy. Some fungus started to grow in dishwasher.",
+    "content": "Unplugged the dishwasher.  Closed and disconnected the water supply. Removed two screws that attached the dishwasher to the countertop. Pulled the dishwasher out from underneath the countertop. Laid the dishwasher on its side to access the bottom.  The high limit thermostat had shorted out and showed signs of electrical burn. I removed the high limit thermostat by unscrewing the single screw that holds it in place. I then pulled the two electrical terminals off the high limit thermostat . One terminal (i.e. small electrical plug connecting electrical wire to high limit thermostat) was burned badly. I cut it off the wire and attached a generic terminal bought at local hardware store (six for $3). The other terminal was fine. I plugged the new high limit thermostat in and attached it with the single screw to the dish washer. Put the dishwasher back in place. Test ran dish washer and dishes came out shiny, clean and dry.  Done."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS420575-Frigidaire-154290204-High-Limit-Thermostat.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS420575-Frigidaire-154290204-High-Limit-Thermostat.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

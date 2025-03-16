@@ -1,0 +1,26 @@
+{
+  "title": "Dishwasher CONFIGURED UI BOARD",
+  "partUrl": "https://www.partselect.com/PS16762508-GE-WD21X31910-CONFIGURED-UI-BOARD.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$123.71",
+  "originalPrice": "",
+  "inStock": true,
+  "partSelectNumber": "PS16762508",
+  "manufacturerPartNumber": "WD21X31910",
+  "description": "Dishwasher CONFIGURED UI BOARD ★★★★★ ★★★★★ 6 Reviews PartSelect Number PS16762508 Manufacturer Part Number WD21X31910 The user interface displays the dishwasher settings and lets you select the cycle.",
+  "rating": 4.83,
+  "reviewCount": 6,
+  "symptoms": [
+    "Will Not Start"
+  ],
+  "installationInstructions": {
+    "author": "DONALD from GOSHEN, IN",
+    "title": "Most of the lights on the control panel had stopped working. There was no way to change the settings of the dishwasher.",
+    "content": "When the part arrived, I was pretty sure it was the wrong part. The replacement part had an LED on it -- a box that stuck up about an inch above the circuit board. My dishwasher did not have an LED readout and I was pretty sure the LED would not fit in the space that was available. I was reluctant to take the dishwasher apart until I had the right part. The people at Part Select were helpful and together we looked at the schematic which did, indeed, seem to show a box sticking up from the circuit board. A YouTube video showed me how to take the door off its hinges, unscrew 4 screws and slide the inside of the door upwards. The circuit board went in fairly easily. There was space for the LED (even though it still doesn't show through the top) and now the lights work."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS16762508-GE-WD21X31910-CONFIGURED-UI-BOARD.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS16762508-GE-WD21X31910-CONFIGURED-UI-BOARD.htm?SourceCode=18#Instructions"
+  },
+  "context": "dishwasher"
+}

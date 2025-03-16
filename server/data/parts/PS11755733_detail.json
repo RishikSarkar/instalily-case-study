@@ -1,0 +1,28 @@
+{
+  "title": "Refrigerator Electronic Control Board",
+  "partUrl": "https://www.partselect.com/PS11755733-Whirlpool-WPW10503278-Electronic-Control-Board.htm?SourceCode=18",
+  "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "price": "$157.90",
+  "originalPrice": "$197.38",
+  "inStock": true,
+  "partSelectNumber": "PS11755733",
+  "manufacturerPartNumber": "WPW10503278",
+  "description": "Refrigerator Electronic Control Board ★★★★★ ★★★★★ 22 Reviews PartSelect Number PS11755733 Manufacturer Part Number WPW10503278 The electronic control board is used in refrigerators to monitor and manage the temperature settings, such as cooling or defrosting times. If your fridge or freezer is too warm, too cold, is not defrosting, will not start, and/or runs too long then replacing the control board could solve your appliance problem. The tools needed for this installation project is a small flat blade screwdriver. *Please note: the board will need to be programmed after installation. Remember to unplug refrigerator from power source as a safety precaution. Refer to the manual provided by the manufacturer for further installation instructions and accurate guidance.",
+  "rating": 4.64,
+  "reviewCount": 22,
+  "symptoms": [
+    "Freezer not defrosting",
+    "Freezer section too warm",
+    "Freezer too cold"
+  ],
+  "installationInstructions": {
+    "author": "Russell from Hardinsburg, KY",
+    "title": "Freezer is cold, Refridgerator is not as cold as it should be",
+    "content": "Having seen this problem before in other equipment so I had an idea where to look.  Problem: the automatic defrost function was not operating.  Looking through openings in the back panel of the freezer compartment, you could see the evaporator coils and fins were a solid chuck of ice.  There are three logical components to check.  Heater element, thermostat (located just above the evaporator) and a relay on the control board (located in the fridge control panel). Checked the heater with an ohm meter -- OK.  The thermostat closes the circuit at around 20 degrees and opens at around 32 degrees. Pulled out the thermostat, wiring, fan unit. Everything unplugs, unscrews, and unclips, don't cut wires. Put the whole assembly in a friends freezer for an hour or so to see if the thermostat closes -- OK.  Problem had to be with the control board.  Replaced control board, reprogrammed it per included instruction.  Everything is working again."
+  },
+  "readMoreLinks": {
+    "symptoms": "https://www.partselect.com/PS11755733-Whirlpool-WPW10503278-Electronic-Control-Board.htm?SourceCode=18#Troubleshooting",
+    "instructions": "https://www.partselect.com/PS11755733-Whirlpool-WPW10503278-Electronic-Control-Board.htm?SourceCode=18#Instructions"
+  },
+  "context": "refrigerator"
+}

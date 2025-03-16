@@ -1,0 +1,253 @@
+{
+  "brands": [
+    {
+      "name": "Admiral",
+      "url": "/Admiral-Parts.htm"
+    },
+    {
+      "name": "Frigidaire",
+      "url": "/Frigidaire-Parts.htm"
+    },
+    {
+      "name": "General Electric",
+      "url": "/GE-Parts.htm"
+    },
+    {
+      "name": "Jenn-Air",
+      "url": "/Jenn-Air-Parts.htm"
+    },
+    {
+      "name": "KitchenAid",
+      "url": "/KitchenAid-Parts.htm"
+    },
+    {
+      "name": "LG",
+      "url": "/LG-Parts.htm"
+    },
+    {
+      "name": "Maytag",
+      "url": "/Maytag-Parts.htm"
+    },
+    {
+      "name": "Whirlpool",
+      "url": "/Whirlpool-Parts.htm"
+    },
+    {
+      "name": "White-Westinghouse",
+      "url": "/White-Westinghouse-Parts.htm"
+    },
+    {
+      "name": "See all Appliance Brands",
+      "url": "/Brands/"
+    },
+    {
+      "name": "Ariens",
+      "url": "/Ariens-Parts.htm"
+    },
+    {
+      "name": "Briggs and Stratton",
+      "url": "/Briggs-Stratton-Parts.htm"
+    },
+    {
+      "name": "Echo",
+      "url": "/Echo-Parts.htm"
+    },
+    {
+      "name": "Husqvarna",
+      "url": "/Husqvarna-Parts.htm"
+    },
+    {
+      "name": "MTD",
+      "url": "/MTD-Parts.htm"
+    },
+    {
+      "name": "Murray",
+      "url": "/Murray-Parts.htm"
+    },
+    {
+      "name": "Poulan",
+      "url": "/Poulan-Parts.htm"
+    },
+    {
+      "name": "Troy-Bilt",
+      "url": "/Troy-Bilt-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment Brands",
+      "url": "/Brands/#LawnEquipment"
+    },
+    {
+      "name": "Dishwasher",
+      "url": "/Dishwasher-Parts.htm"
+    },
+    {
+      "name": "Dryer",
+      "url": "/Dryer-Parts.htm"
+    },
+    {
+      "name": "Stove",
+      "url": "/Range-Parts.htm"
+    },
+    {
+      "name": "Refrigerator",
+      "url": "/Refrigerator-Parts.htm"
+    },
+    {
+      "name": "Washer",
+      "url": "/Washer-Parts.htm"
+    },
+    {
+      "name": "See all Appliances",
+      "url": "/Products/"
+    },
+    {
+      "name": "Lawn Mower",
+      "url": "/Lawn-Mower-Parts.htm"
+    },
+    {
+      "name": "Snow Blower",
+      "url": "/Snow-Blower-Parts.htm"
+    },
+    {
+      "name": "Lawn Tractor",
+      "url": "/Lawn-Tractor-Parts.htm"
+    },
+    {
+      "name": "Chainsaw",
+      "url": "/Chainsaw-Parts.htm"
+    },
+    {
+      "name": "Tiller",
+      "url": "/Tiller-Parts.htm"
+    },
+    {
+      "name": "Generator",
+      "url": "/Generator-Parts.htm"
+    },
+    {
+      "name": "See all Lawn Equipment",
+      "url": "/Products/#LawnEquipment"
+    },
+    {
+      "name": "Same-day Shipping",
+      "url": "/Same-Day-Shipping.htm"
+    },
+    {
+      "name": "All Original Manufacturer Parts\n                            Genuine Quality",
+      "url": "/oem/"
+    },
+    {
+      "name": "1 Year Warranty",
+      "url": "/One-Year-Warranty.htm"
+    }
+  ],
+  "parts": [
+    {
+      "title": "Briggs and Stratton Filter- A/C Cartridge",
+      "partSelectNumber": "PS8987387491588S",
+      "manufacturerPartNumber": "491588S",
+      "price": "7.06",
+      "description": "This is a replacement air filter/AC cartridge for your small engine. The air filter prevents dirt and debris from entering the engine. Over time, the air filter can become clogged or damaged, and this can lead to reduced performance. This air filter is approximately 4 inches wide and approximately 5 inches long. To replace the air filter, locate the air filter cover on the side of the engine, unscrew it, and remove the old filter. Be sure to clear out any dirt, clippings, or other debris that has found its way into the air filter assembly before you insert the new filter. Reattach the air filter cover, and secure it with the screws. This product is sold individually.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8987387-Briggs-and-Stratton-491588S-Filter-A-C-Cartridge.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Plug-Spark",
+      "partSelectNumber": "PS9140427796112S",
+      "manufacturerPartNumber": "796112S",
+      "price": "4.99",
+      "description": "This part is the replacement spark plug for your engine. It measures approximately 2.5 inches by 1 inch. The spark plug creates the spark that ignites fuel in your engine during the combustion process. Over time, spark plugs can become worn and can go bad, which will prevent the engine from firing. You can test your spark plug for continuity with a multimeter, and inspect it for corrosion if you suspect the spark plug has gone bad. This is an OEM part sourced directly from the manufacturer and it is sold individually.",
+      "symptoms": [
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9140427-Briggs-and-Stratton-796112S-Plug-Spark.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Carburetor Overhaul Kit",
+      "partSelectNumber": "PS8984098498260",
+      "manufacturerPartNumber": "498260",
+      "price": "17.96",
+      "description": "This is a replacement carburetor overhaul kit for your small engine. The carburetor is essential to the overall performance of your engine, and the carb can get clogged up over time for a variety of reasons. When your carb becomes clogged, it is often a good idea to take it apart and replace the various parts inside by purchasing a carburetor kit. This is a 15-piece set and contains everything that you will need to do a total overhaul of your carburetor. You may want to purchase some carb cleaner as well, to ensure that the new pieces in the carb kit fit and adhere properly.",
+      "symptoms": [
+        "Engine will not idle",
+        "Will Not Start"
+      ],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8984098-Briggs-and-Stratton-498260-Carburetor-Overhaul-Kit.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Filter-A/C Cartridge",
+      "partSelectNumber": "PS11829331593260",
+      "manufacturerPartNumber": "593260",
+      "price": "14.49",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11829331-Briggs-and-Stratton-593260-Filter-A-C-Cartridge.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Plug-Spark",
+      "partSelectNumber": "PS9281094491055S",
+      "manufacturerPartNumber": "491055S",
+      "price": "4.99",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9281094-Briggs-and-Stratton-491055S-Plug-Spark.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Grommet",
+      "partSelectNumber": "PS9294797692189",
+      "manufacturerPartNumber": "692189",
+      "price": "5.34",
+      "description": "This OEM grommet, also called a 90-degree breather tube, is sold individually. Black in color and made of rubber, this is a 90-degree elbow for the crankcase breather tube of your mower engine. If you notice a reduction in the mower engine performance, and engine backfires, this part is likely to be in need of replacing. It can develop cracks due to fatigue, and our troubleshooting tip is to inspect this part if dark smoke is coming out of the exhaust, it is a telltale sign. This is an easy repair to make, and does not require any tools. The new grommet attaches on the breather tube fromt he crankcase to the carburetor.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9294797-Briggs-and-Stratton-692189-Grommet.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Grommet",
+      "partSelectNumber": "PS9064851692187",
+      "manufacturerPartNumber": "692187",
+      "price": "5.34",
+      "description": "This grommet is an OEM part that is a 45-degree elbow for the crankcase breather tube of your mower engine. That is why it is also known as a 45-degree breather tube. The part is made of rubber and is black in color. You must purchase this part individually. Your grommet may require replacing if you notice dark smoke coming out of the exhaust. This is a telltale sign that your grommet has become cracked and damaged. Other symptoms are a reduction in the mower performance, or a backfiring engine. According to our customers, this is an easy repair. It requires no tools. Simply attach the grommet to the breather tube from the crankcase to the carburetor.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9064851-Briggs-and-Stratton-692187-Grommet.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Pin, Shear, 1-3/4",
+      "partSelectNumber": "PS9999468703063",
+      "manufacturerPartNumber": "703063",
+      "price": "4.99",
+      "description": "Shear Pins are designed to break off in order to prevent further damage to your machine. Because they are designed to break, we recommend having a few spares on hand. This part is made of metal, is silver, is not part of a kit or assembly, and is sold individually. A Shear Pin will break when you hit a large chunk or ice or other debris. Once it is broken, it will need to be replaced. You will need pliers to complete this repair. Customers rate this repair as Easy.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS9999468-Murray-703063-Pin-Shear-1-3-4.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Diaphragm-Carburetor",
+      "partSelectNumber": "PS8937201270026",
+      "manufacturerPartNumber": "270026",
+      "price": "3.99",
+      "description": "This is a carburetor diaphragm, which is an OEM part that pumps fuel from the tank to the engine. It is roughly 1x2 inches and black in color. Sold individually, this part can fail due to fatigue and wear, and if it is broken you may notice your engine is running rough or not starting. If your engine exhibits these signs of being starved of fuel, your diaphragm is damaged and needs to be replaced. Our customers found this repair to be of medium difficulty. It requires a wrench, screwdriver, and pliers to complete. You will be able to locate your diaphragm inside the carburetor itself to swap it out with your new one.",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS8937201-Briggs-and-Stratton-270026-Diaphragm-Carburetor.htm?SourceCode=18"
+    },
+    {
+      "title": "Briggs and Stratton Cover-Air Cleaner",
+      "partSelectNumber": "PS11829389595658",
+      "manufacturerPartNumber": "595658",
+      "price": "5.37",
+      "description": "",
+      "symptoms": [],
+      "imageUrl": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      "detailUrl": "https://www.partselect.com/PS11829389-Briggs-and-Stratton-595658-Cover-Air-Cleaner.htm?SourceCode=18"
+    }
+  ]
+}
