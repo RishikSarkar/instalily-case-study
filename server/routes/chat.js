@@ -13,6 +13,29 @@ const vectorDB = require('../utils/vectorizeData');
 const chatClient = new DeepseekChat();
 
 /**
+ * Check if query is related to refrigerators or dishwashers
+ * @param {string} query - The user's message
+ * @returns {boolean} - True if the query is about refrigerators or dishwashers
+ */
+function isApplianceRelatedQuery(query) {
+  // Convert to lowercase for case-insensitive matching
+  const lowerQuery = query.toLowerCase();
+  
+  // Keywords related to refrigerators and dishwashers
+  const applianceKeywords = [
+    'refrigerator', 'fridge', 'freezer', 'ice maker', 'crisper', 'cooling', 'chiller',
+    'dishwasher', 'dish', 'washer', 'rinse', 'detergent', 'spray arm', 'rack', 
+    'filter', 'drain', 'water', 'door', 'shelf', 'bin', 'drawer', 'seal', 'gasket',
+    'part', 'model', 'repair', 'replace', 'fix', 'broken', 'leaking', 'not working',
+    'cold', 'freeze', 'appliance', 'kitchen', 'installation', 'manual', 'guide',
+    'PS', 'part number', 'PartSelect', 'compatibility'
+  ];
+  
+  // Check if any appliance keyword is in the query
+  return applianceKeywords.some(keyword => lowerQuery.includes(keyword));
+}
+
+/**
  * Format parts data into a user-friendly context string
  * @param {Array} parts - Array of part objects from vector search
  * @returns {string} - Formatted context string
@@ -83,116 +106,242 @@ function formatPartsContext(parts) {
 }
 
 /**
+ * Determine if part cards should be shown based on the query intent
+ * @param {string} query - The user query
+ * @param {string} aiResponse - The AI response text
+ * @returns {boolean} - Whether to show part cards
+ */
+function shouldShowPartCards(query, aiResponse) {
+  // Convert to lowercase for case-insensitive matching
+  const lowerQuery = query.toLowerCase();
+  const lowerResponse = aiResponse.toLowerCase();
+  
+  // Only show parts when:
+  // 1. A specific part number is mentioned in the query or response
+  const partNumberPattern = /ps\d+/i;
+  const hasPartNumberInQuery = partNumberPattern.test(query);
+  const hasPartNumberInResponse = partNumberPattern.test(aiResponse);
+  
+  // 2. The query is explicitly asking for parts
+  const askingForParts = [
+    'what part', 'which part', 'recommend part', 'need a part',
+    'looking for part', 'find part', 'parts for', 'replacement part'
+  ].some(phrase => lowerQuery.includes(phrase));
+  
+  // 3. The response is recommending specific parts
+  const recommendingParts = [
+    'recommend', 'you need', 'you should replace', 'common part',
+    'replacement part', 'compatible part'
+  ].some(phrase => lowerResponse.includes(phrase));
+  
+  // Don't show parts for simple follow-up questions or thank you messages
+  const simpleQuestions = [
+    'how does', 'why is', 'when should', 'thank you', 'thanks', 
+    'got it', 'how do i', 'could you explain'
+  ];
+  
+  if (simpleQuestions.some(q => lowerQuery.includes(q)) && 
+      !hasPartNumberInQuery && !hasPartNumberInResponse) {
+    return false;
+  }
+  
+  // Don't show parts if the AI is asking for more information
+  if ((lowerResponse.includes('could you provide') || 
+      lowerResponse.includes('please provide') || 
+      lowerResponse.includes('need more information')) &&
+      !hasPartNumberInResponse) {
+    return false;
+  }
+  
+  // Return true if any of our positive conditions are met
+  return hasPartNumberInQuery || hasPartNumberInResponse || askingForParts || recommendingParts;
+}
+
+/**
+ * Filter parts to only show relevant ones based on the query and response
+ * @param {Array} parts - All parts returned from vector search
+ * @param {string} query - The user query
+ * @param {string} aiResponse - The AI response text
+ * @returns {Array} - Filtered parts limited to 3 with the most relevant first
+ */
+function filterRelevantParts(parts, query, aiResponse) {
+  if (!parts || !Array.isArray(parts) || parts.length === 0) {
+    return [];
+  }
+  
+  // Extract part numbers mentioned in query or response
+  const extractPartNumbers = (text) => {
+    const matches = text.match(/PS\d+/gi) || [];
+    return matches.map(match => match.toUpperCase());
+  };
+  
+  const queryPartNumbers = extractPartNumbers(query);
+  const responsePartNumbers = extractPartNumbers(aiResponse);
+  const mentionedPartNumbers = [...new Set([...queryPartNumbers, ...responsePartNumbers])];
+  
+  // First, include parts that were explicitly mentioned by part number
+  let filteredParts = parts.filter(part => {
+    const partNumber = part.metadata?.partNumber || part.partNumber || 
+                      (part.text && part.text.match(/\(PS\d+\)/i) ? 
+                       part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') : 
+                       '');
+    
+    return mentionedPartNumbers.includes(partNumber.toUpperCase());
+  });
+  
+  // If no specific parts were mentioned by number, prioritize exact matches
+  if (filteredParts.length === 0 && parts.some(part => part.exactMatch)) {
+    filteredParts = parts.filter(part => part.exactMatch);
+  }
+  
+  // If we still don't have any parts, include parts with types mentioned in the response
+  if (filteredParts.length === 0) {
+    const lowerResponse = aiResponse.toLowerCase();
+    
+    // Extract commonly mentioned part types
+    const partTypes = [
+      'water filter', 'door bin', 'shelf', 'drawer', 'ice maker', 
+      'compressor', 'motor', 'control board', 'thermostat', 'gasket',
+      'spray arm', 'pump', 'drain hose', 'seal', 'fan'
+    ];
+    
+    const mentionedTypes = partTypes.filter(type => lowerResponse.includes(type));
+    
+    if (mentionedTypes.length > 0) {
+      filteredParts = parts.filter(part => {
+        const partType = (part.metadata?.type || part.type || '').toLowerCase();
+        const partTitle = (part.text || '').toLowerCase();
+        return mentionedTypes.some(type => partType.includes(type) || partTitle.includes(type));
+      });
+    }
+  }
+  
+  // If we still don't have any parts but the conversation suggests parts are relevant,
+  // include up to 3 most relevant parts
+  if (filteredParts.length === 0 && shouldShowPartCards(query, aiResponse)) {
+    filteredParts = parts.slice(0, 3);
+  }
+  
+  // Limit to 3 parts, prioritizing exact matches
+  return filteredParts
+    .sort((a, b) => (b.exactMatch ? 1 : 0) - (a.exactMatch ? 1 : 0))
+    .slice(0, 3);
+}
+
+/**
  * Main chat endpoint
  */
 router.post('/', async (req, res) => {
   try {
-    const { message, conversation, filters } = req.body;
+    const { message, conversation = [], filters } = req.body;
     
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
     }
     
     console.log(`Processing chat request: "${message}"`);
+    console.log(`Conversation history: ${JSON.stringify(conversation)}`);
+    
+    // Check if the query is related to refrigerators or dishwashers
+    if (!isApplianceRelatedQuery(message)) {
+      // If not appliance-related, send a specific response
+      return res.json({
+        response: "I apologize, but I can only help with questions about refrigerator and dishwasher parts. If you have questions about other appliances or topics, please contact customer service.",
+        parts: [],
+        outsideDomain: true
+      });
+    }
     
     // Check for part numbers in the query
     const partNumberMatch = message.match(/PS\d+/i);
     
-    // Prepare enhanced filters if part number is detected
-    const enhancedFilters = { ...filters };
+    // Default search parameters
+    let searchParams = {
+      limit: 10,
+      filters: {}
+    };
+    
+    // Add exact part number match if found
     if (partNumberMatch) {
-      console.log(`Part number detected in query: ${partNumberMatch[0]}`);
+      const partNumber = partNumberMatch[0];
+      console.log(`Found part number in query: ${partNumber}`);
+      searchParams.exactMatch = partNumber;
     }
     
-    // Search for relevant parts using vector search
-    const relevantParts = await vectorDB.queryVectors(message, enhancedFilters, 10);
+    // Apply any additional filters from the client
+    if (filters) {
+      searchParams.filters = { ...searchParams.filters, ...filters };
+    }
+    
+    // Perform the vector search
+    const results = await vectorDB.queryVectors(message, searchParams);
+    console.log(`Found ${results.length} results from vector search`);
     
     // Format the context for the LLM
-    let context = '';
-    if (relevantParts && relevantParts.length > 0) {
-      context = formatPartsContext(relevantParts);
-      console.log(`Found ${relevantParts.length} relevant parts for context`);
-    } else {
-      console.log('No relevant parts found for the query');
+    const context = formatPartsContext(results);
+    
+    // Prepare the conversation history for the LLM
+    let promptConversation = [];
+    if (conversation && Array.isArray(conversation)) {
+      // Format previous messages for the LLM
+      promptConversation = conversation.map(msg => ({
+        role: msg.role === 'assistant' ? 'assistant' : 'user',
+        content: msg.content
+      }));
     }
     
-    // Add conversation history to context if provided
-    if (conversation && conversation.length > 0) {
-      // Only include the last 5 messages to avoid context length issues
-      const recentConversation = conversation.slice(-5);
-      const conversationContext = recentConversation
-        .map(msg => `${msg.role === 'user' ? 'Customer' : 'Assistant'}: ${msg.content}`)
-        .join('\n');
+    // Get response from the LLM
+    const response = await chatClient.getResponse(message, context, promptConversation);
+    
+    // Filter parts to only show relevant ones based on the query and response
+    const relevantParts = filterRelevantParts(results, message, response);
+    
+    // Format filtered parts for frontend
+    const formattedParts = relevantParts.map(part => {
+      // Extract part number from text if not available in metadata
+      const extractedPartNumber = part.text && part.text.match(/\(PS\d+\)/i) 
+        ? part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') 
+        : null;
+        
+      const partNumber = part.metadata?.partNumber || part.partNumber || extractedPartNumber || 'Unknown';
       
-      context = `${context}\n\nRECENT CONVERSATION:\n${conversationContext}`;
-    }
+      // Generate image URL based on part number
+      const imageUrl = part.metadata?.imageUrl || part.imageUrl || 
+        `https://www.partselect.com/assets/images/parts/${partNumber}.jpg`;
+      
+      // Check if video is available
+      const hasVideo = part.metadata?.hasVideo || part.hasVideo || false;
+      
+      // Generate video URL
+      const videoUrl = part.metadata?.videoUrl || part.videoUrl || 
+        (hasVideo ? `https://www.partselect.com/Installation-Video-${partNumber}.htm` : null);
+      
+      return {
+        partNumber,
+        title: part.text?.split(':')[0] || 'Unknown Part',
+        price: part.metadata?.price || part.price || '0.00',
+        inStock: part.metadata?.inStock || part.inStock || false,
+        type: part.metadata?.type || part.type || 'unknown',
+        brand: part.metadata?.brand || part.brand || 'unknown',
+        appliance: part.metadata?.appliance || part.appliance || 'unknown',
+        exactMatch: part.exactMatch || false,
+        rating: part.metadata?.rating || part.rating || 0,
+        reviewCount: part.metadata?.reviewCount || part.reviewCount || 0,
+        imageUrl,
+        videoUrl
+      };
+    });
     
-    // Generate response from Deepseek
-    const systemInstructions = `
-You are a knowledgeable appliance parts specialist for PartSelect, an e-commerce website 
-that sells refrigerator and dishwasher parts. Your role is to help customers find the 
-right parts for their appliances and provide detailed installation or repair advice.
-
-When a customer asks about a specific part number (like PS12345678):
-1. Prioritize providing information about that exact part
-2. Include compatibility information, price, and installation advice if available
-3. If the exact part is not in the database, recommend similar alternatives
-
-When a customer describes an issue without a part number:
-1. Help diagnose the issue and recommend appropriate parts
-2. Explain why those parts might be failing and how replacing them will fix the issue
-3. Provide any relevant installation tips or precautions
-
-Always include specific model compatibility information when available, and be precise about
-part numbers, brand compatibility, and appliance types.
-
-CONTEXT INFORMATION:
-${context}`;
-
-    const response = await chatClient.getResponse(message, systemInstructions);
-    
-    // Return the response with detailed part information
+    // Return the response
     return res.json({
       response,
-      parts: relevantParts.map(part => {
-        // Extract part number from text if not available in metadata
-        const extractedPartNumber = part.text && part.text.match(/\(PS\d+\)/i) 
-          ? part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') 
-          : null;
-          
-        const partNumber = part.metadata?.partNumber || part.partNumber || extractedPartNumber || 'Unknown';
-        
-        // Generate image URL based on part number
-        const imageUrl = part.metadata?.imageUrl || part.imageUrl || 
-          `https://www.partselect.com/assets/images/parts/${partNumber}.jpg`;
-        
-        // Check if video is available
-        const hasVideo = part.metadata?.hasVideo || part.hasVideo || false;
-        
-        // Generate video URL
-        const videoUrl = part.metadata?.videoUrl || part.videoUrl || 
-          (hasVideo ? `https://www.partselect.com/Installation-Video-${partNumber}.htm` : null);
-        
-        return {
-          partNumber,
-          title: part.text?.split(':')[0] || 'Unknown Part',
-          price: part.metadata?.price || part.price || '0.00',
-          inStock: part.metadata?.inStock || part.inStock || false,
-          type: part.metadata?.type || part.type || 'unknown',
-          brand: part.metadata?.brand || part.brand || 'unknown',
-          appliance: part.metadata?.appliance || part.appliance || 'unknown',
-          exactMatch: part.exactMatch || false,
-          rating: part.metadata?.rating || part.rating || 0,
-          reviewCount: part.metadata?.reviewCount || part.reviewCount || 0,
-          imageUrl,
-          videoUrl
-        };
-      })
+      parts: formattedParts,
+      shouldShowParts: formattedParts.length > 0
     });
     
   } catch (error) {
     console.error('Error processing chat request:', error);
-    res.status(500).json({ error: 'Failed to process chat request', details: error.message });
+    res.status(500).json({ error: 'Failed to process request', details: error.message });
   }
 });
 

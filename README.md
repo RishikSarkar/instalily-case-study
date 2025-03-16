@@ -2,6 +2,28 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# PartSelect Appliance Parts Search
+
+This application provides a semantic search interface for finding refrigerator and dishwasher parts. It uses vector embeddings for intelligent search and a Deepseek LLM for natural language responses.
+
+## Features
+
+- **Semantic Search**: Find parts based on natural language descriptions
+- **Part Number Search**: Exact matching for part numbers in format PS12345678
+- **Intelligent Chat Interface**: Get recommendations and installation advice
+- **Comprehensive Parts Database**: 1000+ parts across 40+ brands
+
+## System Architecture
+
+- **Frontend**: React application with chat interface
+- **Backend**: Node.js Express server with API endpoints
+- **Vector Database**: HNSW vector index for semantic search
+- **LLM Integration**: Deepseek AI for natural language processing
+
+## Server Documentation
+
+Detailed documentation about the server implementation, including the scraper, vector search system, and API endpoints, is available in the [server README](./server/README.md).
+
 ## Available Scripts
 
 In the project directory, you can run:

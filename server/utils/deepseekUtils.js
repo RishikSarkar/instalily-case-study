@@ -125,19 +125,32 @@ class DeepseekChat {
    * Simplified method to get a response for a single user query with context
    * @param {string} query - The user's query
    * @param {string} context - Additional context to provide in the system message
+   * @param {Array} conversation - Previous conversation history
    * @returns {Promise<string>} - The assistant's response text
    */
-  async getResponse(query, context = '') {
+  async getResponse(query, context = '', conversation = []) {
     const systemMessage = context 
       ? `You are a helpful appliance parts assistant for PartSelect. Use the following information to answer the question: ${context}`
       : 'You are a helpful appliance parts assistant for PartSelect.';
     
     // For testing purposes, provide a mock response if API call fails
     try {
-      const completion = await this.createChatCompletion([
-        { role: 'system', content: systemMessage },
-        { role: 'user', content: query }
-      ]);
+      // Prepare messages array with system message first
+      let messages = [{ role: 'system', content: systemMessage }];
+      
+      // Add conversation history if provided
+      if (conversation && Array.isArray(conversation) && conversation.length > 0) {
+        messages = [...messages, ...conversation];
+      }
+      
+      // Add the current user query if not already included in conversation
+      if (!conversation.length || conversation[conversation.length - 1].role !== 'user') {
+        messages.push({ role: 'user', content: query });
+      }
+      
+      console.log(`Sending ${messages.length} messages to Deepseek API`);
+      
+      const completion = await this.createChatCompletion(messages);
       
       return completion.choices[0].message.content;
     } catch (error) {
