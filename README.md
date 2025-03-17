@@ -13,6 +13,29 @@ This application provides a semantic search interface for finding refrigerator a
 - **Intelligent Chat Interface**: Get recommendations and installation advice
 - **Comprehensive Parts Database**: 1000+ parts across 40+ brands
 
+## Chat Agent Implementation
+
+The application features an AI-powered chat agent with several enhancements:
+
+### Key Features
+
+- **Accurate Stock Status**: Correctly reports in-stock/out-of-stock status for all parts
+- **Part Number Detection**: Advanced regex patterns to extract and highlight part numbers
+- **Intelligent Part Card Display**: Shows relevant parts based on conversation context
+- **Context-Aware Responses**: Maintains conversation history for coherent multi-turn interactions
+- **Installation Instructions**: Provides step-by-step installation guidance for parts
+- **Hallucination Prevention**: Multiple techniques to ensure factual accuracy
+
+### Technical Components
+
+- **Vector Search**: HNSW-based semantic search for finding relevant parts
+- **LLM Integration**: Deepseek AI with carefully crafted system prompts
+- **Structured Context**: Organized part information for improved response quality
+- **Domain Filtering**: Restricts conversations to refrigerator and dishwasher topics
+- **Enhanced Part Detection**: Identifies part numbers, brands, and part types in natural language
+
+For detailed implementation information, see the [server README](./server/README.md#llm-and-chat-interface-implementation).
+
 ## System Architecture
 
 - **Frontend**: React application with chat interface

@@ -111,6 +111,8 @@ class DeepseekChat {
       const response = await this.client.post('/chat/completions', {
         model: DEEPSEEK_CHAT_MODEL,
         messages,
+        temperature: 0.7, // More moderate temperature
+        max_tokens: 800,
         ...options
       });
       
@@ -129,9 +131,24 @@ class DeepseekChat {
    * @returns {Promise<string>} - The assistant's response text
    */
   async getResponse(query, context = '', conversation = []) {
-    const systemMessage = context 
-      ? `You are a helpful appliance parts assistant for PartSelect. Use the following information to answer the question: ${context}`
-      : 'You are a helpful appliance parts assistant for PartSelect.';
+    const baseSystemMessage = `You are a helpful appliance parts assistant for PartSelect, specializing in refrigerator and dishwasher parts. 
+    
+IMPORTANT GUIDELINES:
+1. Always reference part numbers in your responses when discussing specific parts (format: PS followed by numbers, e.g. PS12345678)
+2. Maintain context from previous messages in the conversation
+3. Accurately report inventory status of parts when relevant to the user's query
+4. Only mention stock status when it's relevant to the conversation or explicitly asked about
+5. Focus on providing helpful information about part specifications, compatibility, and installation
+6. For installation queries, provide clear step-by-step instructions
+7. Focus only on refrigerator and dishwasher parts - politely decline other topics
+8. Be conversational and natural in your responses`;
+    
+    let systemMessage = baseSystemMessage;
+    
+    // Add context information when available
+    if (context) {
+      systemMessage += `\n\nREFERENCE INFORMATION:\n${context}`;
+    }
     
     // For testing purposes, provide a mock response if API call fails
     try {

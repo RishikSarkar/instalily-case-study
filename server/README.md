@@ -121,44 +121,173 @@ The search system includes several enhancements:
 - **Result Grouping**: Groups results by type (exact matches, general parts, reviews, symptoms)
 - **Enhanced Filtering**: Supports filtering by brand, appliance type, and other metadata properties
 
-## Chat API System
+## LLM and Chat Interface Implementation
 
-The chat API integrates vector search with the Deepseek LLM to provide intelligent responses.
+The chat interface uses a combination of vector search and the Deepseek LLM to provide helpful, accurate responses about appliance parts. 
+
+### LLM Integration
+
+The system integrates with Deepseek AI through the `deepseekUtils.js` module:
+
+- **Model**: Uses the `deepseek-chat` model for conversational responses
+- **API Configuration**: 
+  - Temperature: 0.7 (balanced between creativity and consistency)
+  - Max tokens: 800 (sufficient for detailed responses)
+  - Connection established via API key in .env file
+
+### System Prompt
+
+The LLM is guided by a carefully crafted system prompt that establishes its behavior:
+
+```
+You are a helpful appliance parts assistant for PartSelect, specializing in refrigerator and dishwasher parts.
+
+IMPORTANT GUIDELINES:
+1. Always reference part numbers in your responses when discussing specific parts (format: PS followed by numbers, e.g. PS12345678)
+2. Maintain context from previous messages in the conversation
+3. Accurately report inventory status of parts when relevant to the user's query
+4. Only mention stock status when it's relevant to the conversation or explicitly asked about
+5. Focus on providing helpful information about part specifications, compatibility, and installation
+6. For installation queries, provide clear step-by-step instructions
+7. Focus only on refrigerator and dishwasher parts - politely decline other topics
+8. Be conversational and natural in your responses
+```
+
+### Context Formatting
+
+When providing parts information to the LLM, the system organizes it into these sections:
+
+1. **Inventory Information**: Simple list of part numbers with availability status
+2. **Exact Part Matches**: Detailed information about exact matching parts
+3. **Related Parts**: Information about semantically related parts
+4. **Customer Reviews**: Optional section with review excerpts
+5. **Symptoms Information**: Details about symptoms resolved by parts
+
+Example of formatted context:
+```
+INVENTORY INFORMATION:
+Part PS11752778 availability: In Stock
+Part PS12345678 availability: In Stock
+
+EXACT PART MATCHES:
+Refrigerator Door Shelf Bin
+Part Number: PS11752778
+Price: $36.18
+Availability: In Stock
+Brand: Whirlpool
+Type: Door shelf
+For: refrigerator
+
+RELATED PARTS:
+[Additional parts information...]
+```
+
+### Conversation Management
+
+The system maintains conversation history to provide context-aware responses:
+
+- User queries and assistant responses are stored in an array
+- Each message includes a `role` (user/assistant) and `content`
+- History is passed to the LLM with each new query
+- The LLM uses this history to maintain context across multiple turns
+
+### Part Cards Implementation
+
+The frontend displays product "part cards" based on the chat interaction:
+
+1. **Display Logic**: Controlled by the `shouldShowPartCards()` function, which analyzes:
+   - Presence of part numbers in query or response
+   - Keywords suggesting the user is looking for parts
+   - Part type mentions in the conversation
+   - Avoiding display for simple follow-up messages
+
+2. **Part Selection Logic**: The `filterRelevantParts()` function determines which parts to show:
+   - Prioritizes parts mentioned by part number
+   - Considers exact matches next
+   - Looks for part types mentioned in the conversation
+   - Limits to 5 most relevant parts
+   - Sorts by exact match status, stock availability, and relevance score
+
+3. **Data Formatting**: Each part card includes:
+   - Part number
+   - Title/description
+   - Price
+   - Availability status
+   - Brand and type
+   - Appliance compatibility
+   - Rating and review count (when available)
+   - Image URL
+   - Installation video URL (when available)
+
+### Hallucination Prevention
+
+The system implements several techniques to reduce LLM hallucinations:
+
+1. **Knowledge Grounding**: All responses are grounded in real part data from the PartSelect database
+2. **Explicit Stock Status**: Inventory information is clearly formatted to prevent stock status confusion
+3. **Part Number Extraction**: Uses regex patterns to detect and extract actual part numbers
+4. **Domain Restriction**: The `isApplianceRelatedQuery()` function filters out irrelevant topics
+5. **Specific Context Format**: Structured context helps the LLM focus on factual information
+6. **Request Enrichment**: Contextual information about parts is provided with every query
+7. **Enhanced Response Validation**: Extracts part numbers from LLM responses to include referenced parts
+
+### Stock Status Handling
+
+A key improvement in the system is accurate stock status reporting:
+
+1. **Default to In Stock**: Parts are considered in stock unless explicitly marked otherwise
+2. **Clear Inventory Reporting**: Stock status is formatted clearly in context
+3. **Stock-Related Guidelines**: System prompt instructs the LLM to accurately report stock status
+4. **Pre-processing**: Context includes a dedicated inventory information section
+
+### Query Processing Pipeline
+
+The complete flow for handling a user query:
+
+1. **Request Validation**: Ensures required data is present
+2. **Domain Check**: Verifies query is about refrigerators or dishwashers using `isApplianceRelatedQuery()`
+3. **Part Number Detection**: Checks for part numbers in the query using regex
+4. **Vector Search**: Retrieves relevant parts from the vector database
+5. **Context Formatting**: Formats part information into structured context
+6. **Conversation History**: Prepares conversation history for the LLM
+7. **LLM Response Generation**: Sends query, context, and history to the DeepseekChat instance
+8. **Part Filtering**: Selects the most relevant parts for display using `filterRelevantParts()`
+9. **Additional Part Discovery**: Finds parts mentioned in the response but not in the initial results
+10. **Response Formatting**: Formats the final response with LLM text and part information
+
+### API Response Format
+
+The chat API endpoint returns responses in this format:
+
+```json
+{
+  "response": "Text response from the LLM",
+  "parts": [
+    {
+      "partNumber": "PS11752778",
+      "title": "Refrigerator Door Shelf Bin",
+      "price": "$36.18",
+      "inStock": true,
+      "type": "Door shelf",
+      "brand": "Whirlpool",
+      "appliance": "refrigerator",
+      "exactMatch": true,
+      "rating": 4.85,
+      "reviewCount": 308,
+      "imageUrl": "https://www.partselect.com/assets/images/parts/PS11752778.jpg",
+      "videoUrl": "https://www.partselect.com/Installation-Video-PS11752778.htm"
+    },
+    ...
+  ],
+  "shouldShowParts": true
+}
+```
 
 ### API Endpoints
 
 - `POST /api/chat` - Main chat endpoint that accepts user messages and returns AI responses
 - `POST /api/chat/vectorize` - Admin endpoint to trigger vectorization (protected by API key)
 - `GET /api/chat/vectorize/status` - Check vectorization status
-
-### Chat Processing Flow
-
-1. User sends a message through the chat API
-2. The system performs vector search to find relevant parts
-3. Retrieved parts are formatted into context for the LLM
-4. The Deepseek LLM generates a response based on the context
-5. The system returns both the LLM response and relevant part information
-
-### Response Format
-
-```json
-{
-  "response": "LLM-generated text response",
-  "parts": [
-    {
-      "partNumber": "PS12345678",
-      "title": "Part Title",
-      "price": "12.34",
-      "inStock": true,
-      "type": "Part Type",
-      "brand": "Brand Name",
-      "appliance": "refrigerator",
-      "exactMatch": true
-    },
-    ...
-  ]
-}
-```
 
 ## Data Structure
 
