@@ -25,6 +25,9 @@ The application features an AI-powered chat agent with several enhancements:
 - **Context-Aware Responses**: Maintains conversation history for coherent multi-turn interactions
 - **Installation Instructions**: Provides step-by-step installation guidance for parts
 - **Hallucination Prevention**: Multiple techniques to ensure factual accuracy
+- **Optimized Entity Detection**: High-performance Set-based lookups for brands and categories 
+- **Exact-Match Prioritization**: Ensures users see the most relevant parts first
+- **Deduplication System**: Prevents duplicate part cards from appearing in results
 
 ### Technical Components
 
@@ -33,8 +36,51 @@ The application features an AI-powered chat agent with several enhancements:
 - **Structured Context**: Organized part information for improved response quality
 - **Domain Filtering**: Restricts conversations to refrigerator and dishwasher topics
 - **Enhanced Part Detection**: Identifies part numbers, brands, and part types in natural language
+- **Set-Based Entity Lookup**: O(1) lookups for 40+ brands and 80+ part categories
+- **Entity-Aware Query Enhancement**: Dynamically adjusts search queries with detected entities
 
-For detailed implementation information, see the [server README](./server/README.md#llm-and-chat-interface-implementation).
+### Recent Enhancements
+
+- **High-Performance Entity Detection**: Now uses Set-based data structures for O(1) lookups instead of regex matching, resulting in faster query processing
+- **Comprehensive Brand & Part Database**: Added support for 40+ appliance brands and 80+ part categories with direct lookups
+- **Improved Part Number Detection**: Enhanced regex pattern matching to handle variations like "PS 12345678", "part number PS12345678", etc.
+- **Context-Driven Entity Detection**: Added extraction of entities from conversation history for better context awareness
+- **Exact Match Prioritization**: When users mention specific part numbers, the system now prioritizes exact matches over semantic results
+- **Enhanced Stock Status Reporting**: Added explicit formatting and verification to ensure accurate stock status reporting
+- **Duplicate Part Prevention**: Implemented deduplication system to prevent identical parts from appearing multiple times in results
+
+## Recent Enhancements
+
+### Improved Entity Detection
+
+The system now features a sophisticated entity detection system that identifies:
+- Part numbers in various formats 
+- Model numbers with brand-specific pattern matching
+- 40+ refrigerator and dishwasher brands
+- 80+ part types across both appliance categories
+
+The implementation uses Set-based lookups for O(1) time complexity and multi-stage detection for optimal performance.
+
+### Enhanced Part Filtering
+
+The part filtering system now prioritizes:
+- Exact part number matches when detected in user queries
+- Compatible parts based on model numbers
+- Brand and part category combinations
+- In-stock items over out-of-stock items
+
+### Deduplication System
+
+A new deduplication system prevents duplicate part cards from appearing in results, ensuring a cleaner user experience and more accurate part recommendations.
+
+### Context Format Improvements
+
+The context format for the LLM has been enhanced to:
+- Prominently display stock status with explicit reporting instructions
+- Provide clear part number reference guidance
+- Format information consistently for better LLM understanding
+
+For more technical details, see the [server README](./server/README.md).
 
 ## System Architecture
 

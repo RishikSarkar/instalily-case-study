@@ -82,14 +82,14 @@ function formatPartsContext(parts) {
   
   // Build formatted part information
   const formattedParts = parts.map(part => {
-    const metadata = part.metadata || {};
+        const metadata = part.metadata || {};
     
     // Make stock status very clear and prominent
     const inStock = typeof metadata.inStock === 'boolean' ? metadata.inStock : true;
     const stockStatus = inStock ? "IN STOCK" : "OUT OF STOCK";
     const stockStatusLine = `STOCK STATUS: ${stockStatus} - IMPORTANT: Please accurately report this stock status to the user`;
     
-    const price = metadata.price ? `$${metadata.price}` : 'Price not available';
+        const price = metadata.price ? `$${metadata.price}` : 'Price not available';
     const brand = metadata.brand || part.brand || 'Brand not specified';
     const type = metadata.type || part.type || 'Type not specified';
     const appliance = metadata.appliance || 'Compatible with multiple appliances';
@@ -285,11 +285,11 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const { message, conversation } = req.body;
-
+    
     if (!message) {
       return res.status(400).json({ error: 'Message is required' });
     }
-
+    
     // Check if the message is related to appliances
     if (!isApplianceRelatedQuery(message)) {
       return res.json({

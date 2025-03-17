@@ -9,9 +9,18 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  // Allow requests from localhost during development and Vercel in production
+  origin: ['http://localhost:3000', 'https://instalily-case-study.vercel.app'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(morgan('dev'));
+
+// Add health endpoint for Render
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 // Serve static files from client build
 app.use(express.static(path.join(__dirname, '../build')));

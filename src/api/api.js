@@ -8,10 +8,9 @@
  */
 export const getAIMessage = async (userQuery, conversationHistory = []) => {
   try {
-    // In development, the backend is at localhost:5000
-    // In production, the backend is served from the same domain
-    const backendUrl = process.env.NODE_ENV === 'production' 
-      ? '/api/chat' 
+    // Use environment variable for production or fall back to localhost
+    const backendUrl = process.env.REACT_APP_API_URL 
+      ? `${process.env.REACT_APP_API_URL}/api/chat`
       : 'http://localhost:5000/api/chat';
     
     // Format the conversation history for the backend

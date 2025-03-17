@@ -340,3 +340,121 @@ Timers, Bearings, Compressors, Springs and Shock Absorbers, Grilles and Kickplat
 Knobs, Trim, Wire Plugs and Connectors, Tanks and Containers, Legs and Feet, Drip Bowls, 
 Panels, Ducts and Vents, Insulation, Grates, Racks, Power Cords, Blades, Deflectors and Chutes, 
 Starters, Manuals and Literature, Transformers 
+
+### Entity Detection System
+
+The chat system includes a sophisticated entity detection component that identifies relevant entities in user queries:
+
+#### Entity Types Supported
+
+1. **Part Numbers**: Identifies PartSelect part numbers in various formats (PS12345678, PS 12345678, part number PS12345678)
+2. **Model Numbers**: Detects appliance model numbers with brand-aware pattern matching 
+3. **Brands**: Recognizes 40+ refrigerator and dishwasher brands
+4. **Part Categories**: Identifies 80+ part types across both appliance categories
+
+#### Optimized Implementation
+
+The entity detection system uses several optimization techniques:
+
+1. **Set-Based Lookups**: Uses JavaScript Set data structures for O(1) time complexity lookups instead of regex matching
+2. **Brand-Specific Prefixes**: Recognizes brand-specific model number patterns (e.g., WRS for Whirlpool refrigerators)
+3. **Multi-Stage Detection**: Tries several matching approaches, starting with the most efficient
+4. **Context Enhancement**: Uses detected brands to improve model number detection accuracy
+5. **Flexible Pattern Matching**: Handles various formatting patterns and normalizes data
+
+```javascript
+// Example of optimized brand detection
+function extractBrands(lowerText) {
+  const results = new Set();
+  
+  // Direct lookup is faster than regex matching
+  for (const brand of ALL_BRANDS) {
+    if (lowerText.includes(brand)) {
+      results.add(brand.charAt(0).toUpperCase() + brand.slice(1));
+    }
+  }
+  
+  return Array.from(results);
+}
+```
+
+### Enhanced Part Filtering
+
+The part filtering system has been improved to provide more relevant results:
+
+#### Prioritization Strategy
+
+1. **Exact Match Detection**: When specific part numbers are mentioned, only those exact parts are shown
+2. **Model Compatibility**: For model number queries, parts are filtered by compatibility
+3. **Brand + Category Combinations**: Parts matching both brand and category get higher priority
+4. **Stock Status Prioritization**: In-stock items are prioritized over out-of-stock items
+5. **Hierarchical Scoring**: Parts are scored based on multiple factors including relevance to query
+
+#### Filtering Implementation
+
+The system uses a multi-stage filtering approach:
+
+```javascript
+// Simplified example of filtering logic
+if (partDisplay.onlyShowExactMatches && partDisplay.partNumbers.length > 0) {
+  // Only show exact part number matches
+  filteredParts = relevantParts.filter(part => {
+    const partNumber = part.metadata?.partNumber || '';
+    return partDisplay.partNumbers.includes(partNumber.toUpperCase());
+  });
+} else {
+  // Use general relevance filtering for broader queries
+  filteredParts = relevantParts;
+}
+```
+
+### Deduplication System
+
+A key enhancement is the deduplication system that prevents duplicate part cards:
+
+```javascript
+// Deduplicate parts by part number
+const seenPartNumbers = new Set();
+filteredParts = filteredParts.filter(part => {
+  const partNumber = part.metadata?.partNumber || '';
+  if (!partNumber || seenPartNumbers.has(partNumber.toUpperCase())) {
+    return false;
+  }
+  seenPartNumbers.add(partNumber.toUpperCase());
+  return true;
+});
+```
+
+This approach ensures:
+1. Each unique part appears only once in results
+2. No empty or undefined part numbers are included
+3. Case-insensitive deduplication for consistent results
+
+### Context Format Improvements
+
+The context format for the LLM has been enhanced to ensure accurate stock status reporting:
+
+```
+PART NUMBER: PS11752778 (reference this exact part number in your response)
+TITLE: Refrigerator Door Shelf Bin
+STOCK STATUS: IN STOCK - IMPORTANT: Please accurately report this stock status to the user
+PRICE: $36.18
+BRAND: Whirlpool
+TYPE: Door shelf
+APPLIANCE: refrigerator
+```
+
+Key improvements include:
+1. Prominent display of stock status with explicit instruction
+2. Explicit part number reference guidance
+3. Clear instructions for accurate reporting
+4. Consistent formatting for better LLM understanding
+
+### Conversation Management
+
+The system maintains conversation history to provide context-aware responses:
+
+- User queries and assistant responses are stored in an array
+- Each message includes a `role` (user/assistant) and `content`
+- History is passed to the LLM with each new query
+- The LLM uses this history to maintain context across multiple turns 
