@@ -8,6 +8,11 @@ const express = require('express');
 const router = express.Router();
 const { DeepseekChat } = require('../utils/deepseekUtils');
 const vectorDB = require('../utils/vectorizeData');
+const { 
+  detectEntities, 
+  extractPartNumbers, 
+  detectApplianceType 
+} = require('../utils/entityUtils');
 
 // Initialize the Deepseek chat client
 const chatClient = new DeepseekChat();
@@ -20,6 +25,17 @@ const chatClient = new DeepseekChat();
 function isApplianceRelatedQuery(query) {
   // Convert to lowercase for case-insensitive matching
   const lowerQuery = query.toLowerCase();
+  
+  // First check for explicit part numbers which should always be considered relevant
+  if (extractPartNumbers(query).length > 0) {
+    return true;
+  }
+  
+  // Check if we can detect a specific appliance type
+  const applianceType = detectApplianceType(query);
+  if (applianceType) {
+    return true;
+  }
   
   // Keywords related to refrigerators and dishwashers
   const applianceKeywords = [
@@ -40,18 +56,12 @@ function isApplianceRelatedQuery(query) {
     'login', 'account', 'checkout', 'cart', 'dimensions', 'material'
   ];
   
-  // First check for explicit part numbers which should always be considered relevant
-  if (query.match(/PS\d+/i)) {
-    return true;
-  }
-  
-  // Then check for appliance keywords
+  // Check for appliance keywords
   if (applianceKeywords.some(keyword => lowerQuery.includes(keyword))) {
     return true;
   }
   
   // Finally check for support keywords in combination with an appliance context 
-  // from previous messages (this would need conversation history to be passed in)
   if (supportKeywords.some(keyword => lowerQuery.includes(keyword))) {
     return true;
   }
@@ -66,386 +76,307 @@ function isApplianceRelatedQuery(query) {
  * @returns {string} - Formatted context string
  */
 function formatPartsContext(parts) {
-  console.log('Formatting parts context. Received parts:', JSON.stringify(parts, null, 2));
-  
   if (!parts || !Array.isArray(parts) || parts.length === 0) {
-    console.log('No parts to format or invalid parts data');
     return 'No relevant parts information available.';
   }
   
-  // Group parts by type (exact matches first, then by chunk type)
-  const exactMatches = parts.filter(part => part.exactMatch);
-  const generalParts = parts.filter(part => !part.exactMatch && (!part.metadata?.chunkType || part.metadata?.chunkType === 'general'));
-  const reviews = parts.filter(part => !part.exactMatch && part.metadata?.chunkType === 'review');
-  const symptoms = parts.filter(part => !part.exactMatch && part.metadata?.chunkType === 'symptoms');
-  
-  // Build context sections
-  const sections = [];
-  
-  // Add parts inventory as reference information, but less prominently
-  const allPartsInventory = [...exactMatches, ...generalParts].map(part => {
+  // Build formatted part information
+  const formattedParts = parts.map(part => {
     const metadata = part.metadata || {};
-    const partNum = metadata.partNumber || part.partNumber || '';
-    const inStock = metadata.inStock === false ? false : true;
-    return `Part ${partNum} availability: ${inStock ? 'In Stock' : 'Out of Stock'}`;
-  }).join('\n');
-  
-  if (allPartsInventory) {
-    sections.push(`INVENTORY INFORMATION:\n${allPartsInventory}`);
-  }
-  
-  // Add exact matches with more detailed information
-  if (exactMatches.length > 0) {
-    sections.push("EXACT PART MATCHES:\n" + 
-      exactMatches.map(part => {
-        const metadata = part.metadata || {};
-        const text = part.text || '';
-        const price = metadata.price ? `$${metadata.price}` : 'Price not available';
-        const stockStatus = metadata.inStock === false ? 'Out of Stock' : 'In Stock';
-        const brand = metadata.brand || 'Unknown brand';
-        const type = metadata.type || 'Unknown type';
-        const appliance = metadata.appliance || 'appliance';
-        
-        return `${text}\nPart Number: ${metadata.partNumber || part.partNumber}\nPrice: ${price}\nAvailability: ${stockStatus}\nBrand: ${brand}\nType: ${type}\nFor: ${appliance}`;
-      }).join('\n\n')
-    );
-  }
-  
-  // Add general parts
-  if (generalParts.length > 0) {
-    sections.push("RELATED PARTS:\n" + 
-      generalParts.map(part => {
-        const metadata = part.metadata || {};
-        const text = part.text || '';
-        const price = metadata.price ? `$${metadata.price}` : 'Price not available';
-        const stockStatus = metadata.inStock === false ? 'Out of Stock' : 'In Stock';
-        
-        return `${text}\nPart Number: ${metadata.partNumber || part.partNumber}\nPrice: ${price}\nAvailability: ${stockStatus}\nBrand: ${metadata.brand || 'Unknown'}\nType: ${metadata.type || 'Unknown'}`;
-      }).join('\n\n')
-    );
-  }
-  
-  // Add customer reviews if available
-  if (reviews.length > 0) {
-    sections.push("CUSTOMER REVIEWS:\n" + 
-      reviews.map(part => part.text).join('\n\n')
-    );
-  }
-  
-  // Add symptom information if available
-  if (symptoms.length > 0) {
-    sections.push("SYMPTOMS FIXED BY THESE PARTS:\n" + 
-      symptoms.map(part => part.text).join('\n\n')
-    );
-  }
-  
-  return sections.join('\n\n');
+    
+    // Make stock status very clear and prominent
+    const inStock = typeof metadata.inStock === 'boolean' ? metadata.inStock : true;
+    const stockStatus = inStock ? "IN STOCK" : "OUT OF STOCK";
+    const stockStatusLine = `STOCK STATUS: ${stockStatus} - IMPORTANT: Please accurately report this stock status to the user`;
+    
+    const price = metadata.price ? `$${metadata.price}` : 'Price not available';
+    const brand = metadata.brand || part.brand || 'Brand not specified';
+    const type = metadata.type || part.type || 'Type not specified';
+    const appliance = metadata.appliance || 'Compatible with multiple appliances';
+    const modelCompatibility = metadata.compatibleModels && metadata.compatibleModels.length > 0 ? 
+      `Compatible with models: ${metadata.compatibleModels.slice(0, 5).join(', ')}` : '';
+    
+    const partNumber = metadata.partNumber || part.partNumber || '';
+    const partNumberLine = `PART NUMBER: ${partNumber} (reference this exact part number in your response)`;
+    
+    return `${partNumberLine}
+TITLE: ${metadata.title || part.title || part.text || 'unknown'}
+${stockStatusLine}
+PRICE: ${price}
+BRAND: ${brand}
+TYPE: ${type}
+APPLIANCE: ${appliance}
+${modelCompatibility}
+${metadata.rating ? `RATING: ${metadata.rating}/5` : ''}
+DESCRIPTION: ${metadata.description || part.description || 'No description available'}
+${metadata.chunkType === 'symptoms' && metadata.symptoms ? `SYMPTOMS RESOLVED: ${metadata.symptoms.join(', ')}` : ''}`;
+  }).join('\n\n');
+
+  return `IMPORTANT PARTS INFORMATION (always state accurate stock status in your response):\n\n${formattedParts}`;
 }
 
 /**
- * Determine if part cards should be shown based on the query intent
+ * Check if parts should be shown for the given query and response
  * @param {string} query - The user query
- * @param {string} aiResponse - The AI response text
- * @returns {boolean} - Whether to show part cards
+ * @param {string} aiResponse - The AI response
+ * @returns {boolean} - True if parts should be shown
  */
 function shouldShowPartCards(query, aiResponse) {
-  // Convert to lowercase for case-insensitive matching
-  const lowerQuery = query.toLowerCase();
-  const lowerResponse = aiResponse.toLowerCase();
+  // Extract part numbers from query and response
+  const queryEntities = detectEntities(query);
+  const responseEntities = detectEntities(aiResponse);
   
-  // 1. Always show parts when a part number is mentioned in the query or response
-  const partNumberPattern = /ps\d+/i;
-  const hasPartNumberInQuery = partNumberPattern.test(query);
-  const hasPartNumberInResponse = partNumberPattern.test(aiResponse);
+  // If specific part numbers are mentioned, ONLY show those exact parts
+  const hasSpecificPartNumbers = queryEntities.partNumbers.length > 0 || responseEntities.partNumbers.length > 0;
   
-  // If a part number is mentioned, always show cards
-  if (hasPartNumberInQuery || hasPartNumberInResponse) {
-    return true;
-  }
-  
-  // 2. Show parts when the query is explicitly asking for parts
-  const askingForParts = [
-    'what part', 'which part', 'recommend part', 'need a part',
-    'looking for part', 'find part', 'parts for', 'replacement part',
-    'show me', 'i need', 'where can i find', 'help me find', 'compatible',
-    'do you have', 'similar to', 'equivalent', 'alternative'
-  ].some(phrase => lowerQuery.includes(phrase));
-  
-  // 3. Show parts when the response is recommending specific parts
-  const recommendingParts = [
-    'recommend', 'you need', 'you should replace', 'common part',
-    'replacement part', 'compatible part', 'available part', 'alternative part',
-    'substitute', 'option', 'selection', 'variety', 'choice'
-  ].some(phrase => lowerResponse.includes(phrase));
-  
-  // 4. Show parts when specific part types are mentioned
-  const partTypeKeywords = [
-    'filter', 'shelf', 'drawer', 'bin', 'gasket', 'seal', 'pump', 'motor',
-    'compressor', 'fan', 'valve', 'ice maker', 'thermostat', 'control board',
-    'door', 'handle', 'hinge', 'latch', 'switch', 'light', 'bulb', 'tray'
-  ];
-  
-  const mentionsPartTypes = partTypeKeywords.some(
-    type => lowerQuery.includes(type) || lowerResponse.includes(type)
-  );
-  
-  // Don't show parts only for simple follow-up questions or thank you messages
-  const simpleQuestions = [
-    'thank you', 'thanks', 'got it', 'ok', 'great', 'awesome',
-    'appreciate', 'helpful', 'understood'
-  ];
-  
-  if (simpleQuestions.some(q => lowerQuery.includes(q) && lowerQuery.length < 20)) {
-    return false;
-  }
-  
-  // Return true if any of our positive conditions are met
-  return askingForParts || recommendingParts || mentionsPartTypes;
-}
-
-/**
- * Filter parts to only show relevant ones based on the query and response
- * @param {Array} parts - All parts returned from vector search
- * @param {string} query - The user query
- * @param {string} aiResponse - The AI response text
- * @returns {Array} - Filtered parts limited to 3 with the most relevant first
- */
-function filterRelevantParts(parts, query, aiResponse) {
-  if (!parts || !Array.isArray(parts) || parts.length === 0) {
-    return [];
-  }
-  
-  // Extract part numbers mentioned in query or response
-  const extractPartNumbers = (text) => {
-    // More comprehensive regex to match part numbers in various formats
-    const matches = text.match(/PS\d+/gi) || [];
-    
-    // Also look for parts in formats like "part PS12345678", "part number PS12345678", etc.
-    const extendedMatches = text.match(/(?:part|part number|part #|number)[:\s]+PS\d+/gi) || [];
-    extendedMatches.forEach(match => {
-      const partMatch = match.match(/PS\d+/i);
-      if (partMatch && !matches.includes(partMatch[0])) {
-        matches.push(partMatch[0]);
-      }
-    });
-    
-    return matches.map(match => match.toUpperCase());
+  // We'll use this flag to determine which filtering strategy to use
+  return { 
+    showParts: true, 
+    onlyShowExactMatches: hasSpecificPartNumbers,
+    partNumbers: [...new Set([...queryEntities.partNumbers, ...responseEntities.partNumbers])]
   };
-  
-  const queryPartNumbers = extractPartNumbers(query);
-  const responsePartNumbers = extractPartNumbers(aiResponse);
-  const mentionedPartNumbers = [...new Set([...queryPartNumbers, ...responsePartNumbers])];
-  
-  // First, include parts that were explicitly mentioned by part number
-  let filteredParts = parts.filter(part => {
-    const partNumber = part.metadata?.partNumber || part.partNumber || 
-                      (part.text && part.text.match(/\(PS\d+\)/i) ? 
-                       part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') : 
-                       '');
-    
-    return mentionedPartNumbers.includes(partNumber.toUpperCase());
-  });
-  
-  // If no specific parts were mentioned by number, prioritize exact matches
-  if (filteredParts.length === 0 && parts.some(part => part.exactMatch)) {
-    filteredParts = parts.filter(part => part.exactMatch);
-  }
-  
-  // If we still don't have any parts, include parts with types mentioned in the response
-  if (filteredParts.length === 0) {
-    const lowerResponse = aiResponse.toLowerCase();
-    
-    // Extract commonly mentioned part types (expanded list)
-    const partTypes = [
-      'water filter', 'door bin', 'shelf', 'drawer', 'ice maker', 
-      'compressor', 'motor', 'control board', 'thermostat', 'gasket',
-      'spray arm', 'pump', 'drain hose', 'seal', 'fan', 'bin', 'basket',
-      'dispenser', 'grille', 'handle', 'hinge', 'latch', 'switch', 'timer',
-      'valve', 'cap', 'light', 'bulb', 'belt', 'knob', 'rack', 'door shelf',
-      'tray', 'tube', 'circuit board', 'touch pad', 'panel', 'bearing',
-      'container', 'wheel', 'roller', 'coil', 'relay', 'sensor', 'filter'
-    ];
-    
-    // Look for any mention of brand + part type combinations
-    const commonBrands = [
-      'whirlpool', 'ge', 'frigidaire', 'samsung', 'lg', 'maytag', 'kitchenaid',
-      'bosch', 'kenmore', 'electrolux', 'amana', 'jenn-air', 'admiral'
-    ];
-    
-    const brandPartCombos = [];
-    commonBrands.forEach(brand => {
-      partTypes.forEach(type => {
-        brandPartCombos.push(`${brand} ${type}`);
-      });
-    });
-    
-    const mentionedTypes = partTypes.filter(type => lowerResponse.includes(type));
-    const mentionedBrandPartCombos = brandPartCombos.filter(combo => lowerResponse.includes(combo));
-    
-    if (mentionedTypes.length > 0 || mentionedBrandPartCombos.length > 0) {
-      filteredParts = parts.filter(part => {
-        const partType = (part.metadata?.type || part.type || '').toLowerCase();
-        const partTitle = (part.text || '').toLowerCase();
-        const partBrand = (part.metadata?.brand || part.brand || '').toLowerCase();
-        
-        // Check if any mentioned type is in this part
-        const hasType = mentionedTypes.some(type => partType.includes(type) || partTitle.includes(type));
-        
-        // Check if any brand+part combo matches
-        const hasBrandPartCombo = mentionedBrandPartCombos.some(combo => {
-          const [brand, ...typeParts] = combo.split(' ');
-          const type = typeParts.join(' ');
-          return partBrand.includes(brand) && (partType.includes(type) || partTitle.includes(type));
-        });
-        
-        return hasType || hasBrandPartCombo;
-      });
-    }
-  }
-  
-  // If we still don't have any parts but the conversation suggests parts are relevant,
-  // include up to 5 most relevant parts
-  if (filteredParts.length === 0 && shouldShowPartCards(query, aiResponse)) {
-    filteredParts = parts.slice(0, 5);
-  }
-  
-  // Sort by relevance and limit to 5 parts max
-  return filteredParts
-    .sort((a, b) => {
-      // First priority: Exact matches
-      if (a.exactMatch !== b.exactMatch) {
-        return a.exactMatch ? -1 : 1;
-      }
-      
-      // Second priority: In stock items
-      if (a.metadata?.inStock !== b.metadata?.inStock) {
-        return a.metadata?.inStock ? -1 : 1;
-      }
-      
-      // Third priority: Higher score (relevance)
-      return (b.score || 0) - (a.score || 0);
-    })
-    .slice(0, 5);
 }
 
 /**
- * Find all part numbers mentioned in the response and add them to the results
- * @param {string} aiResponse - The AI response text
+ * Enhance parts data with information from the response
+ * @param {string} response - AI response text
  * @param {Array} currentParts - Current filtered parts
- * @param {Array} allParts - All parts from vector search
- * @returns {Promise<Array>} - Enhanced parts list with parts mentioned in response
+ * @param {Array} allParts - All parts returned by vector search
+ * @returns {Array} - Enhanced parts array
  */
-async function enhancePartsWithResponseMentions(aiResponse, currentParts, allParts) {
-  // Early return if no response or parts
-  if (!aiResponse || !allParts || !Array.isArray(allParts)) {
+async function enhancePartsWithResponseMentions(response, currentParts, allParts) {
+  // Extract newly mentioned part numbers from the AI response
+  const responseEntities = detectEntities(response);
+  const mentionedPartNumbers = responseEntities.partNumbers;
+  
+  // If no part numbers mentioned or we already have enough parts, just return current parts
+  if (mentionedPartNumbers.length === 0 || currentParts.length >= 5) {
     return currentParts;
   }
   
-  // Extract all part numbers from response
-  const partNumberRegex = /PS\d+/gi;
-  const mentionedPartNumbers = new Set();
-  let match;
+  // Check if any mentioned part numbers are not already in currentParts
+  const currentPartNumbers = new Set(currentParts.map(part => 
+    (part.metadata?.partNumber || part.partNumber || '').toUpperCase()
+  ));
   
-  while ((match = partNumberRegex.exec(aiResponse)) !== null) {
-    mentionedPartNumbers.add(match[0].toUpperCase());
-  }
-  
-  // If no part numbers found, return current parts
-  if (mentionedPartNumbers.size === 0) {
-    return currentParts;
-  }
-  
-  // Filter out part numbers that are already in current parts
-  const currentPartNumbers = new Set(
-    currentParts.map(p => 
-      (p.partNumber || '').toUpperCase()
-    )
-  );
-  
-  const newMentionedPartNumbers = [...mentionedPartNumbers].filter(
-    num => !currentPartNumbers.has(num)
+  const newPartNumbers = mentionedPartNumbers.filter(
+    partNum => !currentPartNumbers.has(partNum)
   );
   
   // If no new part numbers, return current parts
-  if (newMentionedPartNumbers.length === 0) {
+  if (newPartNumbers.length === 0) {
     return currentParts;
   }
   
-  // Find those part numbers in all parts
-  const mentionedParts = allParts.filter(part => {
-    const partNumber = (
-      part.metadata?.partNumber || 
-      part.partNumber || 
-      (part.text && part.text.match(/\(PS\d+\)/i) ? 
-       part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') : 
-       '')
-    ).toUpperCase();
-    
-    return newMentionedPartNumbers.includes(partNumber);
+  // Find parts in allParts that match new part numbers
+  const additionalParts = allParts.filter(part => {
+    const partNumber = (part.metadata?.partNumber || part.partNumber || '').toUpperCase();
+    return newPartNumbers.includes(partNumber);
   });
   
-  console.log(`Found ${mentionedParts.length} additional parts mentioned in AI response`);
-  
-  // Return combined parts list
-  return [...currentParts, ...mentionedParts];
+  // Add new parts to current parts and limit to 5
+  return [...currentParts, ...additionalParts].slice(0, 5);
 }
 
-/**
- * Main chat endpoint
- */
-router.post('/', async (req, res) => {
+// GET handler for chat route
+router.get('/', async (req, res) => {
   try {
-    const { message, conversation = [], filters } = req.body;
-    
-    if (!message) {
-      return res.status(400).json({ error: 'Message is required' });
+    const { query } = req.query;
+
+    if (!query) {
+      return res.status(400).json({ error: 'Query is required' });
     }
-    
-    console.log(`Processing chat request: "${message}"`);
-    console.log(`Conversation history: ${JSON.stringify(conversation)}`);
-    
-    // Check if the query is related to refrigerators or dishwashers
-    if (!isApplianceRelatedQuery(message)) {
-      // If not appliance-related, send a specific response
+
+    // Check if the query is related to appliances
+    if (!isApplianceRelatedQuery(query)) {
       return res.json({
-        response: "I specialize in refrigerator and dishwasher parts only. I'm unable to help with other appliances or unrelated topics. How can I help you find refrigerator or dishwasher parts today?",
+        response: "I'm sorry, I can only assist with refrigerator and dishwasher parts. Please ask a question related to these appliances or their parts.",
         parts: []
       });
     }
     
-    // Check for part numbers in the query
-    const partNumberMatch = message.match(/PS\d+/i);
+    // Detect entities in the query
+    const entities = detectEntities(query);
+    console.log('Detected entities:', JSON.stringify(entities));
     
-    // Default search parameters
-    let searchParams = {
-      limit: 10,
-      filters: {}
+    // Get relevant parts from vector database
+    const relevantParts = await vectorDB.queryVectors(
+      query, 
+      {}, // No filters for now
+      10  // Get up to 10 results
+    );
+    
+    // Format parts for context
+    const partsContext = formatPartsContext(relevantParts);
+    
+    // Get AI response
+    const aiResponse = await chatClient.getResponse(query, partsContext);
+    
+    // Check if we should show parts and filtering strategy
+    const partDisplay = shouldShowPartCards(query, aiResponse);
+    
+    // Filter parts based on the strategy
+    let filteredParts = [];
+    
+    if (partDisplay.showParts) {
+      if (partDisplay.onlyShowExactMatches && partDisplay.partNumbers.length > 0) {
+        // Only show exact part number matches
+        filteredParts = relevantParts.filter(part => {
+          const partNumber = (part.metadata?.partNumber || part.partNumber || '').toUpperCase();
+          return partDisplay.partNumbers.includes(partNumber);
+        });
+        
+        // Sort exact matches to the top
+        filteredParts.sort((a, b) => {
+          const aPartNumber = (a.metadata?.partNumber || a.partNumber || '').toUpperCase();
+          const bPartNumber = (b.metadata?.partNumber || b.partNumber || '').toUpperCase();
+          
+          // If a is in the mentioned parts but b isn't, a comes first
+          if (partDisplay.partNumbers.includes(aPartNumber) && !partDisplay.partNumbers.includes(bPartNumber)) {
+            return -1;
+          }
+          // If b is in the mentioned parts but a isn't, b comes first
+          if (!partDisplay.partNumbers.includes(aPartNumber) && partDisplay.partNumbers.includes(bPartNumber)) {
+            return 1;
+          }
+          
+          // Otherwise sort by in-stock status
+          if (a.metadata?.inStock !== b.metadata?.inStock) {
+            return a.metadata?.inStock ? -1 : 1;
+          }
+          
+          return 0;
+        });
+      } else {
+        // Use general relevance filtering for broader queries
+        filteredParts = relevantParts;
+      }
+      
+      // Enhance with parts mentioned in the response
+      filteredParts = await enhancePartsWithResponseMentions(aiResponse, filteredParts, relevantParts);
+    }
+    
+    // Limit to 5 parts
+    filteredParts = filteredParts.slice(0, 5);
+    
+    // Deduplicate parts by part number (fix for duplicate cards)
+    const seenPartNumbers = new Set();
+    filteredParts = filteredParts.filter(part => {
+      const partNumber = (part.metadata?.partNumber || part.partNumber || '').toUpperCase();
+      if (!partNumber || seenPartNumbers.has(partNumber)) {
+        return false;
+      }
+      seenPartNumbers.add(partNumber);
+      return true;
+    });
+
+    // Return the response and filtered parts
+    return res.json({
+      response: aiResponse,
+      parts: filteredParts
+    });
+  } catch (error) {
+    console.error('Error in chat API:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request' });
+  }
+});
+
+// POST handler with conversation history
+router.post('/', async (req, res) => {
+  try {
+    const { message, conversation } = req.body;
+
+    if (!message) {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // Check if the message is related to appliances
+    if (!isApplianceRelatedQuery(message)) {
+      return res.json({
+        response: "I'm sorry, I can only assist with refrigerator and dishwasher parts. Please ask a question related to these appliances or their parts.",
+        parts: []
+      });
+    }
+    
+    // Detect entities in the message
+    const messageEntities = detectEntities(message);
+    console.log('Detected entities in message:', JSON.stringify(messageEntities));
+    
+    // Also detect entities in recent conversation to maintain context
+    let conversationEntities = { partNumbers: [], modelNumbers: [], brands: [], categories: [] };
+    
+    if (conversation && Array.isArray(conversation) && conversation.length > 0) {
+      // Only look at the last 3 messages to keep context relevant
+      const recentMessages = conversation.slice(-3);
+      
+      recentMessages.forEach(msg => {
+        const msgEntities = detectEntities(msg.content);
+        
+        // Combine with existing entities
+        conversationEntities.partNumbers = [
+          ...conversationEntities.partNumbers,
+          ...msgEntities.partNumbers
+        ];
+        conversationEntities.modelNumbers = [
+          ...conversationEntities.modelNumbers,
+          ...msgEntities.modelNumbers
+        ];
+        conversationEntities.brands = [
+          ...conversationEntities.brands,
+          ...msgEntities.brands
+        ];
+        conversationEntities.categories = [
+          ...conversationEntities.categories,
+          ...msgEntities.categories
+        ];
+      });
+      
+      // Remove duplicates
+      conversationEntities.partNumbers = [...new Set(conversationEntities.partNumbers)];
+      conversationEntities.modelNumbers = [...new Set(conversationEntities.modelNumbers)];
+      conversationEntities.brands = [...new Set(conversationEntities.brands)];
+      conversationEntities.categories = [...new Set(conversationEntities.categories)];
+      
+      console.log('Detected entities in conversation:', JSON.stringify(conversationEntities));
+    }
+    
+    // Combine message and conversation entities
+    const combinedEntities = {
+      partNumbers: [...new Set([...messageEntities.partNumbers, ...conversationEntities.partNumbers])],
+      modelNumbers: [...new Set([...messageEntities.modelNumbers, ...conversationEntities.modelNumbers])],
+      brands: [...new Set([...messageEntities.brands, ...conversationEntities.brands])],
+      categories: [...new Set([...messageEntities.categories, ...conversationEntities.categories])]
     };
     
-    // Add exact part number match if found
-    if (partNumberMatch) {
-      const partNumber = partNumberMatch[0];
-      console.log(`Found part number in query: ${partNumber}`);
-      searchParams.exactMatch = partNumber;
+    // Prepare vector search query by enriching with entity information
+    let vectorQuery = message;
+    
+    // Add model numbers to query if any were detected
+    if (combinedEntities.modelNumbers.length > 0) {
+      vectorQuery += ` model:${combinedEntities.modelNumbers.join(' ')}`;
     }
     
-    // Apply any additional filters from the client
-    if (filters) {
-      searchParams.filters = { ...searchParams.filters, ...filters };
+    // Add brand to query if any were detected
+    if (combinedEntities.brands.length > 0) {
+      vectorQuery += ` brand:${combinedEntities.brands.join(' ')}`;
     }
     
-    // Perform the vector search
-    const results = await vectorDB.queryVectors(message, searchParams);
-    console.log(`Found ${results.length} results from vector search`);
+    // Get relevant parts from vector database with enriched query
+    const results = await vectorDB.queryVectors(
+      vectorQuery, 
+      {}, // No filters for now
+      10  // Get up to 10 results initially
+    );
     
-    // Format the context for the LLM
+    // Format parts for context
     const context = formatPartsContext(results);
     
-    // Prepare the conversation history for the LLM
+    // Prepare conversation history for the AI
     let promptConversation = [];
+    
     if (conversation && Array.isArray(conversation)) {
-      // Format previous messages for the LLM
-      promptConversation = conversation.map(msg => ({
+      // Format previous messages for the LLM and limit to last 5 messages
+      promptConversation = conversation.slice(-5).map(msg => ({
         role: msg.role === 'assistant' ? 'assistant' : 'user',
         content: msg.content
       }));
@@ -454,58 +385,109 @@ router.post('/', async (req, res) => {
     // Get response from the LLM
     const response = await chatClient.getResponse(message, context, promptConversation);
     
-    // Filter parts to only show relevant ones based on the query and response
-    let relevantParts = filterRelevantParts(results, message, response);
+    // Check if we should show parts and filtering strategy
+    const partDisplay = shouldShowPartCards(message, response);
     
-    // Enhance with parts mentioned in the response
-    relevantParts = await enhancePartsWithResponseMentions(response, relevantParts, results);
+    // Filter parts based on the strategy
+    let relevantParts = [];
     
-    // Format filtered parts for frontend
-    const formattedParts = relevantParts.map(part => {
+    if (partDisplay.showParts) {
+      if (partDisplay.onlyShowExactMatches && partDisplay.partNumbers.length > 0) {
+        // Only show exact part number matches
+        relevantParts = results.filter(part => {
+          const partNumber = (part.metadata?.partNumber || part.partNumber || '').toUpperCase();
+          return partDisplay.partNumbers.includes(partNumber);
+        });
+        
+        // Sort exact matches to the top
+        relevantParts.sort((a, b) => {
+          const aPartNumber = (a.metadata?.partNumber || a.partNumber || '').toUpperCase();
+          const bPartNumber = (b.metadata?.partNumber || b.partNumber || '').toUpperCase();
+          
+          // If a is in the mentioned parts but b isn't, a comes first
+          if (partDisplay.partNumbers.includes(aPartNumber) && !partDisplay.partNumbers.includes(bPartNumber)) {
+            return -1;
+          }
+          // If b is in the mentioned parts but a isn't, b comes first
+          if (!partDisplay.partNumbers.includes(aPartNumber) && partDisplay.partNumbers.includes(bPartNumber)) {
+            return 1;
+          }
+          
+          // Otherwise sort by in-stock status
+          if (a.metadata?.inStock !== b.metadata?.inStock) {
+            return a.metadata?.inStock ? -1 : 1;
+          }
+          
+          return 0;
+        });
+      } else {
+        // Use general relevance filtering for broader queries
+        relevantParts = results;
+      }
+      
+      // Enhance with parts mentioned in the response
+      relevantParts = await enhancePartsWithResponseMentions(response, relevantParts, results);
+    }
+    
+    // Format filtered parts for frontend (limit to 5)
+    const formattedParts = relevantParts.slice(0, 5).map(part => {
+      const metadata = part.metadata || {};
+      
       // Extract part number from text if not available in metadata
       const extractedPartNumber = part.text && part.text.match(/\(PS\d+\)/i) 
         ? part.text.match(/\(PS\d+\)/i)[0].replace(/[()]/g, '') 
         : null;
         
-      const partNumber = part.metadata?.partNumber || part.partNumber || extractedPartNumber || 'Unknown';
+      const partNumber = metadata.partNumber || part.partNumber || extractedPartNumber || 'Unknown';
       
       // Generate image URL based on part number
-      const imageUrl = part.metadata?.imageUrl || part.imageUrl || 
+      const imageUrl = metadata.imageUrl || part.imageUrl || 
         `https://www.partselect.com/assets/images/parts/${partNumber}.jpg`;
       
       // Check if video is available
-      const hasVideo = part.metadata?.hasVideo || part.hasVideo || false;
+      const hasVideo = metadata.hasVideo || part.hasVideo || false;
       
       // Generate video URL
-      const videoUrl = part.metadata?.videoUrl || part.videoUrl || 
+      const videoUrl = metadata.videoUrl || part.videoUrl || 
         (hasVideo ? `https://www.partselect.com/Installation-Video-${partNumber}.htm` : null);
       
+      // Return formatted part data
       return {
         partNumber,
-        title: part.text?.split(':')[0] || 'Unknown Part',
-        price: part.metadata?.price || part.price || '0.00',
-        inStock: part.metadata?.inStock !== false, // Default to true unless explicitly false
-        type: part.metadata?.type || part.type || 'unknown',
-        brand: part.metadata?.brand || part.brand || 'unknown',
-        appliance: part.metadata?.appliance || part.appliance || 'unknown',
-        exactMatch: part.exactMatch || false,
-        rating: part.metadata?.rating || part.rating || 0,
-        reviewCount: part.metadata?.reviewCount || part.reviewCount || 0,
+        title: metadata.title || part.title || (part.text ? part.text.split(':')[0] : 'Unknown Part'),
+        description: metadata.description || part.description || (part.text ? part.text.split(':')[1] || part.text : ''),
+        price: metadata.price || part.price || '0.00',
+        inStock: typeof metadata.inStock !== 'undefined' ? metadata.inStock : true,
+        brand: metadata.brand || part.brand || '',
+        type: metadata.type || part.type || '',
         imageUrl,
-        videoUrl
+        hasVideo,
+        videoUrl,
+        reviews: metadata.reviews || part.reviews || [],
+        rating: metadata.rating || part.rating || 0,
+        reviewCount: metadata.reviewCount || part.reviewCount || 0,
+        symptoms: metadata.symptoms || part.symptoms || []
       };
     });
     
-    // Return the response
+    // Deduplicate parts by part number (fix for duplicate cards)
+    const seenPartNumbers = new Set();
+    const uniqueParts = formattedParts.filter(part => {
+      if (!part.partNumber || seenPartNumbers.has(part.partNumber.toUpperCase())) {
+        return false;
+      }
+      seenPartNumbers.add(part.partNumber.toUpperCase());
+      return true;
+    });
+
+    // Return the response and filtered parts
     return res.json({
       response,
-      parts: formattedParts,
-      shouldShowParts: formattedParts.length > 0
+      parts: uniqueParts
     });
-    
   } catch (error) {
-    console.error('Error processing chat request:', error);
-    res.status(500).json({ error: 'Failed to process request', details: error.message });
+    console.error('Error in chat API:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request' });
   }
 });
 
@@ -544,12 +526,12 @@ router.post('/vectorize', async (req, res) => {
  */
 router.get('/vectorize/status', async (req, res) => {
   try {
-    // Get collection count to determine if vectorization has occurred
-    const count = await vectorDB.collection.count();
+    // Check if metadata exists to determine if vectorization has occurred
+    const hasMetadata = vectorDB.metadata && Array.isArray(vectorDB.metadata) && vectorDB.metadata.length > 0;
     
     return res.json({
-      vectorCount: count,
-      status: count > 0 ? 'completed' : 'not started or in progress'
+      vectorCount: hasMetadata ? vectorDB.metadata.length : 0,
+      status: hasMetadata ? 'completed' : 'not started or in progress'
     });
     
   } catch (error) {

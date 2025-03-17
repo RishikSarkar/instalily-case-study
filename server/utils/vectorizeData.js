@@ -87,12 +87,15 @@ class VectorDB {
         rating: part.rating || 0,
         reviewCount: part.reviewCount || 0,
         chunkType: 'general',
+        entityType: 'part',
         // Add image URL if available in the part data, otherwise generate one
         imageUrl: part.imageUrl || `https://www.partselect.com/assets/images/parts/${part.partSelectNumber}.jpg`,
         // Check if the part has installation video
         hasVideo: part.hasInstallationVideo || false,
         videoUrl: part.hasInstallationVideo ? 
-          `https://www.partselect.com/Installation-Video-${part.partSelectNumber}.htm` : null
+          `https://www.partselect.com/Installation-Video-${part.partSelectNumber}.htm` : null,
+        // Add compatible models if available
+        compatibleModels: part.compatibleWith || []
       };
       
       // Prepare main part information
@@ -120,6 +123,129 @@ class VectorDB {
         });
       }
     });
+    
+    // Add brand vectors
+    if (consolidatedData.relationships && consolidatedData.relationships.byBrand) {
+      console.log('Adding brand vectors...');
+      
+      Object.entries(consolidatedData.relationships.byBrand).forEach(([brand, brandInfo]) => {
+        if (!brand) return;
+        
+        // Count parts by type for this brand
+        const partTypesByBrand = {};
+        
+        // Get parts for this brand
+        const brandParts = brandInfo.parts || [];
+        
+        // Count parts by type
+        brandParts.forEach(partNumber => {
+          const part = consolidatedData.parts[partNumber];
+          if (part && part.partType) {
+            partTypesByBrand[part.partType] = (partTypesByBrand[part.partType] || 0) + 1;
+          }
+        });
+        
+        // Determine brand specialties (part types with most parts)
+        const specialties = Object.entries(partTypesByBrand)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 3)
+          .map(entry => entry[0]);
+        
+        // Create a brand description
+        const brandDescription = `${brand} is a manufacturer of ${brandInfo.appliance || 'appliance'} parts. ` +
+          `They specialize in ${specialties.join(', ')}. ` +
+          `They have ${brandParts.length} parts in our database.`;
+        
+        chunks.push({
+          id: `brand-${brand.toLowerCase().replace(/\s+/g, '-')}`,
+          text: brandDescription,
+          metadata: {
+            entityType: 'brand',
+            brandName: brand,
+            appliance: brandInfo.appliance || 'multiple',
+            partCount: brandParts.length,
+            specialties,
+            chunkType: 'brand'
+          }
+        });
+      });
+    }
+    
+    // Add category vectors
+    if (consolidatedData.relationships && consolidatedData.relationships.byType) {
+      console.log('Adding category vectors...');
+      
+      Object.entries(consolidatedData.relationships.byType).forEach(([category, categoryInfo]) => {
+        if (!category) return;
+        
+        // Get parts for this category
+        const categoryParts = categoryInfo.parts || [];
+        
+        // Count brands for this category
+        const brandsByCategory = {};
+        categoryParts.forEach(partNumber => {
+          const part = consolidatedData.parts[partNumber];
+          if (part && part.brand) {
+            brandsByCategory[part.brand] = (brandsByCategory[part.brand] || 0) + 1;
+          }
+        });
+        
+        // Determine top brands for this category
+        const topBrands = Object.entries(brandsByCategory)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 3)
+          .map(entry => entry[0]);
+        
+        // Create a category description
+        const categoryDescription = `${category} are parts used in ${categoryInfo.appliance || 'appliances'}. ` +
+          `Popular brands include ${topBrands.join(', ')}. ` +
+          `We have ${categoryParts.length} ${category.toLowerCase()} parts in our database.`;
+        
+        chunks.push({
+          id: `category-${category.toLowerCase().replace(/\s+/g, '-')}`,
+          text: categoryDescription,
+          metadata: {
+            entityType: 'category',
+            categoryName: category,
+            appliance: categoryInfo.appliance || 'multiple',
+            partCount: categoryParts.length,
+            topBrands,
+            chunkType: 'category'
+          }
+        });
+      });
+    }
+    
+    // Add model vectors if available in the data
+    // Note: This assumes there's model information in the data structure
+    // You might need to adjust based on your actual data structure
+    if (consolidatedData.relationships && consolidatedData.relationships.byModel) {
+      console.log('Adding model vectors...');
+      
+      Object.entries(consolidatedData.relationships.byModel).forEach(([model, modelInfo]) => {
+        if (!model) return;
+        
+        // Get parts compatible with this model
+        const compatibleParts = modelInfo.parts || [];
+        
+        // Create model description
+        const modelDescription = `${model} is a ${modelInfo.brand || ''} ${modelInfo.appliance || 'appliance'} model. ` +
+          `It has ${compatibleParts.length} compatible parts in our database.`;
+        
+        chunks.push({
+          id: `model-${model.toLowerCase().replace(/\s+/g, '-')}`,
+          text: modelDescription,
+          metadata: {
+            entityType: 'model',
+            modelNumber: model,
+            brand: modelInfo.brand || 'unknown',
+            appliance: modelInfo.appliance || 'unknown',
+            compatiblePartCount: compatibleParts.length,
+            chunkType: 'model'
+          }
+        });
+      });
+    }
     
     console.log(`Prepared ${chunks.length} chunks for vectorization`);
     return chunks;
@@ -261,83 +387,207 @@ class VectorDB {
         throw new Error('Search index has not been properly initialized or is empty');
       }
       
-      // Check for direct part number match first (case insensitive)
-      const partNumberMatch = query.match(/PS\d+/i);
-      let exactMatches = [];
+      // Use regex to detect various entity types in the query
+      const partNumberMatches = query.match(/PS\d{5,9}/gi) || [];
+      const modelNumberMatches = query.match(/[A-Z]{2,3}\d{3,7}/gi) || [];
       
-      if (partNumberMatch) {
-        const partNumber = partNumberMatch[0].toUpperCase();
-        console.log(`Found part number in query: ${partNumber}, checking for exact matches`);
+      // Common brands in refrigerators and dishwashers
+      const commonBrands = [
+        'Whirlpool', 'GE', 'Samsung', 'LG', 'Maytag', 'Frigidaire', 'KitchenAid', 
+        'Bosch', 'Kenmore', 'Amana', 'Electrolux', 'Jenn-Air'
+      ];
+      
+      // Check for brand mentions
+      const brandMatches = [];
+      const lowerQuery = query.toLowerCase();
+      
+      commonBrands.forEach(brand => {
+        if (lowerQuery.includes(brand.toLowerCase())) {
+          brandMatches.push(brand);
+        }
+      });
+      
+      console.log(`Detected entities in query:`, {
+        parts: partNumberMatches,
+        models: modelNumberMatches,
+        brands: brandMatches
+      });
+      
+      // Calculate query complexity to determine how many results to return
+      const queryComplexity = partNumberMatches.length + modelNumberMatches.length + brandMatches.length;
+      // Adjust result limit based on complexity, but ensure at least 3 results
+      const dynamicLimit = Math.max(3, Math.min(limit, queryComplexity > 0 ? 5 : 10));
+      
+      let exactMatches = [];
+      let entityMatches = [];
+      
+      // STEP 1: Find exact part number matches (highest priority)
+      if (partNumberMatches.length > 0) {
+        const partNumbers = partNumberMatches.map(match => match.toUpperCase());
+        console.log(`Searching for exact matches for part numbers: ${partNumbers.join(', ')}`);
         
-        // Find exact matches first
+        // Find all documents with matching part numbers
         exactMatches = this.metadata
           .map((item, index) => ({ ...item, index }))
           .filter(item => 
-            item.partNumber === partNumber || 
-            (item.text && item.text.includes(partNumber))
+            partNumbers.some(partNumber => 
+              item.partNumber === partNumber || 
+              (item.text && item.text.includes(partNumber))
+            )
           )
           .map(item => ({
             ...item,
-            score: 1.0, // Give exact matches a perfect score
+            score: 1.0, // Perfect score for exact matches
             exactMatch: true
           }));
         
-        if (exactMatches.length > 0) {
-          console.log(`Found ${exactMatches.length} exact matches for part number ${partNumber}`);
-        }
+        console.log(`Found ${exactMatches.length} exact part number matches`);
       }
       
-      // Convert query to embedding for semantic search
-      const queryEmbedding = await this.embeddings.embedText(query);
-      
-      // Search for similar vectors
-      const numResults = Math.min(limit * 3, this.metadata.length); // Get more results for filtering
-      const result = this.index.searchKnn(queryEmbedding, numResults);
-      
-      // Map results and apply filters
-      let semanticResults = result.neighbors.map((index, i) => ({
-        ...this.metadata[index],
-        score: 1 - result.distances[i], // Convert distance to similarity score
-        index
-      }));
-      
-      // Apply filters if any
-      if (Object.keys(filters).length > 0) {
-        semanticResults = semanticResults.filter(item => {
-          return Object.entries(filters).every(([key, value]) => {
-            if (typeof item[key] === 'string' && typeof value === 'string') {
-              return item[key].toLowerCase() === value.toLowerCase();
+      // STEP 2: Find model number matches (second priority)
+      if (modelNumberMatches.length > 0 && exactMatches.length === 0) {
+        const modelNumbers = modelNumberMatches.map(match => match.toUpperCase());
+        console.log(`Searching for model matches: ${modelNumbers.join(', ')}`);
+        
+        const modelMatches = this.metadata
+          .map((item, index) => ({ ...item, index }))
+          .filter(item => {
+            // Check if this item is a model or if it's compatible with the model
+            if (item.entityType === 'model') {
+              return modelNumbers.some(model => 
+                item.modelNumber && item.modelNumber.toUpperCase().includes(model)
+              );
+            } else if (item.compatibleModels && Array.isArray(item.compatibleModels)) {
+              return modelNumbers.some(model => 
+                item.compatibleModels.some(compatModel => 
+                  compatModel.toUpperCase().includes(model)
+                )
+              );
             }
-            return item[key] === value;
-          });
-        });
+            return false;
+          })
+          .map(item => ({
+            ...item,
+            score: 0.95, // High score but not perfect
+            modelMatch: true
+          }));
+        
+        entityMatches = [...entityMatches, ...modelMatches];
+        console.log(`Found ${modelMatches.length} model matches`);
       }
       
-      // Combine exact and semantic results, removing duplicates
-      const seenIndices = new Set(exactMatches.map(item => item.index));
-      const combinedResults = [
-        ...exactMatches,
-        ...semanticResults.filter(item => !seenIndices.has(item.index))
-      ];
+      // STEP 3: Find brand matches (third priority)
+      if (brandMatches.length > 0 && exactMatches.length === 0) {
+        console.log(`Searching for brand matches: ${brandMatches.join(', ')}`);
+        
+        const brandEntityMatches = this.metadata
+          .map((item, index) => ({ ...item, index }))
+          .filter(item => {
+            if (item.entityType === 'brand') {
+              return brandMatches.some(brand => 
+                item.brandName && item.brandName.toLowerCase() === brand.toLowerCase()
+              );
+            } else {
+              return brandMatches.some(brand => 
+                item.brand && item.brand.toLowerCase() === brand.toLowerCase()
+              );
+            }
+          })
+          .map(item => ({
+            ...item,
+            score: 0.9, // Good score but not as high as exact or model matches
+            brandMatch: true
+          }));
+        
+        entityMatches = [...entityMatches, ...brandEntityMatches];
+        console.log(`Found ${brandEntityMatches.length} brand matches`);
+      }
       
-      // Limit results
-      const finalResults = combinedResults.slice(0, limit);
+      // STEP 4: If we have exact or entity matches, prioritize them
+      if (exactMatches.length > 0 || entityMatches.length > 0) {
+        // Combine exact and entity matches, removing duplicates
+        const seenIndices = new Set(exactMatches.map(item => item.index));
+        
+        // Add entity matches that aren't already in exact matches
+        const filteredEntityMatches = entityMatches.filter(item => !seenIndices.has(item.index));
+        filteredEntityMatches.forEach(item => seenIndices.add(item.index));
+        
+        const priorityResults = [...exactMatches, ...filteredEntityMatches];
+        
+        // Apply any additional filters
+        const filteredResults = this.applyFilters(priorityResults, filters);
+        
+        // If we have enough priority matches, return them without semantic search
+        if (filteredResults.length >= dynamicLimit) {
+          return filteredResults.slice(0, dynamicLimit);
+        }
+        
+        // Store the seen indices to avoid duplicates in semantic results
+        return this.combineWithSemanticResults(query, filteredResults, seenIndices, filters, dynamicLimit);
+      }
       
-      console.log(`Found ${exactMatches.length} exact matches and ${semanticResults.length} semantic matches, returning ${finalResults.length} total results`);
-      
-      // Log the results for debugging
-      finalResults.forEach((result, i) => {
-        console.log(`Result ${i+1}${result.exactMatch ? ' (EXACT MATCH)' : ''}:`);
-        console.log(`  Part number: ${result.partNumber || 'unknown'}`);
-        console.log(`  Title: ${result.text ? result.text.split(':')[0] : 'unknown'}`);
-        console.log(`  Score: ${result.score.toFixed(4)}`);
-      });
-      
-      return finalResults;
+      // STEP 5: Fall back to semantic search if no entity matches found
+      return this.performSemanticSearch(query, filters, dynamicLimit);
     } catch (err) {
-      console.error('Error querying vector database:', err);
-      throw err;
+      console.error('Error querying vectors:', err);
+      return [];
     }
+  }
+  
+  /**
+   * Perform semantic search based on query embedding
+   */
+  async performSemanticSearch(query, filters = {}, limit = 10) {
+    // Convert query to embedding for semantic search
+    const queryEmbedding = await this.embeddings.embedText(query);
+    
+    // Search for similar vectors
+    const numResults = Math.min(limit * 3, this.metadata.length); // Get more results for filtering
+    const result = this.index.searchKnn(queryEmbedding, numResults);
+    
+    // Map results
+    let semanticResults = result.neighbors.map((index, i) => ({
+      ...this.metadata[index],
+      score: 1 - result.distances[i], // Convert distance to similarity score
+      index
+    }));
+    
+    // Apply filters
+    return this.applyFilters(semanticResults, filters).slice(0, limit);
+  }
+  
+  /**
+   * Apply filters to search results
+   */
+  applyFilters(results, filters = {}) {
+    if (Object.keys(filters).length === 0) {
+      return results;
+    }
+    
+    return results.filter(item => {
+      return Object.entries(filters).every(([key, value]) => {
+        if (typeof item[key] === 'string' && typeof value === 'string') {
+          return item[key].toLowerCase() === value.toLowerCase();
+        }
+        return item[key] === value;
+      });
+    });
+  }
+  
+  /**
+   * Combine priority results with semantic search results
+   */
+  async combineWithSemanticResults(query, priorityResults, seenIndices, filters, limit) {
+    // Get semantic results
+    const semanticResults = await this.performSemanticSearch(query, filters, limit * 2);
+    
+    // Filter out any results that are already in priority results
+    const filteredSemanticResults = semanticResults.filter(
+      item => !seenIndices.has(item.index)
+    );
+    
+    // Combine and limit
+    return [...priorityResults, ...filteredSemanticResults].slice(0, limit);
   }
   
   /**
