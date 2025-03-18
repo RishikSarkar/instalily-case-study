@@ -5,10 +5,18 @@ import { marked } from "marked";
 import PartsContainer from "./PartsContainer";
 
 function ChatWindow() {
+  // Configure marked to make links open in new tab
+  marked.use({
+    renderer: {
+      link(href, title, text) {
+        return `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+      }
+    }
+  });
 
   const defaultMessage = [{
     role: "assistant",
-    content: "Hi there! I'm your PartSelect assistant. I can help you find refrigerator and dishwasher parts, check compatibility, assist with installations, and support your purchase. How can I help you today?"
+    content: "Hi there! I'm your PartSelect agent. I can help you find or learn more about refrigerator and dishwasher parts offered on our [official website](https://www.partselect.com/). How can I help you today?"
   }];
 
   const [messages, setMessages] = useState(defaultMessage);

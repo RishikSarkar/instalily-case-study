@@ -6,7 +6,12 @@ function App() {
   return (
     <div className="App">
       <div className="heading">
-        PartSelect Chat Assistant
+        <img 
+          src="/partselect-header.png" 
+          alt="PartSelect Header" 
+          className="header-logo" 
+        />
+        <span className="heading-text">Part Assistance Agent</span>
       </div>
       <ChatWindow/>
     </div>

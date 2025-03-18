@@ -20,7 +20,7 @@ node_modules/
 
 # Generated data files
 server/data/scraper-state.json
-server/data/consolidated-data.json
+# server/data/consolidated-data.json
 # Vector files are now included for Render deployment
 # server/data/vectors/
 # **/vectors/
