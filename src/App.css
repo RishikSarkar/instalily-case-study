@@ -46,3 +46,20 @@
   height: 40px;
   margin-right: 12px;
 }
+
+/* Hide header logo on mobile devices */
+@media screen and (max-width: 768px) {
+  .header-logo {
+    display: none;
+  }
+  
+  .heading {
+    justify-content: center;
+    padding: 0 16px;
+  }
+  
+  .heading-text {
+    position: static;
+    transform: none;
+  }
+}
