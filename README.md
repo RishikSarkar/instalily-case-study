@@ -1,10 +1,27 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # PartSelect Appliance Parts Search
 
 This application provides a semantic search interface for finding refrigerator and dishwasher parts. It uses vector embeddings for intelligent search and a Deepseek LLM for natural language responses.
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Chat Agent Implementation](#chat-agent-implementation)
+- [Technical Components](#technical-components)
+- [Recent Enhancements](#recent-enhancements)
+- [Installation and Setup](#installation-and-setup)
+- [Available Scripts](#available-scripts)
+- [Additional Resources](#additional-resources)
+
+## Overview
+
+The PartSelect Appliance Parts Search application helps users find refrigerator and dishwasher parts through:
+- Natural language queries processed by an AI chat interface
+- Semantic search capabilities for understanding part requirements
+- Exact part number matching for direct lookups
+- Comprehensive database covering 1000+ parts across 40+ brands
+
+For detailed server implementation, including the scraper, vector search system, and API endpoints, see the [server README](./server/README.md).
 
 ## Features
 
@@ -12,6 +29,16 @@ This application provides a semantic search interface for finding refrigerator a
 - **Part Number Search**: Exact matching for part numbers in format PS12345678
 - **Intelligent Chat Interface**: Get recommendations and installation advice
 - **Comprehensive Parts Database**: 1000+ parts across 40+ brands
+- **Part Cards Display**: Visual presentation of relevant parts based on conversation context
+- **Installation Guidance**: Detailed steps for part replacement procedures
+
+## System Architecture
+
+- **Frontend**: React application with chat interface
+- **Backend**: Node.js Express server with API endpoints
+- **Vector Database**: HNSW vector index for semantic search
+- **LLM Integration**: Deepseek AI for natural language processing
+- **Data Storage**: Structured JSON format for parts, brands, and appliance information
 
 ## Chat Agent Implementation
 
@@ -29,7 +56,7 @@ The application features an AI-powered chat agent with several enhancements:
 - **Exact-Match Prioritization**: Ensures users see the most relevant parts first
 - **Deduplication System**: Prevents duplicate part cards from appearing in results
 
-### Technical Components
+## Technical Components
 
 - **Vector Search**: HNSW-based semantic search for finding relevant parts
 - **LLM Integration**: Deepseek AI with carefully crafted system prompts
@@ -38,16 +65,6 @@ The application features an AI-powered chat agent with several enhancements:
 - **Enhanced Part Detection**: Identifies part numbers, brands, and part types in natural language
 - **Set-Based Entity Lookup**: O(1) lookups for 40+ brands and 80+ part categories
 - **Entity-Aware Query Enhancement**: Dynamically adjusts search queries with detected entities
-
-### Recent Enhancements
-
-- **High-Performance Entity Detection**: Now uses Set-based data structures for O(1) lookups instead of regex matching, resulting in faster query processing
-- **Comprehensive Brand & Part Database**: Added support for 40+ appliance brands and 80+ part categories with direct lookups
-- **Improved Part Number Detection**: Enhanced regex pattern matching to handle variations like "PS 12345678", "part number PS12345678", etc.
-- **Context-Driven Entity Detection**: Added extraction of entities from conversation history for better context awareness
-- **Exact Match Prioritization**: When users mention specific part numbers, the system now prioritizes exact matches over semantic results
-- **Enhanced Stock Status Reporting**: Added explicit formatting and verification to ensure accurate stock status reporting
-- **Duplicate Part Prevention**: Implemented deduplication system to prevent identical parts from appearing multiple times in results
 
 ## Recent Enhancements
 
@@ -80,18 +97,41 @@ The context format for the LLM has been enhanced to:
 - Provide clear part number reference guidance
 - Format information consistently for better LLM understanding
 
-For more technical details, see the [server README](./server/README.md).
+### High-Performance Entity Detection
 
-## System Architecture
+Now uses Set-based data structures for O(1) lookups instead of regex matching, resulting in faster query processing.
 
-- **Frontend**: React application with chat interface
-- **Backend**: Node.js Express server with API endpoints
-- **Vector Database**: HNSW vector index for semantic search
-- **LLM Integration**: Deepseek AI for natural language processing
+### Comprehensive Brand & Part Database
 
-## Server Documentation
+Added support for 40+ appliance brands and 80+ part categories with direct lookups.
 
-Detailed documentation about the server implementation, including the scraper, vector search system, and API endpoints, is available in the [server README](./server/README.md).
+### Improved Part Number Detection
+
+Enhanced regex pattern matching to handle variations like "PS 12345678", "part number PS12345678", etc.
+
+### Context-Driven Entity Detection
+
+Added extraction of entities from conversation history for better context awareness.
+
+### Exact Match Prioritization
+
+When users mention specific part numbers, the system now prioritizes exact matches over semantic results.
+
+### Enhanced Stock Status Reporting
+
+Added explicit formatting and verification to ensure accurate stock status reporting.
+
+### Duplicate Part Prevention
+
+Implemented deduplication system to prevent identical parts from appearing multiple times in results.
+
+## Installation and Setup
+
+1. Clone the repository
+2. Install dependencies with `npm install` in both root and server directories
+3. Configure environment variables (see the [server README](./server/README.md) for details)
+4. Run the development server with `npm start`
+5. Access the application at http://localhost:3000
 
 ## Available Scripts
 
@@ -130,7 +170,9 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Additional Resources
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 

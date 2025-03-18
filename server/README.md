@@ -1,6 +1,49 @@
-# PartSelect Data Scraper
+# PartSelect Data Scraper and API Server
 
-This project contains scripts and data for scraping appliance parts information from PartSelect.com, with a focus on refrigerator and dishwasher parts.
+This project contains scripts and data for scraping appliance parts information from PartSelect.com, with a focus on refrigerator and dishwasher parts, and provides an API for semantic search and chat capabilities.
+
+## Table of Contents
+- [Overview](#overview)
+- [Directory Structure](#directory-structure)
+- [Setup and Configuration](#setup-and-configuration)
+  - [Environment Variables](#environment-variables)
+  - [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [CLI Options](#cli-options)
+- [Data and Scraping](#data-and-scraping)
+  - [Supported Brands and Part Types](#supported-brands-and-part-types)
+  - [Data Structure](#data-structure)
+- [Vector Search System](#vector-search-system)
+  - [Vector Storage](#vector-storage)
+  - [Embedding Generation](#embedding-generation)
+  - [Vectorization Process](#vectorization-process)
+  - [Query Processing](#query-processing)
+  - [Improved Search Algorithm](#improved-search-algorithm)
+- [LLM and Chat Interface](#llm-and-chat-interface-implementation)
+  - [LLM Integration](#llm-integration)
+  - [System Prompt](#system-prompt)
+  - [Context Formatting](#context-formatting)
+  - [Conversation Management](#conversation-management)
+  - [Part Cards Implementation](#part-cards-implementation)
+  - [Hallucination Prevention](#hallucination-prevention)
+  - [Stock Status Handling](#stock-status-handling)
+  - [Query Processing Pipeline](#query-processing-pipeline)
+  - [API Response Format](#api-response-format)
+  - [API Endpoints](#api-endpoints)
+- [Advanced Features](#advanced-features)
+  - [Entity Detection System](#entity-detection-system)
+  - [Enhanced Part Filtering](#enhanced-part-filtering)
+  - [Deduplication System](#deduplication-system)
+  - [Context Format Improvements](#context-format-improvements)
+
+## Overview
+
+The PartSelect server provides:
+- Data scraping functionality for refrigerator and dishwasher parts
+- Vector-based semantic search capabilities
+- Integration with Deepseek LLM for natural language responses
+- RESTful API endpoints for frontend integration
+- Entity detection and part filtering systems
 
 ## Directory Structure
 
@@ -41,6 +84,36 @@ server/
 └── server.js           # Express server entry point
 ```
 
+## Setup and Configuration
+
+### Environment Variables
+
+Copy `.env.example` to `.env` and set:
+
+- `PORT` - Server port (default: 5000)
+- `DEEPSEEK_API_KEY` - Your Deepseek API key
+- `MAX_PARTS_PER_PAGE` - Maximum parts per page to extract
+- `MAX_PAGES_PER_CATEGORY` - Maximum pages per category to scrape
+- `DELAY_BETWEEN_REQUESTS` - Delay between requests in milliseconds
+- `ADMIN_API_KEY` - Admin API key for protected routes
+
+### Installation
+
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
+2. Set up environment variables:
+   ```
+   cp .env.example .env
+   ```
+
+3. Start the server:
+   ```
+   npm run dev
+   ```
+
 ## Available Scripts
 
 The project includes several NPM scripts for convenience:
@@ -73,6 +146,49 @@ node cli.js --help
 ### Vectorization Options:
 - `--vectorize` - Vectorize the consolidated data for semantic search
 - `--resetVectors` - Reset the vector database before vectorization
+
+## Data and Scraping
+
+### Data Structure
+
+The consolidated data file contains:
+
+- Parts organized by part number
+- Relationships between parts, brands, and appliance types
+- Meta information about the dataset
+
+### Supported Brands and Part Types
+
+#### Dishwasher Brands
+Admiral, Amana, Beko, Blomberg, Bosch, Caloric, Crosley, Dacor, Electrolux, Estate, 
+Frigidaire, Gaggenau, GE, Gibson, Haier, Hotpoint, Inglis, Jenn-Air, Kelvinator, 
+Kenmore, KitchenAid, LG, Magic Chef, Maytag, Norge, Roper, Samsung, SMEG, Speed Queen, 
+Tappan, Thermador, Uni, Whirlpool, White-Westinghouse
+
+#### Refrigerator Brands
+Admiral, Amana, Beko, Blomberg, Bosch, Caloric, Crosley, Dacor, Dynasty, Electrolux, 
+Estate, Frigidaire, Gaggenau, GE, Gibson, Haier, Hardwick, Hoover, Hotpoint, Inglis, 
+International, Jenn-Air, Kelvinator, Kenmore, KitchenAid, LG, Litton, Magic Chef, 
+Maytag, Norge, RCA, Roper, Samsung, Sharp, SMEG, Tappan, Thermador, Uni, Whirlpool, 
+White-Westinghouse
+
+#### Dishwasher Part Types
+Dishracks, Wheels and Rollers, Seals and Gaskets, Spray Arms, Hardware, Pumps, Latches, 
+Elements and Burners, Valves, Hoses and Tubes, Filters, Brackets and Flanges, Hinges, 
+Racks, Springs and Shock Absorbers, Caps and Lids, Switches, Dispensers, Circuit Boards 
+and Touch Pads, Bearings, Motors, Thermostats, Panels, Sensors, Trays and Shelves, 
+Grilles and Kickplates, Handles, Drawers and Glides, Knobs, Insulation, Timers, 
+Ducts and Vents, Wire Plugs and Connectors, Doors, Legs and Feet, Trim, Manuals and Literature
+
+#### Refrigerator Part Types
+Trays and Shelves, Drawers and Glides, Filters, Ice Makers, Hardware, Seals and Gaskets, 
+Switches, Hinges, Lights and Bulbs, Valves, Motors, Caps and Lids, Thermostats, Door Shelves, 
+Wheels and Rollers, Handles, Hoses and Tubes, Doors, Elements and Burners, Circuit Boards 
+and Touch Pads, Dispensers, Electronics, Sensors, Fans and Blowers, Brackets and Flanges, 
+Timers, Bearings, Compressors, Springs and Shock Absorbers, Grilles and Kickplates, Latches, 
+Knobs, Trim, Wire Plugs and Connectors, Tanks and Containers, Legs and Feet, Drip Bowls, 
+Panels, Ducts and Vents, Insulation, Grates, Racks, Power Cords, Blades, Deflectors and Chutes, 
+Starters, Manuals and Literature, Transformers 
 
 ## Vector Search System
 
@@ -289,57 +405,7 @@ The chat API endpoint returns responses in this format:
 - `POST /api/chat/vectorize` - Admin endpoint to trigger vectorization (protected by API key)
 - `GET /api/chat/vectorize/status` - Check vectorization status
 
-## Data Structure
-
-The consolidated data file contains:
-
-- Parts organized by part number
-- Relationships between parts, brands, and appliance types
-- Meta information about the dataset
-
-## Environment Variables
-
-Copy `.env.example` to `.env` and set:
-
-- `PORT` - Server port (default: 5000)
-- `DEEPSEEK_API_KEY` - Your Deepseek API key
-- `MAX_PARTS_PER_PAGE` - Maximum parts per page to extract
-- `MAX_PAGES_PER_CATEGORY` - Maximum pages per category to scrape
-- `DELAY_BETWEEN_REQUESTS` - Delay between requests in milliseconds
-- `ADMIN_API_KEY` - Admin API key for protected routes
-
-## Supported Brands and Part Types
-
-### Dishwasher Brands
-Admiral, Amana, Beko, Blomberg, Bosch, Caloric, Crosley, Dacor, Electrolux, Estate, 
-Frigidaire, Gaggenau, GE, Gibson, Haier, Hotpoint, Inglis, Jenn-Air, Kelvinator, 
-Kenmore, KitchenAid, LG, Magic Chef, Maytag, Norge, Roper, Samsung, SMEG, Speed Queen, 
-Tappan, Thermador, Uni, Whirlpool, White-Westinghouse
-
-### Refrigerator Brands
-Admiral, Amana, Beko, Blomberg, Bosch, Caloric, Crosley, Dacor, Dynasty, Electrolux, 
-Estate, Frigidaire, Gaggenau, GE, Gibson, Haier, Hardwick, Hoover, Hotpoint, Inglis, 
-International, Jenn-Air, Kelvinator, Kenmore, KitchenAid, LG, Litton, Magic Chef, 
-Maytag, Norge, RCA, Roper, Samsung, Sharp, SMEG, Tappan, Thermador, Uni, Whirlpool, 
-White-Westinghouse
-
-### Dishwasher Part Types
-Dishracks, Wheels and Rollers, Seals and Gaskets, Spray Arms, Hardware, Pumps, Latches, 
-Elements and Burners, Valves, Hoses and Tubes, Filters, Brackets and Flanges, Hinges, 
-Racks, Springs and Shock Absorbers, Caps and Lids, Switches, Dispensers, Circuit Boards 
-and Touch Pads, Bearings, Motors, Thermostats, Panels, Sensors, Trays and Shelves, 
-Grilles and Kickplates, Handles, Drawers and Glides, Knobs, Insulation, Timers, 
-Ducts and Vents, Wire Plugs and Connectors, Doors, Legs and Feet, Trim, Manuals and Literature
-
-### Refrigerator Part Types
-Trays and Shelves, Drawers and Glides, Filters, Ice Makers, Hardware, Seals and Gaskets, 
-Switches, Hinges, Lights and Bulbs, Valves, Motors, Caps and Lids, Thermostats, Door Shelves, 
-Wheels and Rollers, Handles, Hoses and Tubes, Doors, Elements and Burners, Circuit Boards 
-and Touch Pads, Dispensers, Electronics, Sensors, Fans and Blowers, Brackets and Flanges, 
-Timers, Bearings, Compressors, Springs and Shock Absorbers, Grilles and Kickplates, Latches, 
-Knobs, Trim, Wire Plugs and Connectors, Tanks and Containers, Legs and Feet, Drip Bowls, 
-Panels, Ducts and Vents, Insulation, Grates, Racks, Power Cords, Blades, Deflectors and Chutes, 
-Starters, Manuals and Literature, Transformers 
+## Advanced Features
 
 ### Entity Detection System
 
@@ -448,13 +514,4 @@ Key improvements include:
 1. Prominent display of stock status with explicit instruction
 2. Explicit part number reference guidance
 3. Clear instructions for accurate reporting
-4. Consistent formatting for better LLM understanding
-
-### Conversation Management
-
-The system maintains conversation history to provide context-aware responses:
-
-- User queries and assistant responses are stored in an array
-- Each message includes a `role` (user/assistant) and `content`
-- History is passed to the LLM with each new query
-- The LLM uses this history to maintain context across multiple turns 
+4. Consistent formatting for better LLM understanding 
