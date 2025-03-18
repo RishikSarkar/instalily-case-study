@@ -5,7 +5,7 @@ import { marked } from "marked";
 import PartsContainer from "./PartsContainer";
 
 function ChatWindow() {
-  // Configure marked to make links open in new tab
+  // Make links open in new tab
   marked.use({
     renderer: {
       link(href, title, text) {
@@ -33,7 +33,7 @@ function ChatWindow() {
       scrollToBottom();
   }, [messages, loading]);
 
-  // Loading indicator component
+  // Loading dots animation
   const LoadingIndicator = () => (
     <div className="assistant-message-container">
       <div className="message assistant-message">
@@ -49,7 +49,7 @@ function ChatWindow() {
 
   const handleSend = async (input) => {
     if (input.trim() !== "") {
-      // Update state with new user message
+      // Add user message
       const newUserMessage = { role: "user", content: input };
       const updatedMessages = [...messages, newUserMessage];
       setMessages(updatedMessages);
@@ -57,12 +57,10 @@ function ChatWindow() {
       setLoading(true);
 
       try {
-        // Call API with full conversation history for context
         const newMessage = await getAIMessage(input, updatedMessages);
         setMessages(prevMessages => [...prevMessages, newMessage]);
       } catch (error) {
         console.error('Error in chat:', error);
-        // Show error message
         setMessages(prevMessages => [
           ...prevMessages,
           {
@@ -86,14 +84,12 @@ function ChatWindow() {
                       </div>
                   )}
                   
-                  {/* Display parts if this is an assistant message with parts */}
                   {message.role === "assistant" && message.parts && message.parts.length > 0 && (
                     <PartsContainer parts={message.parts} />
                   )}
               </div>
           ))}
           
-          {/* Show loading indicator while waiting for response */}
           {loading && <LoadingIndicator />}
           
           <div ref={messagesEndRef} />

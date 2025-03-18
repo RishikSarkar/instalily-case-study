@@ -1,25 +1,24 @@
-// Chat API client
+// Chat API handler
 
 /**
- * Sends a user query to the backend and gets a response
- * @param {string} userQuery - The user's message
- * @param {Array} conversationHistory - Previous messages in the conversation
- * @returns {Promise<Object>} - The assistant's response
+ * Gets AI response for user query
+ * @param {string} userQuery - User message
+ * @param {Array} conversationHistory - Chat history
+ * @returns {Promise<Object>} AI response
  */
 export const getAIMessage = async (userQuery, conversationHistory = []) => {
   try {
-    // Use environment variable for production or fall back to localhost
+    // Use prod URL or localhost
     const backendUrl = process.env.REACT_APP_API_URL 
       ? `${process.env.REACT_APP_API_URL}/api/chat`
       : 'http://localhost:5000/api/chat';
     
-    // Format the conversation history for the backend
+    // Format history for API
     const formattedHistory = conversationHistory.map(msg => ({
       role: msg.role,
       content: msg.content
     }));
     
-    // Send conversation history to maintain context
     const response = await fetch(backendUrl, {
       method: 'POST',
       headers: {
@@ -37,7 +36,7 @@ export const getAIMessage = async (userQuery, conversationHistory = []) => {
     
     const data = await response.json();
     
-    // Check if the response indicates it's outside the appliance domain
+    // Handle non-appliance questions
     if (data.outsideDomain) {
       return {
         role: 'assistant',
@@ -46,26 +45,20 @@ export const getAIMessage = async (userQuery, conversationHistory = []) => {
       };
     }
     
-    // Add placeholders for image URLs and video URLs
+    // Add missing image/video URLs
     if (data.parts && Array.isArray(data.parts)) {
       data.parts = data.parts.map(part => ({
         ...part,
-        // Generate fallback image URL if not provided
         imageUrl: part.imageUrl || null,
-        // Generate video URL if not provided but we have installation data
         videoUrl: part.videoUrl || (part.hasInstallationVideo ? 
           `https://www.partselect.com/Installation-Video-${part.partNumber}.htm` : null)
       }));
       
-      // Only include parts if relevant to the query
       if (data.shouldShowParts === false) {
         data.parts = [];
       }
     }
     
-    // Format the response to match our expected format
-    // The API returns { response: "text", parts: [...] }
-    // We need to return { role: "assistant", content: "text", parts: [...] }
     return {
       role: 'assistant',
       content: data.response,
@@ -74,7 +67,6 @@ export const getAIMessage = async (userQuery, conversationHistory = []) => {
   } catch (error) {
     console.error('Error getting AI response:', error);
     
-    // Return a fallback message
     return {
       role: 'assistant',
       content: "I'm sorry, I'm having trouble connecting to the server. Please try again later.",

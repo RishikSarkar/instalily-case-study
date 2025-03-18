@@ -1,14 +1,8 @@
-/**
- * Scraper module index file
- * Provides easy access to the scraper functionality
- */
+// Scraper module index file
 
 const { runComprehensiveScraper } = require('./comprehensive-scraper');
 const config = require('../config/scraper-config');
 
-/**
- * Run the scraper with default configuration
- */
 function runScraper() {
   console.log('Running scraper with default configuration:');
   console.log(`- Max parts per page: ${config.maxPartsPerPage}`);
@@ -18,7 +12,6 @@ function runScraper() {
   return runComprehensiveScraper();
 }
 
-// Export the scraper functionality
 module.exports = {
   runScraper,
   runComprehensiveScraper,

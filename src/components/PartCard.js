@@ -1,9 +1,7 @@
 import React from 'react';
 import './PartCard.css';
 
-/**
- * Component to display a single part with its details
- */
+// Single part card component
 function PartCard({ part }) {
   const { 
     partNumber, 
@@ -19,12 +17,12 @@ function PartCard({ part }) {
     videoUrl
   } = part;
 
-  // Clean up price to avoid double dollar signs
+  // Fix price formatting
   const formattedPrice = typeof price === 'string' && price.startsWith('$') 
     ? price 
     : `$${price}`;
   
-  // Build the company product page URL
+  // Build product page URL
   const productUrl = `https://www.partselect.com/${partNumber}-${brand || 'Appliance'}-${title.replace(/[^a-zA-Z0-9]/g, '-')}.htm`;
 
   return (

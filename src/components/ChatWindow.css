@@ -81,7 +81,6 @@
   white-space: normal !important;
 }
 
-/* Lists */
 .assistant-message ol,
 .assistant-message ul {
   margin: 8px 0 !important;
@@ -107,14 +106,12 @@
   margin-bottom: 0 !important;
 }
 
-/* Nested lists */
 .assistant-message li > ul,
 .assistant-message li > ol {
   margin: 0 !important;
   padding-left: 24px !important;
 }
 
-/* Remove extra whitespace in list items */
 .assistant-message li > p,
 .assistant-message li > div {
   display: inline !important;
@@ -122,7 +119,6 @@
   padding: 0 !important;
 }
 
-/* Handle text content */
 .assistant-message p {
   margin: 8px 0 !important;
 }
@@ -135,7 +131,6 @@
   margin-bottom: 0 !important;
 }
 
-/* Handle headings */
 .assistant-message h1,
 .assistant-message h2,
 .assistant-message h3,
@@ -143,14 +138,12 @@
   margin: 8px 0 4px 0 !important;
 }
 
-/* Handle line breaks */
 .assistant-message br {
   display: block;
   content: "";
   margin: 4px 0;
 }
 
-/* Remove double line breaks */
 .assistant-message br + br {
   display: none;
 }
@@ -238,14 +231,12 @@
   color: white;
 }
 
-/* Style for disabled state of input and button */
 .input-area input:disabled,
 .input-area button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-/* Ensure all buttons follow the same style */
 button {
   padding: 10px 20px;
   border: none;
@@ -263,7 +254,6 @@ button:hover {
   color: white;
 }
 
-/* Ensure links in messages maintain proper color */
 .assistant-message a {
   color: white;
   text-decoration: underline;
@@ -275,17 +265,19 @@ button:hover {
 }
 
 .loading-dots {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   position: relative;
-  width: 30px;
-  margin-left: 10px;
+  width: 24px;
+  height: 15px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
 .loading-dots div {
   position: absolute;
-  top: 5px;
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: white;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
@@ -302,12 +294,12 @@ button:hover {
 }
 
 .loading-dots div:nth-child(3) {
-  left: 12px;
+  left: 8px;
   animation: loading-dots2 0.6s infinite;
 }
 
 .loading-dots div:nth-child(4) {
-  left: 24px;
+  left: 16px;
   animation: loading-dots3 0.6s infinite;
 }
 
@@ -334,6 +326,6 @@ button:hover {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(12px, 0);
+    transform: translate(8px, 0);
   }
 }

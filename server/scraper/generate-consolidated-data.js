@@ -1,7 +1,5 @@
-/**
- * Standalone script to generate consolidated data from existing part files
- * This can be run independently after scraping is completed
- */
+// Standalone script to generate consolidated data from existing part files
+
 const { consolidateData } = require('../utils/consolidateData');
 
 console.log('Starting consolidated data generation process...');

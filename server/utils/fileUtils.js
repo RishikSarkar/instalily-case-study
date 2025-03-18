@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-/**
- * Ensures that all required data directories exist
- */
 function ensureDataDirectories() {
   const dirs = [
     path.join(__dirname, '../data'),
@@ -18,11 +15,6 @@ function ensureDataDirectories() {
   });
 }
 
-/**
- * Saves JSON data to a file
- * @param {Object|Array} data - Data to save
- * @param {String} filePath - Path to save file
- */
 function saveJsonToFile(data, filePath) {
   try {
     const dirPath = path.dirname(filePath);
@@ -37,11 +29,6 @@ function saveJsonToFile(data, filePath) {
   }
 }
 
-/**
- * Loads JSON data from a file
- * @param {String} filePath - Path to load file from
- * @returns {Object|Array|null} Loaded data or null if error
- */
 function loadJsonFromFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
@@ -57,11 +44,6 @@ function loadJsonFromFile(filePath) {
   }
 }
 
-/**
- * Appends JSON data to an existing file (or creates a new one)
- * @param {Object|Array} data - Data to append
- * @param {String} filePath - Path to file
- */
 function appendJsonToFile(data, filePath) {
   try {
     let existingData = [];
@@ -83,7 +65,6 @@ function appendJsonToFile(data, filePath) {
         existingData.push(data);
       }
     } else {
-      // If existing data is an object, merge with new data
       existingData = { ...existingData, ...data };
     }
     

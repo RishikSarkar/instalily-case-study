@@ -1,8 +1,5 @@
-/**
- * State Manager for Scraper
- * Tracks processed parts, brands, and categories to avoid duplicates
- * Persists state between scraper runs
- */
+// State Manager for Scraper
+
 const fs = require('fs');
 const path = require('path');
 
@@ -23,16 +20,12 @@ class ScraperState {
     this.load();
   }
 
-  /**
-   * Load state from disk
-   */
   load() {
     try {
       if (fs.existsSync(STATE_FILE)) {
         console.log('Loading existing scraper state...');
         const data = JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
         
-        // Convert arrays to Sets for faster lookups
         this.processedParts = new Set(data.processedParts || []);
         this.knownBrands = new Set(data.knownBrands || []);
         this.knownCategories = new Set(data.knownCategories || []);
@@ -45,22 +38,17 @@ class ScraperState {
       }
     } catch (err) {
       console.error('Error loading state:', err);
-      this.save(); // Create initial file if there was an error
+      this.save();
     }
   }
 
-  /**
-   * Save state to disk
-   */
   save() {
     try {
-      // Ensure data directory exists
       const dataDir = path.dirname(STATE_FILE);
       if (!fs.existsSync(dataDir)) {
         fs.mkdirSync(dataDir, { recursive: true });
       }
       
-      // Convert Sets back to arrays for serialization
       const state = {
         processedParts: [...this.processedParts],
         knownBrands: [...this.knownBrands],
@@ -74,17 +62,10 @@ class ScraperState {
     }
   }
 
-  /**
-   * Check if a part has already been processed
-   */
   hasPart(partNumber) {
     return this.processedParts.has(partNumber);
   }
 
-  /**
-   * Add a part to the tracked state
-   * Returns true if the part was new (not previously tracked)
-   */
   addPart(partData) {
     if (!partData || !partData.partSelectNumber) return false;
     
@@ -94,17 +75,14 @@ class ScraperState {
     if (isNew) {
       this.processedParts.add(partNumber);
       
-      // Track brand if available
       if (partData.brand) {
         this.knownBrands.add(partData.brand.toLowerCase());
       }
       
-      // Track categories/types if available
       if (partData.partType) {
         this.knownCategories.add(partData.partType.toLowerCase());
       }
       
-      // Periodically save to avoid losing state on crashes
       if (this.processedParts.size % 50 === 0) {
         this.save();
       }
@@ -113,9 +91,6 @@ class ScraperState {
     return isNew;
   }
 
-  /**
-   * Get counts of tracked items
-   */
   getCounts() {
     return {
       parts: this.processedParts.size,
@@ -124,26 +99,18 @@ class ScraperState {
     };
   }
 
-  /**
-   * Get missing brands from a provided list
-   */
   getMissingBrands(brandList) {
     return brandList.filter(brand => {
       const normalizedBrand = brand.toLowerCase();
-      // Check if we have this brand in any case format
       return ![...this.knownBrands].some(knownBrand => 
         knownBrand.toLowerCase() === normalizedBrand
       );
     });
   }
 
-  /**
-   * Get missing categories from a provided list
-   */
   getMissingCategories(categoryList) {
     return categoryList.filter(category => {
       const normalizedCategory = category.toLowerCase();
-      // Check if we have this category in any case format
       return ![...this.knownCategories].some(knownCategory => 
         knownCategory.toLowerCase() === normalizedCategory
       );
@@ -151,5 +118,4 @@ class ScraperState {
   }
 }
 
-// Export a singleton instance
 module.exports = new ScraperState(); 

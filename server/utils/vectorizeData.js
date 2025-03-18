@@ -1,9 +1,4 @@
-/**
- * Vector Database Utility for PartSelect Data
- * 
- * This utility converts consolidated part data into vector embeddings
- * and stores them in a vector database for semantic retrieval.
- */
+// Vector Database Utility for PartSelect Data
 const fs = require('fs');
 const path = require('path');
 const { HierarchicalNSW } = require('hnswlib-node');
@@ -14,8 +9,8 @@ const { loadJsonFromFile, saveJsonToFile, ensureDataDirectories } = require('./f
 const INDEX_PATH = path.join(__dirname, '../data/vectors/parts_index.bin');
 const METADATA_PATH = path.join(__dirname, '../data/vectors/parts_metadata.json');
 const CONSOLIDATED_DATA_PATH = path.join(__dirname, '../data/consolidated-data.json');
-const EMBEDDING_DIMENSIONS = 1536; // Deepseek embeddings dimension
-const CHUNK_SIZE = 100; // Process in batches to avoid memory issues
+const EMBEDDING_DIMENSIONS = 1536;
+const CHUNK_SIZE = 100;
 
 class VectorDB {
   constructor() {
@@ -23,16 +18,13 @@ class VectorDB {
     this.index = null;
     this.metadata = [];
     
-    // Ensure directories exist
     ensureDataDirectories();
     
-    // Create data/vectors directory if it doesn't exist
     const vectorsDir = path.dirname(INDEX_PATH);
     if (!fs.existsSync(vectorsDir)) {
       fs.mkdirSync(vectorsDir, { recursive: true });
     }
     
-    // Automatically load the index if it exists
     this.loadIndex().then(loaded => {
       if (loaded) {
         console.log('Vector index loaded successfully on startup');
@@ -44,9 +36,6 @@ class VectorDB {
     });
   }
 
-  /**
-   * Load consolidated data from file
-   */
   loadConsolidatedData() {
     try {
       console.log('Loading consolidated data...');
@@ -62,19 +51,13 @@ class VectorDB {
     }
   }
 
-  /**
-   * Convert part data to text chunks for embedding
-   */
   prepareChunks(consolidatedData) {
     console.log('Preparing text chunks for vectorization...');
     const chunks = [];
     
-    // Process parts
     Object.entries(consolidatedData.parts).forEach(([partNum, part]) => {
-      // Skip parts with missing critical data
       if (!part.partSelectNumber || !part.title) return;
       
-      // Prepare metadata
       const metadata = {
         id: part.partSelectNumber,
         title: part.title,
@@ -88,24 +71,19 @@ class VectorDB {
         reviewCount: part.reviewCount || 0,
         chunkType: 'general',
         entityType: 'part',
-        // Add image URL if available in the part data, otherwise generate one
         imageUrl: part.imageUrl || `https://www.partselect.com/assets/images/parts/${part.partSelectNumber}.jpg`,
-        // Check if the part has installation video
         hasVideo: part.hasInstallationVideo || false,
         videoUrl: part.hasInstallationVideo ? 
           `https://www.partselect.com/Installation-Video-${part.partSelectNumber}.htm` : null,
-        // Add compatible models if available
         compatibleModels: part.compatibleWith || []
       };
       
-      // Prepare main part information
       chunks.push({
         id: `part-${part.partSelectNumber}`,
         text: `${part.title} (${part.partSelectNumber}): ${part.description || ''}`,
         metadata
       });
       
-      // Add review text as separate chunk if available
       if (part.userReview && part.userReview.content) {
         chunks.push({
           id: `review-${part.partSelectNumber}`,
@@ -114,7 +92,6 @@ class VectorDB {
         });
       }
       
-      // Add symptoms as separate chunk if available
       if (part.symptoms && part.symptoms.length > 0) {
         chunks.push({
           id: `symptoms-${part.partSelectNumber}`,
@@ -124,20 +101,16 @@ class VectorDB {
       }
     });
     
-    // Add brand vectors
     if (consolidatedData.relationships && consolidatedData.relationships.byBrand) {
       console.log('Adding brand vectors...');
       
       Object.entries(consolidatedData.relationships.byBrand).forEach(([brand, brandInfo]) => {
         if (!brand) return;
         
-        // Count parts by type for this brand
         const partTypesByBrand = {};
         
-        // Get parts for this brand
         const brandParts = brandInfo.parts || [];
         
-        // Count parts by type
         brandParts.forEach(partNumber => {
           const part = consolidatedData.parts[partNumber];
           if (part && part.partType) {
@@ -145,13 +118,11 @@ class VectorDB {
           }
         });
         
-        // Determine brand specialties (part types with most parts)
         const specialties = Object.entries(partTypesByBrand)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 3)
           .map(entry => entry[0]);
         
-        // Create a brand description
         const brandDescription = `${brand} is a manufacturer of ${brandInfo.appliance || 'appliance'} parts. ` +
           `They specialize in ${specialties.join(', ')}. ` +
           `They have ${brandParts.length} parts in our database.`;
@@ -171,17 +142,14 @@ class VectorDB {
       });
     }
     
-    // Add category vectors
     if (consolidatedData.relationships && consolidatedData.relationships.byType) {
       console.log('Adding category vectors...');
       
       Object.entries(consolidatedData.relationships.byType).forEach(([category, categoryInfo]) => {
         if (!category) return;
         
-        // Get parts for this category
         const categoryParts = categoryInfo.parts || [];
         
-        // Count brands for this category
         const brandsByCategory = {};
         categoryParts.forEach(partNumber => {
           const part = consolidatedData.parts[partNumber];
@@ -190,13 +158,11 @@ class VectorDB {
           }
         });
         
-        // Determine top brands for this category
         const topBrands = Object.entries(brandsByCategory)
           .sort((a, b) => b[1] - a[1])
           .slice(0, 3)
           .map(entry => entry[0]);
         
-        // Create a category description
         const categoryDescription = `${category} are parts used in ${categoryInfo.appliance || 'appliances'}. ` +
           `Popular brands include ${topBrands.join(', ')}. ` +
           `We have ${categoryParts.length} ${category.toLowerCase()} parts in our database.`;
@@ -217,18 +183,14 @@ class VectorDB {
     }
     
     // Add model vectors if available in the data
-    // Note: This assumes there's model information in the data structure
-    // You might need to adjust based on your actual data structure
     if (consolidatedData.relationships && consolidatedData.relationships.byModel) {
       console.log('Adding model vectors...');
       
       Object.entries(consolidatedData.relationships.byModel).forEach(([model, modelInfo]) => {
         if (!model) return;
         
-        // Get parts compatible with this model
         const compatibleParts = modelInfo.parts || [];
         
-        // Create model description
         const modelDescription = `${model} is a ${modelInfo.brand || ''} ${modelInfo.appliance || 'appliance'} model. ` +
           `It has ${compatibleParts.length} compatible parts in our database.`;
         
@@ -251,39 +213,28 @@ class VectorDB {
     return chunks;
   }
 
-  /**
-   * Vectorize all data chunks and store in the index
-   */
   async vectorizeAllData() {
     try {
       console.log('Starting vectorization process...');
       
-      // Load data
       const consolidatedData = this.loadConsolidatedData();
       
-      // Prepare chunks
       const chunks = this.prepareChunks(consolidatedData);
       
-      // Initialize the index
       this.index = new HierarchicalNSW('cosine', EMBEDDING_DIMENSIONS);
       this.index.initIndex(chunks.length, 16, 200, 100);
       
-      // Store metadata separately
       this.metadata = [];
       
-      // Process in batches to avoid memory issues
       let totalProcessed = 0;
       for (let i = 0; i < chunks.length; i += CHUNK_SIZE) {
         const batchChunks = chunks.slice(i, i + CHUNK_SIZE);
         console.log(`Processing batch ${Math.floor(i/CHUNK_SIZE) + 1} of ${Math.ceil(chunks.length/CHUNK_SIZE)}, with ${batchChunks.length} chunks`);
         
-        // Extract texts for embedding
         const texts = batchChunks.map(chunk => chunk.text);
         
-        // Generate embeddings for batch
         const embeddings = await this.embeddings.embedBatch(texts);
         
-        // Add to index
         for (let j = 0; j < batchChunks.length; j++) {
           const indexPos = totalProcessed + j;
           this.index.addPoint(embeddings[j], indexPos);
@@ -297,7 +248,6 @@ class VectorDB {
         console.log(`Completed batch, total processed: ${totalProcessed}`);
       }
       
-      // Save the index and metadata
       await this.saveIndex();
       
       console.log('Vectorization complete!');
@@ -310,17 +260,12 @@ class VectorDB {
     }
   }
 
-  /**
-   * Save the index and metadata to disk
-   */
   async saveIndex() {
     try {
       console.log('Saving vector index and metadata...');
       
-      // Save the index
       this.index.writeIndex(INDEX_PATH);
       
-      // Save metadata
       saveJsonToFile(this.metadata, METADATA_PATH);
       
       console.log('Vector index and metadata saved successfully');
@@ -331,9 +276,6 @@ class VectorDB {
     }
   }
 
-  /**
-   * Load the index and metadata from disk
-   */
   async loadIndex() {
     try {
       if (!fs.existsSync(INDEX_PATH) || !fs.existsSync(METADATA_PATH)) {
@@ -343,14 +285,12 @@ class VectorDB {
       
       console.log('Loading vector index and metadata...');
       
-      // Load metadata first
       this.metadata = loadJsonFromFile(METADATA_PATH);
       if (!this.metadata || !Array.isArray(this.metadata) || this.metadata.length === 0) {
         console.warn('Metadata is empty or invalid');
         return false;
       }
       
-      // Initialize and load the index
       this.index = new HierarchicalNSW('cosine', EMBEDDING_DIMENSIONS);
       this.index.initIndex(this.metadata.length, 16, 200, 100);
       this.index.readIndex(INDEX_PATH);
@@ -363,18 +303,10 @@ class VectorDB {
     }
   }
 
-  /**
-   * Query the vector database for relevant parts
-   * @param {string} query - The user's query
-   * @param {Object} filters - Optional filters to apply
-   * @param {number} limit - Maximum number of results to return
-   * @returns {Array} - Array of matching parts
-   */
   async queryVectors(query, filters = {}, limit = 10) {
     try {
       console.log(`Querying vector database for: "${query}"`);
       
-      // Load index if not loaded
       if (!this.index) {
         const loaded = await this.loadIndex();
         if (!loaded) {
@@ -382,22 +314,18 @@ class VectorDB {
         }
       }
       
-      // Ensure index is initialized
       if (!this.index || this.metadata.length === 0) {
         throw new Error('Search index has not been properly initialized or is empty');
       }
       
-      // Use regex to detect various entity types in the query
       const partNumberMatches = query.match(/PS\d{5,9}/gi) || [];
       const modelNumberMatches = query.match(/[A-Z]{2,3}\d{3,7}/gi) || [];
       
-      // Common brands in refrigerators and dishwashers
       const commonBrands = [
         'Whirlpool', 'GE', 'Samsung', 'LG', 'Maytag', 'Frigidaire', 'KitchenAid', 
         'Bosch', 'Kenmore', 'Amana', 'Electrolux', 'Jenn-Air'
       ];
       
-      // Check for brand mentions
       const brandMatches = [];
       const lowerQuery = query.toLowerCase();
       
@@ -413,9 +341,7 @@ class VectorDB {
         brands: brandMatches
       });
       
-      // Calculate query complexity to determine how many results to return
       const queryComplexity = partNumberMatches.length + modelNumberMatches.length + brandMatches.length;
-      // Adjust result limit based on complexity, but ensure at least 3 results
       const dynamicLimit = Math.max(3, Math.min(limit, queryComplexity > 0 ? 5 : 10));
       
       let exactMatches = [];
@@ -426,7 +352,6 @@ class VectorDB {
         const partNumbers = partNumberMatches.map(match => match.toUpperCase());
         console.log(`Searching for exact matches for part numbers: ${partNumbers.join(', ')}`);
         
-        // Find all documents with matching part numbers
         exactMatches = this.metadata
           .map((item, index) => ({ ...item, index }))
           .filter(item => 
@@ -437,7 +362,7 @@ class VectorDB {
           )
           .map(item => ({
             ...item,
-            score: 1.0, // Perfect score for exact matches
+            score: 1.0,
             exactMatch: true
           }));
         
@@ -452,7 +377,6 @@ class VectorDB {
         const modelMatches = this.metadata
           .map((item, index) => ({ ...item, index }))
           .filter(item => {
-            // Check if this item is a model or if it's compatible with the model
             if (item.entityType === 'model') {
               return modelNumbers.some(model => 
                 item.modelNumber && item.modelNumber.toUpperCase().includes(model)
@@ -468,7 +392,7 @@ class VectorDB {
           })
           .map(item => ({
             ...item,
-            score: 0.95, // High score but not perfect
+            score: 0.95,
             modelMatch: true
           }));
         
@@ -495,7 +419,7 @@ class VectorDB {
           })
           .map(item => ({
             ...item,
-            score: 0.9, // Good score but not as high as exact or model matches
+            score: 0.9,
             brandMatch: true
           }));
         
@@ -505,24 +429,19 @@ class VectorDB {
       
       // STEP 4: If we have exact or entity matches, prioritize them
       if (exactMatches.length > 0 || entityMatches.length > 0) {
-        // Combine exact and entity matches, removing duplicates
         const seenIndices = new Set(exactMatches.map(item => item.index));
         
-        // Add entity matches that aren't already in exact matches
         const filteredEntityMatches = entityMatches.filter(item => !seenIndices.has(item.index));
         filteredEntityMatches.forEach(item => seenIndices.add(item.index));
         
         const priorityResults = [...exactMatches, ...filteredEntityMatches];
         
-        // Apply any additional filters
         const filteredResults = this.applyFilters(priorityResults, filters);
         
-        // If we have enough priority matches, return them without semantic search
         if (filteredResults.length >= dynamicLimit) {
           return filteredResults.slice(0, dynamicLimit);
         }
         
-        // Store the seen indices to avoid duplicates in semantic results
         return this.combineWithSemanticResults(query, filteredResults, seenIndices, filters, dynamicLimit);
       }
       
@@ -534,31 +453,21 @@ class VectorDB {
     }
   }
   
-  /**
-   * Perform semantic search based on query embedding
-   */
   async performSemanticSearch(query, filters = {}, limit = 10) {
-    // Convert query to embedding for semantic search
     const queryEmbedding = await this.embeddings.embedText(query);
     
-    // Search for similar vectors
-    const numResults = Math.min(limit * 3, this.metadata.length); // Get more results for filtering
+    const numResults = Math.min(limit * 3, this.metadata.length);
     const result = this.index.searchKnn(queryEmbedding, numResults);
     
-    // Map results
     let semanticResults = result.neighbors.map((index, i) => ({
       ...this.metadata[index],
-      score: 1 - result.distances[i], // Convert distance to similarity score
+      score: 1 - result.distances[i],
       index
     }));
     
-    // Apply filters
     return this.applyFilters(semanticResults, filters).slice(0, limit);
   }
   
-  /**
-   * Apply filters to search results
-   */
   applyFilters(results, filters = {}) {
     if (Object.keys(filters).length === 0) {
       return results;
@@ -574,30 +483,20 @@ class VectorDB {
     });
   }
   
-  /**
-   * Combine priority results with semantic search results
-   */
   async combineWithSemanticResults(query, priorityResults, seenIndices, filters, limit) {
-    // Get semantic results
     const semanticResults = await this.performSemanticSearch(query, filters, limit * 2);
     
-    // Filter out any results that are already in priority results
     const filteredSemanticResults = semanticResults.filter(
       item => !seenIndices.has(item.index)
     );
     
-    // Combine and limit
     return [...priorityResults, ...filteredSemanticResults].slice(0, limit);
   }
   
-  /**
-   * Delete the index and metadata files
-   */
   async resetVectors() {
     try {
       console.log('Resetting vector database...');
       
-      // Delete files if they exist
       if (fs.existsSync(INDEX_PATH)) {
         fs.unlinkSync(INDEX_PATH);
       }
@@ -606,7 +505,6 @@ class VectorDB {
         fs.unlinkSync(METADATA_PATH);
       }
       
-      // Reset instance variables
       this.index = null;
       this.metadata = [];
       

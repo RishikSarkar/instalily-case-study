@@ -3,10 +3,8 @@ const path = require('path');
 const cheerio = require('cheerio');
 const axios = require('axios');
 
-// Define BASE_URL constant
 const BASE_URL = 'https://www.partselect.com';
 
-// Array of user agents to rotate between requests
 const USER_AGENTS = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15',
@@ -16,57 +14,41 @@ const USER_AGENTS = [
   'Mozilla/5.0 (iPad; CPU OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1'
 ];
 
-// Get a random user agent from the array
 function getRandomUserAgent() {
   return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
 }
 
-// Sleep function to add delay between requests
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Clean text to remove excessive whitespace and special characters
- */
+// Clean text to remove excessive whitespace and special characters
 function cleanText(text) {
   if (!text) return '';
   
   return text
-    .replace(/\s+/g, ' ') // Replace multiple spaces with a single space
-    .replace(/\n+/g, ' ') // Replace newlines with spaces
+    .replace(/\s+/g, ' ')
+    .replace(/\n+/g, ' ')
     .trim();
 }
 
-/**
- * Clean price data to extract just the first price
- * @param {string} priceText - Raw price text that might contain multiple prices
- * @returns {string} - Cleaned price value
- */
+// Clean price data to extract just the first price
 function cleanPrice(priceText) {
   if (!priceText) return '';
   
-  // Remove currency symbols and whitespace first
+  // Remove currency symbols and whitespace
   const cleanedText = priceText.replace(/[$\s]/g, '');
   
-  // Look for repeating price patterns (like "39.8949.8639.8949.86")
-  // Extract only the first valid price value
+  // Look for repeating price patterns
   const priceMatch = cleanedText.match(/^(\d+\.\d{2})/);
   if (priceMatch && priceMatch[1]) {
     return priceMatch[1];
   }
   
-  // If no clear pattern match, just return the cleaned text
   return cleanedText;
 }
 
-/**
- * Fetch HTML content from a URL with custom user agent and retry logic
- * @param {string} url - URL to fetch
- * @param {number} retries - Number of retries (default: 3)
- * @param {number} delayMs - Delay between retries in milliseconds (default: 2000)
- * @returns {Promise<string>} - HTML content
- */
+// Fetch HTML content from a URL with custom user agent and retry logic
 async function fetchHtmlWithUserAgent(url, retries = 3, delayMs = 2000) {
   let attempt = 0;
   
@@ -101,12 +83,7 @@ async function fetchHtmlWithUserAgent(url, retries = 3, delayMs = 2000) {
   throw new Error(`Failed to fetch ${url} after ${retries} attempts`);
 }
 
-/**
- * Extract data from HTML content based on CSS selectors
- * @param {string} html - HTML content
- * @param {object} selectors - CSS selectors for extracting data
- * @returns {object} - Extracted data
- */
+// Extract data from HTML content based on CSS selectors
 function extractDataFromHtml(html, selectors = {}) {
   const $ = cheerio.load(html);
   const result = {
@@ -157,38 +134,31 @@ function extractDataFromHtml(html, selectors = {}) {
     // Extract part price
     const priceElement = partElement.find(partPriceSelector);
     if (priceElement.length) {
-      // Use cleanPrice to handle cases with multiple prices
       part.price = cleanPrice(priceElement.text());
     }
     
-    // Extract the "Read more" or detail link
     const readMoreElement = partElement.find(readMoreSelector);
     if (readMoreElement.length) {
       let detailUrl = readMoreElement.attr('href');
       
-      // Make relative URLs absolute
       if (detailUrl && !detailUrl.startsWith('http')) {
         detailUrl = `https://www.partselect.com${detailUrl.startsWith('/') ? '' : '/'}${detailUrl}`;
       }
       
       part.detailUrl = detailUrl;
     } else {
-      // If no direct link is found, try to construct it from other elements
       
-      // First look for any link in the part container
       let foundDetailLink = false;
       partElement.find('a').each((i, link) => {
         const href = $(link).attr('href');
         if (href && (href.includes('PS') || href.includes('-') && href.includes('.htm'))) {
           part.detailUrl = href.startsWith('http') ? href : `https://www.partselect.com${href.startsWith('/') ? '' : '/'}${href}`;
           foundDetailLink = true;
-          return false; // break the loop
+          return false;
         }
       });
       
-      // If still no link, check if we can construct it from part number or title
       if (!foundDetailLink && part.title) {
-        // Search for a part number in the title (like PS12345678)
         const psMatch = part.title.match(/PS\d+/);
         if (psMatch) {
           part.detailUrl = `https://www.partselect.com/${psMatch[0]}.htm`;
@@ -196,30 +166,20 @@ function extractDataFromHtml(html, selectors = {}) {
       }
     }
     
-    // Only add parts with titles and detail URLs
     if (part.title && part.detailUrl) {
       result.parts.push(part);
     }
   });
   
-  // If we're on a part detail page, extract all the detailed information
   if (selectors === SELECTORS.partDetailPage) {
-    // For part detail pages, extract using the extractPartDetailPage function
     const details = extractPartDetailPage(html, selectors);
     
-    // Merge the details with the result
     return { ...result, ...details };
   }
   
   return result;
 }
 
-/**
- * Process HTML content and extract structured data based on selectors
- * @param {string} html - HTML content
- * @param {object} selectors - Object containing CSS selectors for different data elements
- * @returns {object} - Extracted data
- */
 function extractDataFromHtml(html, selectors = {}) {
   const $ = cheerio.load(html);
   const defaultSelectors = {
@@ -239,7 +199,6 @@ function extractDataFromHtml(html, selectors = {}) {
   
   const activeSelectors = { ...defaultSelectors, ...selectors };
   
-  // Extract brands data (if this is a brand listing page)
   const brands = [];
   $(activeSelectors.brands).each((index, element) => {
     const name = $(element).text().trim();
@@ -250,7 +209,6 @@ function extractDataFromHtml(html, selectors = {}) {
     }
   });
   
-  // Extract parts data
   const parts = [];
   $(activeSelectors.partContainer).each((index, element) => {
     const part = {
@@ -276,18 +234,15 @@ function extractDataFromHtml(html, selectors = {}) {
       part.manufacturerPartNumber = mfrNumber;
     }
     
-    // Extract price - only the current price, not crossed-out ones
+    // Extract price
     const priceEl = $(element).find(activeSelectors.price).first();
     if (priceEl.length) {
-      // Use cleanPrice to handle multiple prices
       part.price = cleanPrice(priceEl.text().trim());
     }
     
-    // Extract description - carefully extract text between part numbers and symptoms/instructions
+    // Extract description
     const detailEl = $(element).find(activeSelectors.description);
     if (detailEl.length) {
-      // Get all text nodes directly under the detail element
-      // This might need refinement as it's trying to extract text between elements
       const descriptionNodes = [];
       detailEl.contents().each((i, node) => {
         if (node.type === 'text' && $(node).text().trim()) {
@@ -303,7 +258,6 @@ function extractDataFromHtml(html, selectors = {}) {
     // Extract symptoms
     $(element).find(activeSelectors.symptoms).each((i, symptomEl) => {
       const symptomText = $(symptomEl).text().trim();
-      // Skip "See more" links
       if (symptomText && !symptomText.includes('See more')) {
         part.symptoms.push(symptomText);
       }
@@ -315,17 +269,14 @@ function extractDataFromHtml(html, selectors = {}) {
       part.imageUrl = imgEl.attr('src');
     }
     
-    // Extract "Read more" link to get the full part detail page URL
-    // Try multiple approaches to find the link
     let readMoreLink = null;
     
     // Method 1: Look for links with PS in the URL
     $(element).find('a[href*="PS"]').each((i, linkEl) => {
       const href = $(linkEl).attr('href');
-      // Make sure it looks like a part detail page URL
       if (href && (href.includes('/PS') && href.includes('.htm'))) {
         readMoreLink = href;
-        return false; // break the loop
+        return false;
       }
     });
     
@@ -356,13 +307,6 @@ function extractDataFromHtml(html, selectors = {}) {
   return { brands, parts };
 }
 
-/**
- * Process a URL and extract structured data into JSON
- * @param {string} url - URL to process
- * @param {string} outputJsonPath - Path where the JSON output will be saved
- * @param {object} selectors - CSS selectors for different data elements
- * @returns {Object|null} - The extracted data or null if there was an error
- */
 async function processUrlToJson(url, outputJsonPath, selectors = {}) {
   try {
     console.log(`Processing URL: ${url}`);
@@ -373,7 +317,6 @@ async function processUrlToJson(url, outputJsonPath, selectors = {}) {
     // Extract data from HTML
     const outputData = extractDataFromHtml(html, selectors);
     
-    // Write to JSON file
     fs.writeFileSync(outputJsonPath, JSON.stringify(outputData, null, 2));
     console.log(`Successfully processed ${url} to ${outputJsonPath}`);
     
@@ -384,13 +327,6 @@ async function processUrlToJson(url, outputJsonPath, selectors = {}) {
   }
 }
 
-/**
- * Process an HTML file and extract structured data into JSON
- * @param {string} htmlFilePath - Path to the HTML file
- * @param {string} outputJsonPath - Path where the JSON output will be saved
- * @param {object} selectors - CSS selectors for different data elements
- * @returns {Object|null} - The extracted data or null if there was an error
- */
 async function processHtmlToJson(htmlFilePath, outputJsonPath, selectors = {}) {
   try {
     // Read HTML file
@@ -399,7 +335,6 @@ async function processHtmlToJson(htmlFilePath, outputJsonPath, selectors = {}) {
     // Extract data from HTML
     const outputData = extractDataFromHtml(html, selectors);
     
-    // Write to JSON file
     fs.writeFileSync(outputJsonPath, JSON.stringify(outputData, null, 2));
     console.log(`Successfully processed ${htmlFilePath} to ${outputJsonPath}`);
     
@@ -410,19 +345,11 @@ async function processHtmlToJson(htmlFilePath, outputJsonPath, selectors = {}) {
   }
 }
 
-/**
- * Process all HTML files in a directory and convert them to JSON
- * @param {string} directory - Directory containing HTML files
- * @param {string} outputDirectory - Directory where JSON files will be saved
- * @param {object} selectors - CSS selectors for different data elements
- */
 async function processAllHtmlFiles(directory, outputDirectory, selectors = {}) {
-  // Create output directory if it doesn't exist
   if (!fs.existsSync(outputDirectory)) {
     fs.mkdirSync(outputDirectory, { recursive: true });
   }
   
-  // Get all HTML files
   const files = fs.readdirSync(directory)
     .filter(file => file.endsWith('.htm') || file.endsWith('.html'));
   
@@ -435,20 +362,11 @@ async function processAllHtmlFiles(directory, outputDirectory, selectors = {}) {
     
     await processHtmlToJson(htmlPath, jsonPath, selectors);
     
-    // Add delay between processing files to avoid overwhelming resources
     await sleep(1000);
   }
 }
 
-/**
- * Process multiple URLs and convert them to JSON
- * @param {string[]} urls - Array of URLs to process
- * @param {string} outputDirectory - Directory where JSON files will be saved
- * @param {object} selectors - CSS selectors for different data elements
- * @param {number} delayBetweenRequestsMs - Delay between requests in milliseconds
- */
 async function processMultipleUrls(urls, outputDirectory, selectors = {}, delayBetweenRequestsMs = 3000) {
-  // Create output directory if it doesn't exist
   if (!fs.existsSync(outputDirectory)) {
     fs.mkdirSync(outputDirectory, { recursive: true });
   }
@@ -463,7 +381,6 @@ async function processMultipleUrls(urls, outputDirectory, selectors = {}, delayB
     
     await processUrlToJson(url, jsonPath, selectors);
     
-    // Add delay between requests to avoid hitting rate limits
     if (i < urls.length - 1) {
       console.log(`Waiting ${delayBetweenRequestsMs}ms before next request...`);
       await sleep(delayBetweenRequestsMs);
@@ -471,10 +388,6 @@ async function processMultipleUrls(urls, outputDirectory, selectors = {}, delayB
   }
 }
 
-/**
- * Ensure data directories exist
- * @param {string[]} dirPaths - Array of directory paths to ensure
- */
 function ensureDirectories(dirPaths) {
   dirPaths.forEach(dir => {
     if (!fs.existsSync(dir)) {
@@ -484,7 +397,7 @@ function ensureDirectories(dirPaths) {
   });
 }
 
-// Update the selectors for part detail pages
+// Update selectors for part detail pages
 const SELECTORS = {
   brandPage: {
     brands: '.semi-bold a, .brand_links a, .nf__links a',
@@ -511,26 +424,17 @@ const SELECTORS = {
   },
 };
 
-/**
- * Extract part details from a part detail page
- * @param {string} html - HTML content of the part detail page
- * @param {object} selectors - Optional selectors for extracting data
- * @returns {object} - Part details
- */
 function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
   const $ = cheerio.load(html);
   const details = {};
   
-  // Extract basic part information
-  details.sourceUrl = ''; // Will be filled by the caller
+  details.sourceUrl = '';
   
-  // Print all h1 elements to debug
   console.log("All H1 elements:");
   $('h1').each((i, el) => {
     console.log($(el).text().trim());
   });
   
-  // Extract title - try multiple selectors to find the product title
   const titleSelectors = ['h1', '.product-title h1', '.product-title', '.page-title', 'h1.product-heading'];
   for (const selector of titleSelectors) {
     const el = $(selector);
@@ -542,7 +446,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
   }
   
   // Extract part numbers
-  // Try to find the PartSelect Number
   const psSelectors = [
     '.product-specs:contains("PartSelect Number")', 
     'span:contains("PartSelect Number")',
@@ -562,7 +465,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // If still not found, try to extract it from the URL in the sourceUrl field
   if (!details.partSelectNumber && details.sourceUrl) {
     const urlMatch = details.sourceUrl.match(/PS\d+/);
     if (urlMatch) {
@@ -571,7 +473,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Try to find the Manufacturer Part Number
   const mfrSelectors = [
     '.product-specs:contains("Manufacturer Part Number")', 
     'span:contains("Manufacturer Part Number")',
@@ -584,7 +485,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
       const text = el.text();
       console.log(`Found text for manufacturer part: ${text}`);
       
-      // Different patterns to match the manufacturer part number
       const patterns = [
         /Number\s+([A-Za-z0-9-]+)/,
         /Manufacturer\s+Part\s+Number\s+([A-Za-z0-9-]+)/,
@@ -603,7 +503,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract price - find the current price, not the crossed-out price
   const priceSelectors = [
     '.price:not(.original-price)', 
     '.your-price:contains("Your Price")',
@@ -621,7 +520,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract stock status
   const stockSelectors = [
     'span:contains("In Stock")', 
     '.stock-status',
@@ -641,7 +539,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     details.stockStatus = 'Unknown';
   }
   
-  // Extract description - this is usually a paragraph following the part numbers
   const descSelectors = [
     '.product-description', 
     '.part-description', 
@@ -659,7 +556,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // If still no description, look for any paragraph that seems substantial
   if (!details.description) {
     $('p').each((i, el) => {
       const text = $(el).text().trim();
@@ -670,7 +566,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     });
   }
   
-  // Extract installation instructions
   const installSelectors = [
     '.installation-instructions', 
     '.install-instructions', 
@@ -687,7 +582,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract reviews
   const reviewSelectors = [
     '.reviews', 
     '.customer-reviews', 
@@ -703,14 +597,12 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
       let averageRating = 0;
       let reviewCount = 0;
       
-      // Try to extract rating info
       const ratingText = section.find('.rating, .star-rating, .rating__stars').text();
       const ratingMatch = ratingText.match(/[\d.]+/);
       if (ratingMatch) {
         averageRating = parseFloat(ratingMatch[0]);
       }
       
-      // Try to extract review count
       const countText = section.find('.review-count, .ratings-count, .rating__count').text();
       const countMatch = countText.match(/\d+/);
       if (countMatch) {
@@ -723,7 +615,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
         items: []
       };
       
-      // Extract individual reviews
       const reviewItemSelectors = [
         '.review-item', 
         '.customer-review', 
@@ -734,7 +625,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
         section.find(itemSelector).each((i, el) => {
           const reviewEl = $(el);
           
-          // Different selectors for review components
           const titleSelectors = ['.review-title', '.review-heading', '.bold:not(.pd__cust-review__submitted-review__header)'];
           const textSelectors = ['.review-text', '.review-content', '.js-searchKeys'];
           const authorSelectors = ['.review-author', '.reviewer-name', '.pd__cust-review__submitted-review__header'];
@@ -744,7 +634,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
           let author = '';
           let date = '';
           
-          // Extract title
           for (const s of titleSelectors) {
             const titleEl = reviewEl.find(s);
             if (titleEl.length) {
@@ -753,7 +642,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
             }
           }
           
-          // Extract text
           for (const s of textSelectors) {
             const textEl = reviewEl.find(s);
             if (textEl.length) {
@@ -762,12 +650,10 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
             }
           }
           
-          // Extract author and date
           for (const s of authorSelectors) {
             const authorEl = reviewEl.find(s);
             if (authorEl.length) {
               const authorText = authorEl.text().trim();
-              // Try to separate author and date (often in format "Author - Date")
               const authorMatch = authorText.match(/([^-]+)-\s*(.*)/);
               if (authorMatch) {
                 author = authorMatch[1].trim();
@@ -797,7 +683,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract compatible models
   const modelSelectors = [
     '.compatible-models', 
     '.models-list',
@@ -823,7 +708,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract symptoms fixed
   const symptomSelectors = [
     '.fixes-symptoms', 
     '.symptoms-list', 
@@ -849,14 +733,12 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // If we still don't have any data, try to parse from the URL
   if ((!details.title || !details.partSelectNumber) && details.sourceUrl) {
     console.log("Attempting to extract details from URL:", details.sourceUrl);
     try {
       const urlPath = details.sourceUrl.split('?')[0];
       const urlParts = urlPath.split('/').pop().split('.')[0].split('-');
       
-      // URL format is typically: /PS12345678-Brand-PartNumber-Title.htm
       if (urlParts.length >= 4 && urlParts[0].includes('PS')) {
         if (!details.partSelectNumber) {
           details.partSelectNumber = urlParts[0];
@@ -878,7 +760,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract image URL - look for the main product image
   const imageSelectors = [
     '.product-image img',
     '.nf__part__left-col__img img',
@@ -889,14 +770,11 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     '.product-page-image img'
   ];
   
-  // Create an array to store all images
   details.images = [];
   
-  // Extract the main product image
   for (const selector of imageSelectors) {
     const el = $(selector);
     if (el.length) {
-      // Try various image attributes - modern sites use data-src or srcset for lazy loading
       const imgSrc = el.attr('data-src') || el.attr('src') || el.attr('data-original');
       if (imgSrc) {
         const fullImageUrl = imgSrc.startsWith('http') ? imgSrc : `https://www.partselect.com${imgSrc.startsWith('/') ? '' : '/'}${imgSrc}`;
@@ -913,7 +791,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   }
   
-  // Extract additional product images
   $('.product-images img, .thumbnail-images img, .additional-images img, .product-thumbnails img').each((i, el) => {
     const imgEl = $(el);
     const imgSrc = imgEl.attr('data-src') || imgEl.attr('src') || imgEl.attr('data-original');
@@ -930,7 +807,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   });
   
-  // If still no image, look for background images in style attributes
   if (!details.imageUrl) {
     $('[style*="background"]').each((i, el) => {
       const style = $(el).attr('style');
@@ -946,19 +822,17 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
             type: 'product'
           });
           console.log(`Found background image URL: ${fullImageUrl}`);
-          return false; // break the loop
+          return false;
         }
       }
     });
   }
   
-  // Extract video tutorials
   details.videoTutorials = [];
   $('.yt-video, [data-yt-init], .youtube-video, .video-container').each((i, el) => {
     const videoEl = $(el);
     const videoId = videoEl.attr('data-yt-init') || videoEl.attr('data-video-id') || '';
     
-    // Try to extract from iframe src if no data attribute
     if (!videoId) {
       const iframe = videoEl.find('iframe');
       if (iframe.length) {
@@ -971,17 +845,14 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
     
     if (videoId) {
-      // Get video title and thumbnail
       const videoImg = videoEl.find('img');
       const videoTitle = videoImg.attr('title') || videoImg.attr('alt') || 'Installation Video';
       let thumbnailUrl = videoImg.attr('src') || '';
       
-      // If no thumbnail, construct the default YouTube thumbnail URL
       if (!thumbnailUrl && videoId) {
         thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
       }
       
-      // Add to video tutorials
       details.videoTutorials.push({
         videoId,
         videoUrl: `https://www.youtube.com/watch?v=${videoId}`,
@@ -990,7 +861,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
         description: videoEl.closest('.row').find('h4').text().trim() || 'Installation Tutorial'
       });
       
-      // Also add as an image
       details.images.push({
         url: thumbnailUrl,
         isPrimary: false,
@@ -1003,7 +873,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
     }
   });
   
-  // Extract installation help/guides
   details.installationGuides = [];
   $('.installation-guide, .installation-help, .install-steps, .how-to-install').each((i, el) => {
     const guideEl = $(el);
@@ -1023,7 +892,6 @@ function extractPartDetailPage(html, selectors = SELECTORS.partDetailPage) {
         if (imgSrc) {
           guide.imageUrl = imgSrc.startsWith('http') ? imgSrc : `https://www.partselect.com${imgSrc.startsWith('/') ? '' : '/'}${imgSrc}`;
           
-          // Add to images array if not already there
           if (!details.images.some(img => img.url === guide.imageUrl)) {
             details.images.push({
               url: guide.imageUrl,

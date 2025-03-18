@@ -1,7 +1,5 @@
-/**
- * Comprehensive scraper for PartSelect that recursively extracts all parts
- * from both dishwasher and refrigerator categories
- */
+// Comprehensive scraper for PartSelect that recursively extracts all parts
+
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
@@ -25,9 +23,6 @@ const REFRIGERATOR_DIR = path.join(DATA_DIR, 'refrigerator');
 const visitedUrls = new Set();
 const visitedPartUrls = new Set();
 
-/**
- * Ensure all required directories exist
- */
 function setupDirectories() {
   ensureDirectories([
     DATA_DIR,
@@ -43,28 +38,20 @@ function setupDirectories() {
   ]);
 }
 
-/**
- * Delay execution to avoid overloading the server
- */
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/**
- * Clean text by removing extra whitespace and normalizing
- */
 function cleanText(text) {
   if (!text) return '';
   return text.replace(/\s+/g, ' ').trim();
 }
 
-/**
- * Extract the first price from possibly multiple prices
- */
+// Extract first price from possibly multiple prices
 function cleanPrice(priceText) {
   if (!priceText) return '';
   
-  // Try to extract the first price that matches the pattern $XX.XX
+  // Try to extract first price that matches pattern $XX.XX
   const priceMatch = priceText.match(/\$\d+\.\d+/);
   if (priceMatch) {
     return priceMatch[0];
@@ -73,36 +60,30 @@ function cleanPrice(priceText) {
   return priceText.trim();
 }
 
-/**
- * Normalize a URL by ensuring it starts with the base URL
- */
+// Normalize URL by ensuring it starts with base URL
 function normalizeUrl(url) {
   if (!url) return '';
   
-  // If it's already a full URL, return it
+  // If already a full URL return
   if (url.startsWith('http')) {
     return url;
   }
   
-  // If it's a relative URL, add the base URL
+  // If relative URL add base URL
   if (url.startsWith('/')) {
     return `${BASE_URL}${url}`;
   }
   
-  // Otherwise, add base URL with slash
+  // Otherwise add base URL with slash
   return `${BASE_URL}/${url}`;
 }
 
-/**
- * Determine if a URL is for a part detail page
- */
+// Determine if a URL is for a part detail page
 function isPartDetailUrl(url) {
   return url && url.includes('/PS') && url.endsWith('.htm');
 }
 
-/**
- * Extract part data from a part element (.nf__part)
- */
+// Extract part data from a part element (.nf__part)
 function extractPartData($, partElement) {
   const $part = $(partElement);
   
@@ -121,7 +102,7 @@ function extractPartData($, partElement) {
   const priceElement = $part.find('.price:not(.original-price)');
   const price = cleanPrice(priceElement.text());
   
-  // Original price (if on sale)
+  // Original price
   const originalPriceElement = $part.find('.price.original-price');
   const originalPrice = originalPriceElement.length ? cleanPrice(originalPriceElement.text()) : '';
   
@@ -133,12 +114,12 @@ function extractPartData($, partElement) {
   const partSelectNumber = $part.find('.nf__part__detail__part-number strong').first().text().trim();
   const manufacturerPartNumber = $part.find('.nf__part__detail__part-number').eq(1).find('strong').text().trim();
   
-  // Description - all text between part numbers and symptoms
+  // Description
   let description = '';
   const detailElement = $part.find('.nf__part__detail');
   const detailText = detailElement.clone().children('.nf__part__detail__symptoms, .nf__part__detail__instruction').remove().end().text();
   
-  // Extract description by removing the part numbers text
+  // Extract descr by removing the part numbers text
   if (detailText) {
     const partNumbersText = $part.find('.nf__part__detail__part-number').text();
     description = cleanText(detailText.replace(partNumbersText, ''));
@@ -169,7 +150,7 @@ function extractPartData($, partElement) {
       location: locationMatch ? locationMatch[1].trim() : '',
       title: instructionTitle,
       content: instructionContent,
-      date: '' // Date not available in preview
+      date: ''
     };
   }
   
@@ -182,7 +163,6 @@ function extractPartData($, partElement) {
     }
   });
   
-  // Read more link - for full reviews, installation, etc.
   const readMoreLinks = {};
   $part.find('a[href*="PS"]').each((i, el) => {
     const linkText = $(el).text().trim();
@@ -219,19 +199,15 @@ function extractPartData($, partElement) {
   };
 }
 
-/**
- * Extract all parts from a page
- */
+// Extract all parts from a page
 async function extractPartsFromPage(html, context) {
   const $ = cheerio.load(html);
   const parts = [];
   
-  // Find all parts on the page
   $('.nf__part').each((i, el) => {
-    // Limit the number of parts extracted from each page
     if (i < config.maxPartsPerPage) {
       const partData = extractPartData($, el);
-      partData.context = context; // Add context (dishwasher/refrigerator)
+      partData.context = context;
       parts.push(partData);
     }
   });
@@ -244,7 +220,6 @@ async function extractPartsFromPage(html, context) {
     if (part.partUrl && !visitedPartUrls.has(part.partUrl)) {
       visitedPartUrls.add(part.partUrl);
       
-      // Check if we already processed this part
       if (stateManager.hasPart(part.partSelectNumber)) {
         console.log(`Skipping already processed part: ${part.partSelectNumber}`);
         continue;
@@ -254,17 +229,12 @@ async function extractPartsFromPage(html, context) {
       const filename = `${part.partSelectNumber}_detail.json`;
       const outputPath = path.join(PARTS_DIR, filename);
       
-      // Add to state manager
       if (stateManager.addPart(part)) {
         fs.writeFileSync(outputPath, JSON.stringify(part, null, 2));
         console.log(`Saved part data: ${filename}`);
         newPartsCount++;
       }
       
-      // Optional: fetch the full part detail page for more information
-      // await fetchAndProcessPartDetail(part.partUrl, part.partSelectNumber, context);
-      
-      // Rate limiting
       await delay(config.delayBetweenRequests);
     }
   }
@@ -273,9 +243,7 @@ async function extractPartsFromPage(html, context) {
   return parts;
 }
 
-/**
- * Fetch and process a brand page
- */
+// Fetch and process a brand page
 async function processBrandPage(url, context, pageNum = 1) {
   if (visitedUrls.has(url) || pageNum > config.maxPagesPerCategory) {
     console.log(`Skipping: ${url} (${pageNum > config.maxPagesPerCategory ? 'max pages reached' : 'already visited'})`);
@@ -288,13 +256,10 @@ async function processBrandPage(url, context, pageNum = 1) {
   try {
     const html = await fetchHtmlWithUserAgent(url);
     
-    // Extract parts from this brand page
     await extractPartsFromPage(html, context);
     
-    // Check for pagination links to process additional pages
     const $ = cheerio.load(html);
     
-    // Find "Next" pagination link
     const nextPageLink = $('a:contains("Next")').attr('href');
     if (nextPageLink) {
       const nextPageUrl = normalizeUrl(nextPageLink);
@@ -307,9 +272,7 @@ async function processBrandPage(url, context, pageNum = 1) {
   }
 }
 
-/**
- * Process a part type page (e.g., Dishwasher Spray Arms)
- */
+// Process a part type page (e.g., Dishwasher Spray Arms)
 async function processPartTypePage(url, context, pageNum = 1) {
   if (visitedUrls.has(url) || pageNum > config.maxPagesPerCategory) {
     console.log(`Skipping: ${url} (${pageNum > config.maxPagesPerCategory ? 'max pages reached' : 'already visited'})`);
@@ -322,13 +285,10 @@ async function processPartTypePage(url, context, pageNum = 1) {
   try {
     const html = await fetchHtmlWithUserAgent(url);
     
-    // Extract parts from this part type page
     await extractPartsFromPage(html, context);
     
-    // Check for pagination links
     const $ = cheerio.load(html);
     
-    // Find "Next" pagination link
     const nextPageLink = $('a:contains("Next")').attr('href');
     if (nextPageLink) {
       const nextPageUrl = normalizeUrl(nextPageLink);
@@ -341,9 +301,7 @@ async function processPartTypePage(url, context, pageNum = 1) {
   }
 }
 
-/**
- * Process a model page
- */
+// Process a model page
 async function processModelPage(url, context, pageNum = 1) {
   if (visitedUrls.has(url) || pageNum > config.maxPagesPerCategory) {
     console.log(`Skipping: ${url} (${pageNum > config.maxPagesPerCategory ? 'max pages reached' : 'already visited'})`);
@@ -356,13 +314,10 @@ async function processModelPage(url, context, pageNum = 1) {
   try {
     const html = await fetchHtmlWithUserAgent(url);
     
-    // Extract parts for this model
     await extractPartsFromPage(html, context);
     
-    // Check for pagination
     const $ = cheerio.load(html);
     
-    // Find "Next" pagination link
     const nextPageLink = $('a:contains("Next")').attr('href');
     if (nextPageLink) {
       const nextPageUrl = normalizeUrl(nextPageLink);
@@ -375,9 +330,7 @@ async function processModelPage(url, context, pageNum = 1) {
   }
 }
 
-/**
- * Process the main appliance category page and extract all parts and links
- */
+// Process the main appliance category page and extract all parts and links
 async function processAppliancePage(url, context) {
   console.log(`Processing main ${context} page: ${url}`);
   
@@ -416,7 +369,6 @@ async function processAppliancePage(url, context) {
     });
     
     if (partTypeLinks.length === 0) {
-      // Try alternative selector
       $('h2:contains("Related")').next('ul.nf__links').find('a').each((i, el) => {
         const href = $(el).attr('href');
         const text = $(el).text().trim();
@@ -442,7 +394,6 @@ async function processAppliancePage(url, context) {
     
     console.log(`Found ${modelLinks.length} model links`);
     
-    // Save links for reference
     const outputDir = context === 'dishwasher' ? DISHWASHER_DIR : REFRIGERATOR_DIR;
     
     fs.writeFileSync(
@@ -460,7 +411,6 @@ async function processAppliancePage(url, context) {
       JSON.stringify(modelLinks, null, 2)
     );
     
-    // Process up to the configured number of links
     console.log(`\nProcessing links for ${context}...`);
     console.log(`Using configuration: max ${config.maxPartsPerPage} parts per page, max ${config.maxPagesPerCategory} pages per category`);
     
@@ -495,9 +445,7 @@ async function processAppliancePage(url, context) {
   }
 }
 
-/**
- * Main function to run the comprehensive scraper
- */
+// Main function to run the comprehensive scraper
 async function runComprehensiveScraper() {
   console.log('Starting comprehensive scraper...');
   console.log('Configuration:');
@@ -505,11 +453,9 @@ async function runComprehensiveScraper() {
   console.log(`- Max pages per category: ${config.maxPagesPerCategory}`);
   console.log(`- Delay between requests: ${config.delayBetweenRequests}ms`);
   
-  // Log current state
   const counts = stateManager.getCounts();
   console.log(`Current state: ${counts.parts} parts, ${counts.brands} brands, ${counts.categories} categories`);
   
-  // Setup directories
   setupDirectories();
   
   // Process dishwasher parts
@@ -518,22 +464,17 @@ async function runComprehensiveScraper() {
   // Process refrigerator parts
   await processAppliancePage(REFRIGERATOR_URL, 'refrigerator');
   
-  // Generate consolidated data file with relationship trees
   console.log('Generating consolidated data file with relationship trees...');
   await consolidateData();
   
-  // Save final state
   stateManager.save();
   
   console.log('Comprehensive scraping completed.');
   console.log(`Final state: ${stateManager.getCounts().parts} total parts processed`);
 }
 
-/**
- * Check which brands and categories are missing from our database
- */
+// Check which brands and categories are missing from our database
 async function checkMissingData() {
-  // Load comprehensive list of expected brands and categories
   console.log('Checking for missing brands and categories...');
   
   const dishwasherBrands = [
